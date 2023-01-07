@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'roboto';
+  }
+  
+  .cont{margin:15px 5px 10px 5px; display:flex;flex-wrap:wrap;justify-content: space-around;}
+
+  .child{width:30%; padding-top:10px; text-align: center;}
+
+  .fa-arrow-circle-right{font-size: 16px}
+
+  .fa-bell{font-size: 16px;}
+
+  .img1{width:100%;
+        padding:3%}
+
+  .rating{margin:10px}
+
+  .descripcionobra{margin:10px}
+
+  .tamaño{margin:10px; text-align: center;}
+
+  .contsml{display:flex;flex-wrap:wrap;justify-content:space-around;padding:10px}
+
+  .childsml{width:30%; text-align:center}
+
+  .textsml{font-size: 18px; background-color: gray; color:white}
