@@ -9,14 +9,18 @@
 
   .child{width:30%; padding-top:10px; text-align: center;}
 
-  .fa-arrow-circle-right{font-size: 16px}
+  .fa-arrow-left{font-size: 16px; color: #5C5C5C}
 
-  .fa-bell{font-size: 16px;}
+  .fa-bell{font-size: 16px; color: #5C5C5C}
 
   .img1{width:100%;
         padding:3%}
 
-  .rating{margin:10px}
+  .ratingcont{display:flex; flex-wrap:wrap;}
+
+  .rating{margin:10px; width:30%; align-self: baseline;}
+
+  .ratingtxtcont{width:60%; align-self: baseline;}
 
   .descripcionobra{margin:10px}
 
@@ -26,4 +30,24 @@
 
   .childsml{width:30%; text-align:center}
 
-  .textsml{font-size: 18px; background-color: gray; color:white}
+  .agregarcarrito{display:flex;flex-wrap:wrap;justify-content: space-around; align-items: center;}
+
+  .precio{font-size: 22px; color: #AFD0BF;width:25%}
+
+  .cart{width:60%}
+
+  .addtocart{width:100%; display:flex; flex-wrap:wrap; 
+             justify-content: space-around; align-items: center; background-color: #808F87;
+             color:white; border-radius: 5px; border:solid #808F87; height: 35px; transition: 5ms}
+
+  .addtocart:hover{background-color: #5C5C5C}
+
+  .fa-shopping-cart{width:20%}
+
+  .addtocarttxt{width:80%; font-weight:bold; font-size: 16px;}
+
+  .typogray{color: #5C5C5C; font-size:22px; font-weight:bold}
+
+  .titulosdp{color: #9B7E46; font-weight: bold; font-size: 18px}
+
+  .textsml{font-size: 18px; background-color: #AFD0BF; color:white}
