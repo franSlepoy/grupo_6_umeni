@@ -1,0 +1,342 @@
+body{
+    background-color: #F5F5F5;
+}
+
+.titulo{
+    position: absolute;
+    width: 264px;
+    height: 49px;
+    left: 24px;
+    top: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 49px;
+    letter-spacing: -0.05em;
+    color: #808F87;
+
+}
+
+h5{
+    position: absolute;
+    width: 264px;
+    height: 19px;
+    left: 24px;
+    top: 99px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.nombre{
+    position: absolute;
+    width: 264px;
+    height: 19px;
+    left: 24px;
+    top: 156px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #9B7E46;
+}
+
+.correo{
+    position: absolute;
+    width: 141px;
+    height: 19px;
+    left: 24px;
+    top: 256px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #9B7E46;
+}
+
+.contra{
+    position: absolute;
+    width: 89px;
+    height: 19px;
+    left: 24px;
+    top: 356px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #9B7E46;
+}
+
+#casillero-nombre{
+    position: absolute;
+    width: 341px;
+    height: 53px;
+    left: 24px;
+    top: 183px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+#casillero-correo{
+    position: absolute;
+    width: 341px;
+    height: 53px;
+    left: 24px;
+    top: 283px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+#casillero-contra{
+    position: absolute;
+    width: 341px;
+    height: 53px;
+    left: 24px;
+    top: 383px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.registrate{
+   position: absolute;
+    width: 348px;
+    height: 58px;
+    left: 24px;
+    top: 461px;
+    background: #AFD0BF;
+    border-radius: 10px;
+}
+
+.o{
+    width: 11px;
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.01em;
+    color: rgba(0, 0, 0, 0.6);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.recordatorio{
+    position: absolute;
+    width: 232px;
+    height: 19px;
+    left: 75px;
+    top: 791px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.6)
+}
+
+.facebook{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 49px;
+    gap: 18px;
+    position: absolute;
+    width: 341px;
+    height: 59px;
+    left: 24px;
+    top: 651px;
+    background: #1877F2;
+    border-radius: 10px;
+}
+
+.google{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 49px;
+    gap: 18px;
+    position: absolute;
+    width: 341px;
+    height: 58px;
+    left: 24px;
+    top: 578px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.contenedor-o{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    position: absolute;
+    width: 341px;
+    height: 17px;
+    left: 24px;
+    top: 539px;
+}
+.line1{
+    width: 154px;
+    height: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    flex: none;
+    order: 0;
+    flex-grow: 0;    
+}
+.line2{
+    width: 154px;
+    height: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.o{
+    width: 11px;
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.01em;
+    color: rgba(0, 0, 0, 0.6);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#casillero-nombre::placeholder{
+    position: absolute;
+    width: 264px;
+    height: 19px;
+    left: 22px;
+    top: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+#casillero-correo::placeholder{
+    position: absolute;
+    width: 264px;
+    height: 19px;
+    left: 22px;
+    top: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#casillero-contra::placeholder{
+    position: absolute;
+    width: 264px;
+    height: 19px;
+    left: 22px;
+    top: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.contenido-registrate{
+    position: absolute;
+    width: 78px;
+    height: 19px;
+    left: 132px;
+    top: 19px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+
+.contenido-google{
+    width: 167px;
+    height: 19px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #5C5C5C;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.contenido-facebook{
+    width: 187px;
+    height: 19px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+i.fa-facebook{
+    width: 25px;
+    height: 24.85px;;
+    
+}
+
+
+#recordatorio{
+    position: absolute;
+    width: 232px;
+    height: 19px;
+    left: 75px;
+    top: 791px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.6); 
+}
+

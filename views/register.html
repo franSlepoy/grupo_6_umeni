@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="register-container">
+        <h2 class="titulo">Crea tu cuenta</h2>
+        <h5>Llena la informacion requerida</h5>
+        <form action="">
+            <div>
+                <label class="nombre">Nombre Completo</label>
+                <br><input type="text" placeholder="Ingresa tu nombre completo" id="casillero-nombre" required>
+            </div>
+            <div>
+                <label class="correo">Correo Electronico</label>
+                <br><input type="email" placeholder="Ingresa tu correo electronico" id="casillero-correo" required>
+            </div>
+            <div>
+                <label class="contra">Contraseña</label>
+                <br><input type="password" placeholder="Ingresa tu contraseña" id="casillero-contra" required>
+            </div>
+            <button type="submit" class="registrate"><div class="contenido-registrate">Registrate</div></button>
+            
+            <div class="contenedor-o">
+                <div class="line1"></div>
+                <div class="o">O</div>
+                <div class="line2"></div>
+            </div>
+            
+            <div>
+                <button type="submit" class="google"><div class="contenido-google"><i class="fab fa-google"></i> Registrate con Google</div></button>
+            </div>
+            <div>
+                <button type="submit" class="facebook"><div class="contenido-facebook"><i class="fab fa-facebook"></i>Registrate con Facebook</div></button>
+            </div>
+            <div class="recordatorio">
+                ¿Ya te registraste? <a href="#">Inicia Sesion</a>
+            </div>
+               
+        </form>
+
+    </div>
+
+</body>
+</html>
