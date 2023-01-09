@@ -1,0 +1,200 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.top-header{
+    padding: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+h2{
+    font-size: 2em;
+    font-weight: bolder;
+    position: absolute;
+    left: 40%;
+    color: #808F87;
+}
+
+.fa-arrow-left,
+.fa-shopping-cart{
+    font-size: 25px;
+    color: #808F87;
+}
+
+.umeni{
+    min-width: 3em;
+    max-width: 3em;
+    position: absolute;
+    left: 90px;
+    top: 40px;
+}
+
+section article{
+    position: relative;
+    margin-top: 5px;
+    background-color: #E2EFDE;
+    border-radius: 10px;
+    padding: 8px;  
+}
+
+article,
+.imagen,
+.info{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 5em;
+    justify-content: center;
+}
+
+section article .imagen{
+    object-fit: cover;
+    height: 60px;
+    width: 60px;   
+}
+
+.info{
+    margin-left: 20px;
+}
+
+.precio{
+    margin-top: 30px;
+    font-size: 24px;
+    color: #9B7E46;
+    font-weight: bolder;
+}
+
+.eliminar{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: rgb(151, 6, 6);
+}
+
+.cantidad{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-size: 20px;
+    color: #808F87;
+}
+
+.cuantia{
+    position: relative;
+    bottom: 3.5px;
+    width: 20px;
+    border-radius: 4px;
+    background-color: #E2EFDE;
+    border: 2.3px solid #808F87;
+}
+
+.descuento{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    background-color: #E2EFDE;
+    border: none;
+    height: 3em;
+    width: 70%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.subtotal,
+.iva,
+.envio,
+.total{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 24px;
+}
+
+
+input[type="submit"]{
+    display: block;
+    width: 60%;
+    height: 3em;
+    font-size: 1.1rem;
+    background-color: #AFD0BF;
+    border: none;
+    margin: 1em auto;
+    color: #fff;
+    border-radius: 10px;
+}
+
+h3{
+    color:#808F87;
+}
+
+h5{
+    color:#9B7E46;
+}
+
+
+@media screen and (max-width: 361px) {
+    .autor,
+    .tamaño{
+        width: 50%;
+        font-size: 0.8em;
+    }
+
+    article,
+    .imagen,
+    .info{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height:5em;
+    }
+
+    .precio{
+        font-size: 0.9em;
+        margin-top: auto;
+    }
+
+    .umeni{
+        min-width: 2em;
+        max-width: 2em;
+        top: 48px;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+
+}
+
+@media (min-width: 361px){
+
+    main section article{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .autor,
+    .tamaño{
+        width: 60%;
+    }
+    .precio{
+        margin-top: 20px;
+        width: 60%;
+    }
+}
+
+@media (min-width: 769px){
+
+}
