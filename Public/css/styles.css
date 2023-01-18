@@ -1,0 +1,145 @@
+* {
+    box-sizing: content-box;
+    font-family: inter;
+}
+body.home {
+    background-image: url(/images/fondo.png);
+    background-position: center top ;
+    background-repeat: no-repeat;
+    background-color: #9B7E46;
+}
+
+.logo {
+width: 188px;
+height: 188px;
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+}
+.hamburger-buttom {
+    
+    z-index: 2;
+    font-size: 50px;
+    color: #808F87;
+    position: absolute;
+    left: 78%;
+    top: 5%;
+}
+
+button {
+    position: absolute;
+    z-index: 5;
+    padding: 10px;
+    border-radius: 8px;
+    width: 80%;
+    font-family: inter;
+    font-size: 16px;
+    background-color: #E2EFDE;
+    color: #5C5C5C;
+    border: solid 2px #5C5C5C;
+    box-shadow: 10px 10px 50px #F4B266 ;
+   
+}
+
+.redes {
+     top: 80%;
+     left: 8%;
+     
+}
+.contacto {
+    top: 87%;
+    left: 8%;
+    
+}
+.carrito-de-compras {
+    display: none
+}
+.user {
+    display: none;
+}
+nav {
+    display: none;
+}
+
+@media (min-width: 768px){
+    .hamburger-buttom{
+        display: none;
+    }
+    nav {
+        display: inline-block;
+        position: absolute;
+        left: 350px;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+    a {
+        color: #5C5C5C;
+        text-decoration: none;
+        font-size: 30px;
+        padding: 5px;
+        margin: 10px;
+    }
+
+    .carrito-de-compras {
+       display: inline-block;
+        position: absolute;
+        top: 35px;
+        left: 1000px;
+    }
+    i {
+        transition: all 3s;
+    }
+    i:hover {
+        color: #9B7E46;
+        text-shadow: 10px 10px 50px #F4B266;
+        font-size: 20px;
+    }
+    .user {
+        display: inline-block;
+        position: absolute;
+        top: 35px;
+        left: 950px;
+        
+    }
+  .redes {
+        width: 80px;
+        position: absolute;
+        top: 600px;
+        left: 30%;
+        transition: all 3s;
+}
+   .redes:hover {
+    color: #5C5C5C;
+    background-color: #9B7E46;
+    border-radius: 10px;
+    
+
+   }
+   .contacto {
+     width: 80px;
+     position: absolute;
+        top: 600px;
+        left: 60%;
+     transition: all 3s;  
+   }
+   
+   .contacto:hover {
+    color: #5C5C5C;
+    background-color: #9B7E46;
+    border-radius: 10px;
+}
+a {
+    transition: all 3s;
+}
+a:hover {
+    color: #9B7E46;
+    text-shadow: 10px 10px 50px #F4B266
+}
+
+}
