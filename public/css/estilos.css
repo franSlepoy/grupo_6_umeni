@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'inter';
-    text-align: center;
+    
   }
   
  body{
@@ -24,13 +24,18 @@
       text-align: center;
 }
 
-  .ratingcont{display:flex; flex-wrap:wrap; justify-content: center;}
+  .ratingcont{display:flex; flex-wrap:wrap; justify-content: center; text-align: center; width: 60%; position: relative; left: 10%;}
 
   .rating{margin:10px; width:30%; align-self: baseline;}
 
   .ratingtxtcont{width:60%; align-self: baseline;}
 
-  .descripcionobra{margin:10px}
+  .descripcionobra{
+      margin:10px;
+      position: relative;
+      left: 14%;
+
+}
 
   .tamaño{margin:10px; text-align: center;}
 
