@@ -2,9 +2,13 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'roboto';
+    font-family: 'inter';
+    text-align: center;
   }
   
+ body{
+      margin: 0 auto;
+ }
   .cont{margin:15px 5px 10px 5px; display:flex;flex-wrap:wrap;justify-content: space-around;}
 
   .child{width:30%; padding-top:10px; text-align: center;}
@@ -13,10 +17,14 @@
 
   .fa-bell{font-size: 16px; color: #5C5C5C}
 
-  .img1{width:100%;
+  .img1{ max-width: 550px;
         padding:3%}
+.contimg {
+      
+      text-align: center;
+}
 
-  .ratingcont{display:flex; flex-wrap:wrap;}
+  .ratingcont{display:flex; flex-wrap:wrap; justify-content: center;}
 
   .rating{margin:10px; width:30%; align-self: baseline;}
 
@@ -36,12 +44,11 @@
 
   .cart{width:60%}
 
-  .addtocart{width:100%; display:flex; flex-wrap:wrap; 
+  .addtocart{width: 200px; margin: 10px; display:flex; flex-wrap:wrap; 
              justify-content: space-around; align-items: center; background-color: #808F87;
-             color:white; border-radius: 5px; border:solid #808F87; height: 35px; transition: 5ms}
+             color:white; border-radius: 5px; border:solid #808F87; height: 35px;}
 
-  .addtocart:hover{background-color: #5C5C5C}
-
+  
   .fa-shopping-cart{width:20%}
 
   .addtocarttxt{width:80%; font-weight:bold; font-size: 16px;}
@@ -51,3 +58,34 @@
   .titulosdp{color: #9B7E46; font-weight: bold; font-size: 18px}
 
   .textsml{font-size: 18px; background-color: #AFD0BF; color:white}
+
+
+@media (min-width: 768px){
+      body {
+          background-color: #9B7E46;
+      }
+      .contenedor {
+          width: 768px;
+          margin: auto;
+          border: #9B7E46 solid 2px;
+          background-color: #9B7E46;
+          background-color: white;
+      }
+      .addtocart {
+            transition: all 3s;
+        }
+        .addtocart:hover {
+            color: #F4B266;
+            background-color: #9B7E46;
+            border-radius: 20px;
+            box-shadow: 10px 10px 50px #808F87 ;}
+            i {
+                  transition: all 3s;
+              }
+              i:hover {
+                  color: #9B7E46;
+                  text-shadow: 10px 10px 50px #F4B266;
+                  font-size: 30px;
+              }
+      
+}

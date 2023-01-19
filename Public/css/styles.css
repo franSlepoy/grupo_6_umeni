@@ -67,10 +67,13 @@ nav {
     .hamburger-buttom{
         display: none;
     }
+   
     nav {
         display: inline-block;
         position: absolute;
-        left: 350px;
+        top: 6%;
+        left: 45%;
+        transform: translate(-50%, -50%);
     }
     ul {
         display: flex;
@@ -78,7 +81,7 @@ nav {
         align-items: center;
         list-style: none;
     }
-    a {
+    a.nav {
         color: #5C5C5C;
         text-decoration: none;
         font-size: 30px;
@@ -89,8 +92,10 @@ nav {
     .carrito-de-compras {
        display: inline-block;
         position: absolute;
-        top: 35px;
-        left: 1000px;
+        top: 53%;
+        left: 115%;
+        transform: translate(-50%, -50%);
+        color: #060606;
     }
     i {
         transition: all 3s;
@@ -100,12 +105,13 @@ nav {
         text-shadow: 10px 10px 50px #F4B266;
         font-size: 20px;
     }
-    .user {
+    .fa-user {
         display: inline-block;
         position: absolute;
-        top: 35px;
-        left: 950px;
-        
+        top: 50%;
+        left: 105%;
+        transform: translate(-50%, -50%);
+        color: #060606;
     }
   .redes {
         width: 80px;
@@ -134,7 +140,7 @@ nav {
     background-color: #9B7E46;
     border-radius: 10px;
 }
-a {
+a.nav {
     transition: all 3s;
 }
 a:hover {
