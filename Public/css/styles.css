@@ -29,17 +29,15 @@ transform: translate(-50%, -50%);
 }
 
 button {
-    position: absolute;
-    z-index: 5;
-    padding: 10px;
-    border-radius: 8px;
-    width: 80%;
-    font-family: inter;
-    font-size: 16px;
-    background-color: #E2EFDE;
-    color: #5C5C5C;
-    border: solid 2px #5C5C5C;
-    box-shadow: 10px 10px 50px #F4B266 ;
+    width: 100%;
+    background-color: #AFD0BF;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #888888;
    
 }
 
