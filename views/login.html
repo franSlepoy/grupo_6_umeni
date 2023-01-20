@@ -2,43 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Umeni - Detalle de Producto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesion</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/login.css">
     <link rel="icon" href="/images/umeni.jpeg">
-
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-    <div class="register-container">
-        <h2>Iniciar Sesion</h2>
-        <h5>Llena la informacion requerida</h5>
-        <form action="">
-            <div>
-                <label>Correo Electronico</label>
-                <br><input type="email" placeholder="Ingresa tu correo electronico"required>
-            </div>
-            <div>
-                <label>Ingresa tu contraseña</label>
-                <br><input type="password" placeholder="Ingresa tu contraseña" required>
-            <button type="submit">Iniciar Sesion</button>
-            <div class="o">
-                O
-            </div>
-            <div>
-                
-                <button type="submit"><i class="fab fa-google"></i> Inicia Sesion con Google</button>
-            </div>
-            <div>
-                <button type="submit"><i class="fab fa-facebook"></i> Inicia Sesion con Facebook</button>
-            </div>
-            <div>
-                ¿No tienes un usuario generado? <a href="#">Registrarme</a>
-            </div>
-        </form>
-
-    </div>
-    
+<form>
+  <h1>Iniciar Sesion</h1>
+  <br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <br><br>
+    <button class="login" type="submit">Login</button>
+  <br><br>
+<button class="google" type="submit"><img src="/images/logos_google-icon.png" alt=""> Inicia Sesion con Google</button>
+<button class="facebook" type="submit"><img src="/images/logos_facebook.png" alt=""> Inicia Sesion con Facebook</button>
+  <br><br>
+  <a href="#">Forgot your password?</a>
+  <br><br>
+  <a href="#">Still not a member?</a>
+</form>
 </body>
 </html>
