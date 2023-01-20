@@ -126,7 +126,7 @@ input[type="submit"]{
     width: 60%;
     height: 3em;
     font-size: 1.1rem;
-    background-color: #AFD0BF;
+    background-color:#AFD0BF;
     border: none;
     margin: 1em auto;
     color: #fff;
@@ -165,12 +165,13 @@ h5{
         
         input {
             transition: all 3s;
+            
         }
         input:hover {
-            color: #F4B266;
-            background-color: #9B7E46;
+            color: #E2EFDE;
+            background-color:#86A093;
             border-radius: 20px;
             box-shadow: 10px 10px 50px #808F87 ;
-             
+            
         }
 }

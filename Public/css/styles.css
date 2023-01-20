@@ -121,9 +121,13 @@ nav {
         transition: all 3s;
 }
    .redes:hover {
-    color: #5C5C5C;
-    background-color: #9B7E46;
-    border-radius: 10px;
+    
+        color: #E2EFDE;
+        background-color:#86A093;
+        border-radius: 20px;
+        box-shadow: 10px 10px 50px #808F87 ;
+        
+    }
     
 
    }
@@ -136,9 +140,11 @@ nav {
    }
    
    .contacto:hover {
-    color: #5C5C5C;
-    background-color: #9B7E46;
-    border-radius: 10px;
+    
+        color: #E2EFDE;
+        background-color:#86A093;
+        border-radius: 20px;
+        box-shadow: 10px 10px 50px #808F87 ;
 }
 a.nav {
     transition: all 3s;
