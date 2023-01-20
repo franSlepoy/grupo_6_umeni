@@ -1,10 +1,10 @@
 const path = require("path");
 const mainControllers = {
-    index: (req,res) => res.sendFile(path.resolve(__dirname, "../views/home.ejs")),
-    login: (req,res) => res.sendFile(path.resolve(__dirname, "../views/login.ejs")),
-    register: (req,res) => res.sendFile(path.resolve(__dirname, "../views/register.ejs")),
-    productDetails: (req,res) => res.sendFile(path.resolve(__dirname, "../views/productDetails.ejs")),
-    cart: (req,res) => res.sendFile(path.resolve(__dirname, "../views/cart.ejs"))
+    index: (req,res) => res.render(path.resolve(__dirname, "../views/home")),
+    login: (req,res) => res.render(path.resolve(__dirname, "../views/login")),
+    register: (req,res) => res.render(path.resolve(__dirname, "../views/register")),
+    productDetails: (req,res) => res.render(path.resolve(__dirname, "../views/productDetails")),
+    cart: (req,res) => res.render(path.resolve(__dirname, "../views/cart"))
 }
 
 module.exports = mainControllers;
