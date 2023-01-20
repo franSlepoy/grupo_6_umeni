@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: inter;
 }
 
 .top-header{
@@ -66,8 +67,8 @@ section article .imagen{
 }
 
 .precio{
-    margin-top: 30px;
-    font-size: 24px;
+    margin: 8px;
+    font-size: 100%;
     color: #9B7E46;
     font-weight: bolder;
 }
@@ -125,7 +126,7 @@ input[type="submit"]{
     width: 60%;
     height: 3em;
     font-size: 1.1rem;
-    background-color: #AFD0BF;
+    background-color:#AFD0BF;
     border: none;
     margin: 1em auto;
     color: #fff;
@@ -141,60 +142,36 @@ h5{
 }
 
 
-@media screen and (max-width: 361px) {
-    .autor,
-    .tamaño{
-        width: 50%;
-        font-size: 0.8em;
-    }
 
-    article,
-    .imagen,
-    .info{
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height:5em;
-    }
-
-    .precio{
-        font-size: 0.9em;
-        margin-top: auto;
-    }
-
-    .umeni{
-        min-width: 2em;
-        max-width: 2em;
-        top: 48px;
-    }
-
-    h2{
-        font-size: 1.5em;
-    }
-
-}
-
-@media (min-width: 361px){
-
-    main section article{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-start;
-    }
-
-    .autor,
-    .tamaño{
-        width: 60%;
-    }
-    .precio{
-        margin-top: 20px;
-        width: 60%;
-    }
-}
-
-@media (min-width: 769px){
-
+@media (min-width: 768px){
+        body {
+            background-color: #9B7E46;
+        }
+        .contenedor {
+            width: 768px;
+            margin: auto;
+            border: #9B7E46 solid 2px;
+            background-color: #9B7E46;
+            background-color: white;
+        }
+        i {
+            transition: all 3s;
+        }
+        i:hover {
+            color: #9B7E46;
+            text-shadow: 10px 10px 50px #F4B266;
+            font-size: 30px;
+        }
+        
+        input {
+            transition: all 3s;
+            
+        }
+        input:hover {
+            color: #E2EFDE;
+            background-color:#86A093;
+            border-radius: 20px;
+            box-shadow: 10px 10px 50px #808F87 ;
+            
+        }
 }

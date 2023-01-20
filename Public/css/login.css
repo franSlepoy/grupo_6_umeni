@@ -19,18 +19,13 @@ body {
     align-items: left;
     background-color:white;
   }
-
-  .subtitulo {
-    color: #afd0bf
-  }
   
   label {
     font-weight: bold;
   }
   
   input[type="email"],
-  input[type="password"],
-  input[type="name"] {
+  input[type="password"] {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -92,11 +87,7 @@ body {
   .google:hover {
     background-color: rgb(177, 177, 177);
   }
-  .login-signup-now {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-  }
+
   a {
     color: blue;
     text-decoration: underline;
