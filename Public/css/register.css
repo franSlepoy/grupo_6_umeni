@@ -19,6 +19,10 @@ body {
     align-items: left;
     background-color:white;
   }
+
+  .subtitulo {
+    color: #afd0bf
+  }
   
   label {
     font-weight: bold;
