@@ -170,190 +170,107 @@ h5{
 .google{
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 17px 49px;
-    gap: 18px;
-    position: absolute;
-    width: 311px;
-    height: 45px;
-    left: 24px;
-    top: 578px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    background-color: #9b7e46;
+    font-family: 'Inter', sans-serif;
+    color: #5C5C5C;
+  }
+  
+  form {
+    width: 400px;
+    padding: 20px;
+    border: 2px solid #ccc;
     border-radius: 10px;
-}
-
-.contenedor-o{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    background-color:white;
+  }
+
+  .subtitulo {
+    color: #afd0bf
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="email"],
+  input[type="password"],
+  input[type="name"] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .login{
+    width: 100%;
+    background-color: #AFD0BF;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #888888;
+  }
+  
+  .login:hover {
+    background-color: #86a093;
+  }
+
+  .facebook{
+    width: 100%;
+    background-color: #1877F2;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #888888;
+    display: flex; 
+    justify-content: center; 
     align-items: center;
-    padding: 0px;
-    gap: 10px;
-    position: absolute;
-    width: 341px;
-    height: 17px;
-    left: 24px;
-    top: 539px;
-}
-.line1{
-    width: 154px;
-    height: 0px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    flex: none;
-    order: 0;
-    flex-grow: 0;    
-}
-.line2{
-    width: 154px;
-    height: 0px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-}
-
-.o{
-    width: 11px;
-    height: 17px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: -0.01em;
-    color: rgba(0, 0, 0, 0.6);
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
-
-#casillero-nombre::placeholder{
-    position: absolute;
-    width: 264px;
-    height: 19px;
-    left: 22px;
-    top: 15px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-    color: rgba(0, 0, 0, 0.6);
-
-}
-
-#casillero-correo::placeholder{
-    position: absolute;
-    width: 264px;
-    height: 19px;
-    left: 22px;
-    top: 15px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-    color: rgba(0, 0, 0, 0.6);
-}
-
-#casillero-contra::placeholder{
-    position: absolute;
-    width: 264px;
-    height: 19px;
-    left: 22px;
-    top: 15px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.contenido-registrate{
-    position: absolute;
-    width: 78px;
-    height: 19px;
-    left: 108px;
-    top: 19px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 3px;
-    letter-spacing: -0.02em;
-    color: #FFFFFF;
-}
-
-.contenido-google{
-    width: 167px;
-    height: 19px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
+  }
+  
+  .facebook:hover {
+    background-color: #1052a8;
+  }
+  
+  .google{
+    width: 100%;
+    background-color: white;
     color: #5C5C5C;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #888888;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
 
-.contenido-facebook{
-    width: 187px;
-    height: 19px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-    color: #5C5C5C;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
-
-
-i.fa-facebook{
-    width: 25px;
-    height: 24.85px;;
-    
-}
-
-
-#recordatorio{
-    position: absolute;
-    width: 232px;
-    height: 19px;
-    left: 75px;
-    top: 791px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-    color: rgba(0, 0, 0, 0.6); 
-}
-input {
-    margin: 5px;
-}
-@media (min-width: 768px){
-    body {
-        background-color: #9B7E46;
-    }
-    .register-container {
-        width: 768px;
-        margin: auto;
-        border: #9B7E46 solid 2px;
-        background-color: white;
-        height: 100%;
-    }
-}
+  .google:hover {
+    background-color: rgb(177, 177, 177);
+  }
+  .login-signup-now {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+  a {
+    color: blue;
+    text-decoration: underline;
+    justify-content: center;
+    display: flex;
+  }
+  
