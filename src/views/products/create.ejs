@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creación de producto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/umeni.jpeg">
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+<form>
+  <h1>Creá un producto</h1>
+  <h4 class=subtitulo>Llená la información requerida</h4>
+  <br>
+  <label for="name">Título de la obra:</label>
+  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="prodname" required>
+  <br>
+  <label for="description">Descripción:</label>
+  <input type="name" placeholder="Ingresá la descripción del mismo" id="description" name="description" required>
+  <br>
+  <label for="prod_img">Imagen de la obra:</label>
+  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="prod_img" accept=".jpg" multiple required>
+  <br>
+  <legend>Categoría</legend>
+  <div class="contcheckbox">
+      <label>
+          <input id="catint" type="checkbox" name="catint" value="pintura" checked>Pintura
+      </label>
+      <label>
+          <input id="catint" type="checkbox" name="catint" value="escultura">Escultura
+      </label>
+      <label>
+          <input id="catint" type="checkbox" name="catint" value="fotografia">Fotografía
+      </label>
+  </div>
+  <div class="contcheckbox">
+    <br>
+    <legend>Colores</legend>
+    <label>
+        <input id="colors" type="checkbox" name="colors" value="frios" checked>Fríos
+    </label>
+    <label>
+        <input id="colors" type="checkbox" name="colors" value="calidos">Cálidos
+    </label>
+</div>
+<br>
+<br>
+<label for="price">Precio:</label>
+<input type="number" placeholder="Ingresá el precio de la obra" id="price" name="price" required>
+<br>
+  <br><br>
+    <button class="login" type="submit">Enviar</button>
+  <br><br>
+  <div class="login-signup-now">
+    ¿Ya te registraste?
+    <a href="#" style="text-indent: 10px;">Inicia Sesión</a>
+  </div>
+ 
+  <br><br>
+</form>
+<footer>
+  <%- include('../partials/footer.ejs') %>
+</footer>
+</body>
+</html>
