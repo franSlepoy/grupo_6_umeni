@@ -1,23 +1,8 @@
-* {
-    box-sizing: content-box;
-    font-family: inter;
-}
-body.home {
-    background-image: url(/images/fondo.png);
-    background-position: center top ;
-    background-repeat: no-repeat;
-    background-color: #9B7E46;
+header {
+    margin-bottom: 150px;
+    ;
 }
 
-.logo {
-width: 188px;
-height: 188px;
-position: absolute;
-top: 40%;
-left: 50%;
-transform: translate(-50%, -50%);
-
-}
 .hamburger-buttom {
     
     z-index: 2;
@@ -28,32 +13,6 @@ transform: translate(-50%, -50%);
     top: 5%;
 }
 
-button {
-    width: 100%;
-    background-color: #AFD0BF;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px #888888;
-   
-}
-
-.redes {
-     top: 80%;
-     left: 8%;
-     position: absolute;
-     width: 80px;
-     top: 600px;
-     transition: all 3s;
-}
-.contacto {
-    top: 87%;
-    left: 8%;
-    
-}
 .carrito-de-compras {
     display: none
 }
@@ -114,39 +73,7 @@ nav {
         transform: translate(-50%, -50%);
         color: #060606;
     }
-  .redes {
-        width: 80px;
-        position: absolute;
-        top: 600px;
-        left: 30%;
-        transition: all 3s;
-}
-   .redes:hover {
-    
-        color: #E2EFDE;
-        background-color:#86A093;
-        border-radius: 20px;
-        box-shadow: 10px 10px 50px #808F87 ;
-        
-    }
-    
-
-   }
-   .contacto {
-     width: 80px;
-     position: absolute;
-        top: 600px;
-        left: 60%;
-     transition: all 3s;  
-   }
    
-   .contacto:hover {
-    
-        color: #E2EFDE;
-        background-color:#86A093;
-        border-radius: 20px;
-        box-shadow: 10px 10px 50px #808F87 ;
-}
 a.nav {
     transition: all 3s;
 }
@@ -155,4 +82,4 @@ a:hover {
     text-shadow: 10px 10px 50px #F4B266
 }
 
-
+}
