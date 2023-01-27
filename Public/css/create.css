@@ -6,7 +6,6 @@ body {
     background-color: #9b7e46;
     font-family: 'Inter', sans-serif;
     color: #5C5C5C;
-    flex-direction:column;
   }
   
   form {
@@ -27,7 +26,9 @@ body {
   }
   
   input[type="email"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="name"],
+  input[type="number"] {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -51,7 +52,7 @@ body {
   .login:hover {
     background-color: #86a093;
   }
-
+  
   .facebook{
     width: 100%;
     background-color: #1877F2;
@@ -85,11 +86,11 @@ body {
     justify-content: center; 
     align-items: center;
   }
-
+  
   .google:hover {
     background-color: rgb(177, 177, 177);
   }
-
+  
   a {
     color: blue;
     text-decoration: underline;

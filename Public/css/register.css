@@ -1,276 +1,99 @@
-body{
-    background-color: #F5F5F5;
-    
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #9b7e46;
+  font-family: 'Inter', sans-serif;
+  color: #5C5C5C;
+  flex-direction:column;
 }
 
-
-.titulo{
-    position: absolute;
-    width: 264px;
-    height: 49px;
-    left: 24px;
-    top: 50px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 49px;
-    letter-spacing: -0.05em;
-    color: #808F87;
-
+form {
+  width: 400px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  background-color:white;
+  margin-top: 220px;
 }
 
-h5{
-    position: absolute;
-    width: 264px;
-    height: 19px;
-    left: 24px;
-    top: 99px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-    color: rgba(0, 0, 0, 0.6);
-    
+label {
+  font-weight: bold;
 }
 
-.nombre{
-    position: absolute;
-    width: 264px;
-    height: 19px;
-    left: 24px;
-    top: 156px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-    color: #9B7E46;
+input[type="email"],
+input[type="password"],
+input[type="name"] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.correo{
-    position: absolute;
-    width: 141px;
-    height: 19px;
-    left: 24px;
-    top: 256px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-    color: #9B7E46;
+.login{
+  width: 100%;
+  background-color: #AFD0BF;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #888888;
 }
 
-.contra{
-    position: absolute;
-    width: 89px;
-    height: 19px;
-    left: 24px;
-    top: 356px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-    color: #9B7E46;
-}
-
-#casillero-nombre{
-    position: absolute;
-    width: 291px;
-    height: 42px;
-    left: 24px;
-    top: 183px;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-}
-
-#casillero-correo{
-    position: absolute;
-    width: 291px;
-    height: 42px;
-    left: 24px;
-    top: 283px;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-}
-
-#casillero-contra{
-    position: absolute;
-    width: 291px;
-    height: 42px;
-    left: 24px;
-    top: 383px;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-}
-
-.registrate{
-   position: absolute;
-    width: 300px;
-    height: 46px;
-    left: 30px;
-    top: 471px;
-    background: #AFD0BF;
-    border-radius: 10px;
-}
-
-.o{
-    width: 11px;
-    height: 17px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: -0.01em;
-    color: rgba(0, 0, 0, 0.6);
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
-
-.recordatorio{
-    position: absolute;
-    width: 232px;
-    height: 19px;
-    left: 75px;
-    top: 791px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-    color: rgba(0, 0, 0, 0.6)
+.login:hover {
+  background-color: #86a093;
 }
 
 .facebook{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 17px 49px;
-    gap: 18px;
-    position: absolute;
-    width: 311px;
-    height: 45px;
-    left: 24px;
-    top: 651px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+  background-color: #1877F2;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #888888;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.facebook:hover {
+  background-color: #1052a8;
 }
 
 .google{
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #9b7e46;
-    font-family: 'Inter', sans-serif;
-    color: #5C5C5C;
-  }
-  
-  form {
-    width: 400px;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    background-color:white;
-  }
+  width: 100%;
+  background-color: white;
+  color: #5C5C5C;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #888888;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
 
-  .subtitulo {
-    color: #afd0bf
-  }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  input[type="email"],
-  input[type="password"],
-  input[type="name"] {
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .login{
-    width: 100%;
-    background-color: #AFD0BF;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px #888888;
-  }
-  
-  .login:hover {
-    background-color: #86a093;
-  }
+.google:hover {
+  background-color: rgb(177, 177, 177);
+}
 
-  .facebook{
-    width: 100%;
-    background-color: #1877F2;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px #888888;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-  }
-  
-  .facebook:hover {
-    background-color: #1052a8;
-  }
-  
-  .google{
-    width: 100%;
-    background-color: white;
-    color: #5C5C5C;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px #888888;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-  }
-
-  .google:hover {
-    background-color: rgb(177, 177, 177);
-  }
-  .login-signup-now {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-  }
-  a {
-    color: blue;
-    text-decoration: underline;
-    justify-content: center;
-    display: flex;
-  }
-  
+a {
+  color: blue;
+  text-decoration: underline;
+  justify-content: center;
+  display: flex;
+}
