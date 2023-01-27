@@ -10,7 +10,7 @@ body {
 }
 
 form {
-  width: 400px;
+  width: 80%;
   padding: 20px;
   border: 2px solid #ccc;
   border-radius: 10px;
@@ -19,7 +19,8 @@ form {
   justify-content: left;
   align-items: left;
   background-color:white;
-  margin-top: 220px;
+  margin-top: 500px;
+    max-width: 568px;
 }
 
 label {
