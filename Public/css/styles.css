@@ -8,6 +8,11 @@ body.home {
     background-repeat: no-repeat;
     background-color: #9B7E46;
 }
+footer {
+    position: absolute;
+    top: 747px;
+    margin: auto
+}
 
 .logo {
 width: 188px;
