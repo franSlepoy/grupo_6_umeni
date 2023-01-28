@@ -97,4 +97,10 @@ body {
     justify-content: center;
     display: flex;
   }
+
+  footer {
+    position: absolute;
+    top: 435px;
+    width: 300px;
+  }
   
