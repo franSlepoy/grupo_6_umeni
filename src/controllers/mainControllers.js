@@ -5,7 +5,8 @@ const mainControllers = {
     register: (req,res) => res.render(path.resolve(__dirname, "../views/users/register")),
     productDetails: (req,res) => res.render(path.resolve(__dirname, "../views/products/productDetails")),
     cart: (req,res) => res.render(path.resolve(__dirname, "../views/products/cart")),
-    create: (req,res) => res.render(path.resolve(__dirname, "../views/products/create"))
+    create: (req,res) => res.render(path.resolve(__dirname, "../views/products/create")),
+    edit: (req,res) => res.render(path.resolve(__dirname, "../views/products/edit"))
 }
 
 module.exports = mainControllers;
