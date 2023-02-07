@@ -6,8 +6,10 @@ const productsControllers = require("./controllers/productsControllers")
 const PORT = 3031;
 
 app.use(express.static('public'));
+app.set("view engine", "ejs");
+
 app.use("/", mainRoutes);
 app.use("/products", productsRoutes);
-app.set("view engine", "ejs")
+
 
 app.listen(PORT, ()=>console.log('Servidor corriendo en el puerto 3031'));

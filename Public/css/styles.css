@@ -11,7 +11,8 @@ body.home {
 footer {
     position: absolute;
     top: 747px;
-    margin: auto
+    margin: auto;
+    display: flex;
 }
 
 .logo {
@@ -19,7 +20,7 @@ width: 188px;
 height: 188px;
 position: absolute;
 top: 40%;
-left: 50%;
+left: 45%;
 transform: translate(-50%, -50%);
 
 }
@@ -29,7 +30,7 @@ transform: translate(-50%, -50%);
     font-size: 50px;
     color: #808F87;
     position: absolute;
-    left: 78%;
+    left: 68%;
     top: 5%;
 }
 
@@ -47,16 +48,12 @@ button {
 }
 
 .redes {
-     top: 80%;
-     left: 8%;
-     position: absolute;
-     width: 80px;
-     top: 600px;
+     margin-top: 5px;
+     
      transition: all 3s;
 }
 .contacto {
-    top: 87%;
-    left: 8%;
+    
     
 }
 .carrito-de-compras {
