@@ -6,7 +6,11 @@ body.home {
     background-image: url(/images/fondo.png);
     background-position: center top ;
     background-repeat: no-repeat;
-    background-color: #9B7E46;
+    background-color: #9B7E46; 
+    background-image: url(/images/fondo.png);
+    background-size: cover;
+    background-position: center;
+   
 }
 footer {
     position: absolute;
@@ -35,7 +39,7 @@ transform: translate(-50%, -50%);
 }
 
 button {
-    width: 100%;
+    
     background-color: #AFD0BF;
     color: white;
     padding: 14px 20px;
@@ -46,16 +50,24 @@ button {
     box-shadow: 2px 2px 5px #888888;
    
 }
-
 .redes {
-     margin-top: 5px;
-     
-     transition: all 3s;
+    width: 80px;
+    position: absolute;
+    top: 600px;
+    left: 17%;
+    transition: all 3s;
 }
 .contacto {
+    width: 80px;
+    position: absolute;
+       top: 600px;
+       left: 60%;
+    transition: all 3s;  
+  }
+
+
     
-    
-}
+
 .carrito-de-compras {
     display: none
 }
@@ -116,13 +128,7 @@ nav {
         transform: translate(-50%, -50%);
         color: #060606;
     }
-  .redes {
-        width: 80px;
-        position: absolute;
-        top: 600px;
-        left: 30%;
-        transition: all 3s;
-}
+  
    .redes:hover {
     
         color: #E2EFDE;
@@ -134,13 +140,7 @@ nav {
     
 
    }
-   .contacto {
-     width: 80px;
-     position: absolute;
-        top: 600px;
-        left: 60%;
-     transition: all 3s;  
-   }
+   
    
    .contacto:hover {
     
