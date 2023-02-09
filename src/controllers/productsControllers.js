@@ -13,12 +13,12 @@ const productsControllers = {
     
 	// Detail - Detail from one product
 	detail: (req, res) => {
-		// Do the magic
+		
 	},
 
 	// Create - Form to create
 	create: (req, res) => {
-		// Do the magic
+		return res.render("productdetail")
 	},
 	
 	// Create -  Method to store
