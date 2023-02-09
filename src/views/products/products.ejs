@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>productos aca</h1>
+    <% if (locals.products){ %>
+        <% for (let i = 0; i < products.length; i++){ %>
+          <%= products[i].nombre_artista %>
+          <% } %>
+          <% } %>
+
 </body>
 </html>
