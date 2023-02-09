@@ -3,13 +3,8 @@
     font-family: inter;
 }
 body.home {
-    background-image: url(/images/fondo.png);
-    background-position: center top ;
-    background-repeat: no-repeat;
-    background-color: #9B7E46; 
-    background-image: url(/images/fondo.png);
-    background-size: cover;
-    background-position: center;
+  
+   
    
 }
 footer {
