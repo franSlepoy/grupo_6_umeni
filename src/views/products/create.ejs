@@ -14,18 +14,18 @@
     <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<form>
+<form method="post" action="/productsRoutes">
   <h1>Creá un producto</h1>
   <h4 class=subtitulo>Llená la información requerida</h4>
   <br>
   <label for="name">Título de la obra:</label>
-  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="prodname" required>
+  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="titulo_obra" required>
   <br>
   <label for="description">Descripción:</label>
-  <input type="name" placeholder="Ingresá la descripción del mismo" id="description" name="description" required>
+  <input type="name" placeholder="Ingresá la descripción del mismo" id="description" name="descripcion" required>
   <br>
   <label for="prod_img">Imagen de la obra:</label>
-  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="prod_img" accept=".jpg" multiple required>
+  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="imagen" accept=".jpg" multiple required>
   <br>
   <legend>Categoría</legend>
   <div class="contcheckbox">
@@ -39,20 +39,11 @@
           <input id="catint" type="checkbox" name="catint" value="fotografia">Fotografía
       </label>
   </div>
-  <div class="contcheckbox">
-    <br>
-    <legend>Colores</legend>
-    <label>
-        <input id="colors" type="checkbox" name="colors" value="frios" checked>Fríos
-    </label>
-    <label>
-        <input id="colors" type="checkbox" name="colors" value="calidos">Cálidos
-    </label>
-</div>
+  
 <br>
 <br>
 <label for="price">Precio:</label>
-<input type="number" placeholder="Ingresá el precio de la obra" id="price" name="price" required>
+<input type="number" placeholder="Ingresá el precio de la obra" id="price" name="precio" required>
 <br>
   <br>
     <button class="login" type="submit">Enviar</button>

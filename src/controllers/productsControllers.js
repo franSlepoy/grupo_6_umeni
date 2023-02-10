@@ -1,3 +1,4 @@
+const { response } = require("express");
 const fs = require("fs");
 const path = require("path");
 
@@ -18,12 +19,18 @@ const productsControllers = {
 
 	// Create - Form to create
 	create: (req, res) => {
-		return res.render("productdetail")
+		return res.render(path.resolve(__dirname, "../views/products/create"))
 	},
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		// Do the magic
+		let obra = {
+			titulo: req.body.titulo_obra ,
+			nombreArtista: req.body.nombre_artista,
+			imagen: req.body.imagen
+        }
+		//res.send(obra)
+		res.redirect("/home")
 	},
 
 	// Update - Form to edit
