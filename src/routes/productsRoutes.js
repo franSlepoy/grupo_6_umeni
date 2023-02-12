@@ -11,10 +11,10 @@ router.post("/", productsControllers.store);
 //Detalle de producto
 router.get("/:id/", productsControllers.detail);
 //editar un producto
-router.get("/:id/edit", productsControllers.edit);
+router.get("/edit/:id", productsControllers.edit);
 router.put("/:id", productsControllers.update);
 //Eliminar un producto
-router.delete("/:id", productsControllers.destroy);
+router.delete("/delete/:id", productsControllers.destroy);
 
 
 module.exports = router;

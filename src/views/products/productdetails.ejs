@@ -87,6 +87,12 @@
                 <i class="fas fa-shopping-cart"></i>
                 <p class="addtocarttxt">Agregar al carrito</p>
         </div>
+        <div class="eliminar">
+            <a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                <button type="submit" class="action-button delete">ELIMINAR</button>
+            </form>
+        </div>
     </div>
     <footer>
         <%- include('../partials/footer.ejs') %>

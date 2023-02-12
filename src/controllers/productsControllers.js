@@ -35,16 +35,27 @@ const productsControllers = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
-		// Do the magic
+		const id = req.params.id;
+		const product = products.find(product => product.id == id);
+		return res.render("edit", { product });
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		// Do the magic
+		const id = req.params.id;
+		
+		const product = {
+			id,
+			...req.body,
+			image: req.file?.filename ? req.file.filename : "imagen.png"
+		}
+		guardarProducto(product)
+		return res.redirect("/products");
 	},
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
-		// Do the magic
+		eliminarProducto(req.params.id);
+		return res.redirect("/productdetails");
 	}
 
 }
