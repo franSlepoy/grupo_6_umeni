@@ -8,159 +8,19 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
 }
-
-h3{
-    font-size: 24px;
+h1 {
+    font-size: 25px;
+    color: rgb(123, 123, 131);
 }
-
-p{
-    font-size: 12px;
-}
-
-div.shop-all,
-div.offers{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.price{
-    font-size: 18px;
-    width: 30%;
-}
-
-.discount{
-    width: 70%;
-}
-
-.discount,
-.description{
-    font-size: 16px;
-    font-weight: normal;
-}
-
-h3,
-.description{
-    color: #666;
-}
-
-.description{
-    display: none;
-    margin-top: 20px;
-}
-
-main{
-    width: 90%;
-    margin: 0 auto;
-}
-
-main section article{
-    background-color: #fff;    
-    margin: 10px 0px;
-}
-
-main section article img{
-    width: 100%;
-    object-fit: cover;
-}
-
-main section article i,
-.discount{
-    color: #9b7e46;
-}
-
-main section article i{
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #9b7e46;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-}
-
-main section h3{
-    margin: 20px 0px;
-}
-
-article div.main-article{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    border-top: 1px solid #ebebeb;
-    position: relative;
-    padding: 15px;
-}
-
-main form{
-    top:300px;
-}
-    
-.container{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-main section article:hover{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-
-main section article:hover .description{
-    display:block;
-}
-
-main section article:hover .fa-truck{
-    transform: rotate(-0.25turn);
-    }
-
-main section div.products{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-main section div.products article{
-    width: 45%;
-}
-
-.price,
-.discount{
-    width: 50%;
-}
-
-.info-slide h2 {
-    color: #4b4b4b;
+h2 {
     font-size: 20px;
-    font-weight: 500;
-    line-height: 1.4;
-    margin: 16px 0 0;
+    color: rgba(0, 0, 2, 0.7);
 }
-.info-slide p {
-    color: #999;
-    font-size: 15px;
-    line-height: 1.2;
-    margin: 4px 0 10px;
+p {
+    font-size: 20px;
+    color: rgb(123, 123, 131, 0.8);
 }
-.info-slide>.img-container {
-    height: 55px;
-}
-@media (min-width: 361px){
-    main section article .description{
-        display:none;
-    }
-
-
-@media (min-width: 769px){
-    main section div.products article{
-        width: 22%;
-    }
+article{
+    border: 4px solid;
 }
 
-}
