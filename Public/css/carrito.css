@@ -1,0 +1,178 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: inter;
+    
+}
+
+.top-header{
+    padding: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+h2{
+    font-size: 2em;
+    font-weight: bolder;
+    position: absolute;
+    left: 40%;
+    color: #808F87;
+}
+
+.fa-arrow-left,
+.fa-shopping-cart{
+    font-size: 25px;
+    color: #808F87;
+}
+
+.umeni{
+    min-width: 3em;
+    max-width: 3em;
+    position: absolute;
+    left: 90px;
+    top: 40px;
+}
+
+section article{
+    position: relative;
+    margin-top: 5px;
+    background-color: #E2EFDE;
+    border-radius: 10px;
+    padding: 8px;  
+}
+
+article,
+.imagen,
+.info{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 5em;
+    justify-content: center;
+}
+
+section article .imagen{
+    object-fit: cover;
+    height: 60px;
+    width: 60px;   
+}
+
+.info{
+    margin-left: 20px;
+}
+
+.precio{
+    margin: 8px;
+    font-size: 100%;
+    color: #9B7E46;
+    font-weight: bolder;
+}
+
+.eliminar{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: rgb(151, 6, 6);
+}
+
+.cantidad{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-size: 20px;
+    color: #808F87;
+}
+
+.cuantia{
+    position: relative;
+    bottom: 3.5px;
+    width: 20px;
+    border-radius: 4px;
+    background-color: #E2EFDE;
+    border: 2.3px solid #808F87;
+}
+
+.descuento{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    background-color: #E2EFDE;
+    border: none;
+    height: 3em;
+    width: 70%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.subtotal,
+.iva,
+.envio,
+.total{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 24px;
+}
+
+
+input[type="submit"]{
+    display: block;
+    width: 60%;
+    height: 3em;
+    font-size: 1.1rem;
+    background-color:#AFD0BF;
+    border: none;
+    margin: 1em auto;
+    color: #fff;
+    border-radius: 10px;
+}
+
+h3{
+    color:#808F87;
+}
+
+h5{
+    color:#9B7E46;
+}
+
+
+
+@media (min-width: 768px){
+        body {
+            background-color: #9B7E46;
+        }
+        .contenedor {
+            width: 768px;
+            margin: auto;
+            border: #9B7E46 solid 2px;
+            background-color: #9B7E46;
+            background-color: white;
+        }
+        i {
+            transition: all 3s;
+        }
+        i:hover {
+            color: #9B7E46;
+            text-shadow: 10px 10px 50px #F4B266;
+            font-size: 30px;
+        }
+        
+        input {
+            transition: all 3s;
+            
+        }
+        input:hover {
+            color: #E2EFDE;
+            background-color:#86A093;
+            border-radius: 20px;
+            box-shadow: 10px 10px 50px #808F87 ;
+            
+        }
+}

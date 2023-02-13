@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Umeni - Detalle de Producto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/umeni.jpeg">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
+</head>
+<header>
+    <%- include('../partials/header.ejs') %>
+</header>
+
+<body>
+    <div class="contenedor">
+<header>
+</header>
+<nav>
+    <div class="cont">
+        <div class="child">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="child">
+            <h2 class="typogray">Detalles</h2>
+        </div>
+        <div class="child">
+            <i class="fas fa-bell"></i>
+        </div>
+    </div>
+</nav>
+
+    <div class="contimg">
+        <% if(selectedProduct){%>
+            <% const myJsonId = JSON.stringify(selectedProduct.id)%>
+            <% console.log(myJsonId) %>
+            <% routeImg = "/images/obra" + myJsonId + ".jpeg"%>
+            <img class="img1" src=<%=routeImg%> alt=String(selectedProduct.titulo_obra)>
+        <%}else{%>
+            <h1> Producto no encontrado </h1>
+        <%}%>
+    </div> 
+    <div class="ratingcont"> 
+        <div class="rating titulosdp">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+        </div>
+        <div class="ratingtxtcont">
+            <p class="ratingtxt">4/5 (76 votos)</p>
+        </div>
+    </div>
+    <p class="descripcionobra">
+        Título: "Naturaleza al borde del abismo"<br>
+        <br>
+        Artista: Max Gomez Canle<br>
+        <br>
+        Precio: 2020<br>
+        <br>
+        Técnica: Oleo sobre lienzo <br>
+        <br>
+        Edición variada (cada obra intervenida por el artista de manera distinta)<br>
+        Obra numerada y firmada<br>
+        Con tintas de máxima resistencia a rayos UV,<br> garantizando la estabilidad de los colores por más de 100 años<br>
+        Con Certificado de Autenticidad<br>
+        Con cuño de editor    
+    </p>
+    <div class="tamaño">
+        <p class="titulosdp">Tamaño de la foto</h2>
+    </div>
+    <div class="contsml">
+        <div class="childsml">
+            <p class="textsml">S</p>
+        </div>
+        <div class="childsml">
+            <p class="textsml">M</p>
+        </div>
+        <div class="childsml">
+            <p class="textsml">L</p>   
+        </div>
+    </div>
+    <div class="agregarcarrito">
+        <div class="precio">
+            AR$9790
+        </div>
+        <div class="cart">
+            <button type="button" class="addtocart">
+                <i class="fas fa-shopping-cart"></i>
+                <p class="addtocarttxt">Agregar al carrito</p>
+        </div>
+    </div>
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+</div>
+</body>
+
+</html>

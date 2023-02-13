@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #9b7e46;
+    font-family: 'Inter', sans-serif;
+    color: #5C5C5C;
+    flex-direction:column;
+  }
+  
+  form {
+    width: 80%;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    background-color:white;
+    margin-top: 408px;
+    max-width: 568px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .login{
+    width: 100%;
+    background-color: #AFD0BF;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #888888;
+  }
+  
+  .login:hover {
+    background-color: #86a093;
+  }
+
+  .facebook{
+    width: 100%;
+    background-color: #1877F2;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #888888;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  .facebook:hover {
+    background-color: #1052a8;
+  }
+  
+  .google{
+    width: 100%;
+    background-color: white;
+    color: #5C5C5C;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #888888;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+
+  .google:hover {
+    background-color: rgb(177, 177, 177);
+  }
+
+  a {
+    color: blue;
+    text-decoration: underline;
+    justify-content: center;
+    display: flex;
+  }
+  

@@ -1,0 +1,155 @@
+* {
+    box-sizing: content-box;
+    font-family: inter;
+}
+body.home {
+  
+   
+   
+}
+footer {
+    position: absolute;
+    top: 747px;
+    margin: auto;
+    display: flex;
+}
+
+.logo {
+width: 188px;
+height: 188px;
+position: absolute;
+top: 40%;
+left: 45%;
+transform: translate(-50%, -50%);
+
+}
+.hamburger-buttom {
+    
+    z-index: 2;
+    font-size: 50px;
+    color: #808F87;
+    position: absolute;
+    left: 68%;
+    top: 5%;
+}
+
+button {
+    
+    background-color: #AFD0BF;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #888888;
+   
+}
+.redes {
+    width: 80px;
+    position: absolute;
+    top: 600px;
+    left: 17%;
+    transition: all 3s;
+}
+.contacto {
+    width: 80px;
+    position: absolute;
+       top: 600px;
+       left: 60%;
+    transition: all 3s;  
+  }
+
+
+    
+
+.carrito-de-compras {
+    display: none
+}
+.user {
+    display: none;
+}
+nav {
+    display: none;
+}
+
+@media (min-width: 768px){
+    .hamburger-buttom{
+        display: none;
+    }
+   
+    nav {
+        display: inline-block;
+        position: absolute;
+        top: 6%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+    a.nav {
+        color: #5C5C5C;
+        text-decoration: none;
+        font-size: 30px;
+        padding: 5px;
+        margin: 10px;
+    }
+
+    .carrito-de-compras {
+       display: inline-block;
+        position: absolute;
+        top: 53%;
+        left: 115%;
+        transform: translate(-50%, -50%);
+        color: #060606;
+    }
+    i {
+        transition: all 3s;
+    }
+    i:hover {
+        color: #9B7E46;
+        text-shadow: 10px 10px 50px #F4B266;
+        font-size: 20px;
+    }
+    .fa-user {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 105%;
+        transform: translate(-50%, -50%);
+        color: #060606;
+    }
+  
+   .redes:hover {
+    
+        color: #E2EFDE;
+        background-color:#86A093;
+        border-radius: 20px;
+        box-shadow: 10px 10px 50px #808F87 ;
+        
+    }
+    
+
+   }
+   
+   
+   .contacto:hover {
+    
+        color: #E2EFDE;
+        background-color:#86A093;
+        border-radius: 20px;
+        box-shadow: 10px 10px 50px #808F87 ;
+}
+a.nav {
+    transition: all 3s;
+}
+a:hover {
+    color: #9B7E46;
+    text-shadow: 10px 10px 50px #F4B266
+}
+
+

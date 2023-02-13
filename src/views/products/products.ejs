@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenidxs a MercadoLiebre</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="css/products.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+    </head>
+    <body>
+        <% /* %>
+        <% if (locals.products){ %>
+            <% for (let i = 0; i < products.length; i++){ %>
+                <section class="product-box">
+                    <h1> Titulo de la obra:<%= products[i].titulo_obra %></h1>
+                    <h1> Nomre del Atrista: <%= products[i].nombre_artista %></h1>
+                    <h1> Categoria: <%= products[i].categoria %></h1>
+                    <h1> Precio: <%= products[i].precio %></h1>
+                    <h1> Imagen: <%= products[i].imagen %></h1>
+               
+              
+              <% } %>
+              <% } %>
+                 </section>
+        <% */ %>
+        <header>
+            <%- include('../partials/header.ejs') %>
+        </header>
+        <main>
+            <section class="shop-all">
+                <h3>Todas las obras</h3>
+                <div class="products">
+                    <article>
+                        <img height="242" width="242" src="../images/obra1.jpeg" alt="Obra 1" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$6.770</p>
+                            <p class="discount">40% off</p>
+                            <h4 class="description">Descripción Obra 1</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img height="242" width="242" src="../images/obra2.jpeg" alt="Obra 2" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$230.000</p>
+                            <p class="discount">20% off</p>
+                            <h4 class="description">Descripción Obra 2</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img height="242" width="242" src="../images/obra3.jpeg" alt="Obra 3" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$70.500</p>
+                            <p class="discount">10% off</p>
+                            <h4 class="description">Descripción Obra 3</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img height="242" width="242" src="../images/obra4.jpeg" alt="Obra 4" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$23.200</p>
+                            <p class="discount">5% off</p>
+                            <h4 class="description">Descripción Obra 4</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img height="242" width="242" src="../images/obra5.jpeg" alt="Obra 5" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$6.770</p>
+                            <p class="discount">40% off</p>
+                            <h4 class="description">Descripción Obra 5</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img height="242" width="242" src="../images/obra6.jpeg" alt="Obra 6" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$230.000</p>
+                            <p class="discount">20% off</p>
+                            <h4 class="description">Descripción Obra 6</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img height="242" width="242" src="../images/obra7.jpeg" alt="Obra 7" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$70.500</p>
+                            <p class="discount">10% off</p>
+                        <h4 class="description">Descripción Obra 7</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img height="242" width="242" src="../images/obra8.jpg" alt="Obra 8" class="product_img">
+                        <div class="main-article">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$23.200</p>
+                            <p class="discount">5% off</p>
+                            <h4 class="description">Descripción Obra 8</h4>
+                        </div>
+                    </article>
+                </div>  
+            </section>
+        
+    </body>
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+</html>
