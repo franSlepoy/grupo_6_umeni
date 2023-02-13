@@ -9,7 +9,7 @@ router.get("/create", productsControllers.create);
 //a donde se envia el producto
 router.post("/", productsControllers.store);
 //Detalle de producto
-router.get("/:id/", productsControllers.detail);
+router.get("/productdetails/:id", productsControllers.productDetails);
 //editar un producto
 router.get("/edit/:id", productsControllers.edit);
 router.put("/:id", productsControllers.update);

@@ -13,9 +13,10 @@ const productsControllers = {
     },
     
 	// Detail - Detail from one product
-	detail: (req, res) => {
-		
-	},
+	productDetails: (req,res) => {
+		idProd = req.params.id
+		const selectedProduct = products.find(product=>product.id == idProd)
+		res.render(path.resolve(__dirname, "../views/products/productDetails"),{selectedProduct: selectedProduct})},
 
 	// Create - Form to create
 	create: (req, res) => {
