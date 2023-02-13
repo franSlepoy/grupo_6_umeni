@@ -8,6 +8,7 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
 }
+<<<<<<< HEAD
 
 h3{
     font-size: 24px;
@@ -164,3 +165,21 @@ main section div.products article{
 }
 
 }
+=======
+h1 {
+    font-size: 25px;
+    color: rgb(123, 123, 131);
+}
+h2 {
+    font-size: 20px;
+    color: rgba(0, 0, 2, 0.7);
+}
+p {
+    font-size: 20px;
+    color: rgb(123, 123, 131, 0.8);
+}
+article{
+    border: 4px solid;
+}
+
+>>>>>>> 6f90a39a738ee748408f829d758f1cbf77f23f90
