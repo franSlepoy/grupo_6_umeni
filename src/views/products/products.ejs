@@ -20,19 +20,18 @@
             <section class="shop-all">
                 <h3>Todas las obras</h3>
                 <div class="products">
-                    
-
-                            <article>
-                                <% if (locals.products){ %>
-                                    <% for (let i = 0; i < products.length; i++){ %>
-                              <div class="main-article">
-                                <h1 class="titulo"> Titulo de la obra:<%= products[i].titulo_obra %></h1>
-                                <h2 class="nombre-artista"> Nomre del Atrista: <%= products[i].nombre_artista %></h2>
-                                <h2 class="categoria"> Categoria: <%= products[i].categoria %></h2>
-                                <p class="precio">Precio: <%= products[i].precio %></p>
-                                <img src="<%= products[i].imagen %>" alt="" height="242" width="242"> 
+                    <article>
+                       <% if (locals.products){ %>
+                      <% for (let i = 0; i < products.length; i++){ %>
+                        <div class="main-article">
+                        <h1 class="titulo"> Titulo de la obra:<%= products[i].titulo_obra %></h1>
+                        <h2 class="nombre-artista"> Nomre del Atrista: <%= products[i].nombre_artista %></h2>
+                        <h2 class="categoria"> Categoria: <%= products[i].categoria %></h2>
+                        <p class="precio">Precio: <%= products[i].precio %></p>
+                        <img src="<%= products[i].imagen %>" alt="" height="242" width="242"> 
                           <% } %>
                           <% } %>
+                             </div>
                              </div>
                         </article>
                     </section>

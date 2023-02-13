@@ -26,7 +26,7 @@
 "nombre_artista":"Honey",
 "apellido_artista":"Norvel",
 "titulo_obra":"Pledge This!","categoria":"Comedy",
-"imagen":"../images/obra2.jpeg",
+"imagen":"../images/obra5.png",
 "precio":49272798},
 
 {"id":5,
@@ -34,6 +34,6 @@
 "apellido_artista":"Yanshin",
 "titulo_obra":"Beijing Taxi",
 "categoria":"Documentary",
-"imagen":"../images/obra3.jpeg",
+"imagen":"../images/obra6png.jpeg",
 "precio":11928233}]
 

@@ -22,5 +22,10 @@ p {
 }
 article{
     border: 4px solid;
+    
+}
+.products {
+    display: flex;
+    flex-direction: row;
 }
 
