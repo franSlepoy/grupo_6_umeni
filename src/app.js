@@ -8,6 +8,8 @@ const PORT = 3031;
 
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
 app.set("view engine", "ejs");
 
 app.use("/", mainRoutes);

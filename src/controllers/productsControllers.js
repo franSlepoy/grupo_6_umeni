@@ -30,8 +30,9 @@ const productsControllers = {
 			nombreArtista: req.body.nombre_artista,
 			imagen: req.body.imagen
         }
+		console.log(obra)
 		//res.send(obra)
-		res.redirect("/home")
+		res.redirect("/products")
 	},
 
 	// Update - Form to edit
