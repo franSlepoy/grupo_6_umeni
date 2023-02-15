@@ -3,7 +3,7 @@
 "apellido_artista":"Tubbs",
 "titulo_obra":"Ca$h",
 "categoria":"Crime|Thriller",
-"imagen":"../images/obra2.jpeg",
+"imagen":"../images/obra1.jpeg",
 "precio":49374783},
 
 {"id":2,
@@ -11,7 +11,7 @@
 "apellido_artista":"Hawgood",
 "titulo_obra":"Recipe for Love",
 "categoria":"Romance",
-"imagen":"../images/obra3.jpeg",
+"imagen":"../images/obra2.jpeg",
 "precio":21786503},
 
 {"id":3,
@@ -19,14 +19,14 @@
 "apellido_artista":"Bernette",
 "titulo_obra":"Common Wealth (Comunidad, La)",
 "categoria":"Comedy|Thriller",
-"imagen":"../images/obra4.jpeg",
+"imagen":"../images/obra3.jpeg",
 "precio":95182684},
 
 {"id":4,
 "nombre_artista":"Honey",
 "apellido_artista":"Norvel",
 "titulo_obra":"Pledge This!","categoria":"Comedy",
-"imagen":"../images/obra5.png",
+"imagen":"../images/obra4.jpeg",
 "precio":49272798},
 
 {"id":5,
@@ -34,6 +34,32 @@
 "apellido_artista":"Yanshin",
 "titulo_obra":"Beijing Taxi",
 "categoria":"Documentary",
-"imagen":"../images/obra6png.jpeg",
-"precio":11928233}]
+"imagen":"../images/obra5.jpeg",
+"precio":11928233},
+
+{"id":6,
+"nombre_artista":"Agatha",
+"apellido_artista":"Yanshin",
+"titulo_obra":"Beijing Taxi",
+"categoria":"Documentary",
+"imagen":"../images/obra6.jpeg",
+"precio":11928233},
+
+{"id":7,
+"nombre_artista":"Agatha",
+"apellido_artista":"Yanshin",
+"titulo_obra":"Beijing Taxi",
+"categoria":"Documentary",
+"imagen":"../images/obra7.jpeg",
+"precio":11928233},
+
+{"id":8,
+"nombre_artista":"Agatha",
+"apellido_artista":"Yanshin",
+"titulo_obra":"Beijing Taxi",
+"categoria":"Documentary",
+"imagen":"../images/obra8.jpeg",
+"precio":11928233}
+
+]
 

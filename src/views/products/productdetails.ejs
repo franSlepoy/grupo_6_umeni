@@ -24,7 +24,7 @@
     <div class="contenedor">
 <header>
 </header>
-<nav>
+<!-- <nav>
     <div class="cont">
         <div class="child">
             <i class="fas fa-arrow-left"></i>
@@ -36,7 +36,7 @@
             <i class="fas fa-bell"></i>
         </div>
     </div>
-</nav>
+</nav> -->
 
 <div class="contimg">
     <% if(selectedProduct){%>
@@ -94,13 +94,18 @@
                 <i class="fas fa-shopping-cart"></i>
                 <p class="addtocarttxt">Agregar al carrito</p>
         </div>
+        <div>
+            <form method="POST" action="/productsdetails/delete/<%= selectedProduct.id %>?_method=DELETE" style="display: inline-flex">
+                <button type="submit" class="action-button-delete">ELIMINAR</button>
+            </form>
+        </div>
     </div>
     <footer>
         <%- include('../partials/footer.ejs') %>
     </footer>
 </div>
 </body>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -201,6 +206,6 @@
         <%- include('../partials/footer.ejs') %>
     </footer>
 </div>
-</body>
+</body> -->
 
 </html>
