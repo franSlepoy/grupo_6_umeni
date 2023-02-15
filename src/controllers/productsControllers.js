@@ -57,9 +57,13 @@ const productsControllers = {
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
 		eliminarProducto(req.params.id);
-		return res.redirect("/productdetails");
+		return res.redirect("/products");
 	}
 
+}
+
+function getProductList(path) {
+	return JSON.parse(fs.readFileSync(path, 'utf-8'));
 }
 
 function eliminarProducto(id) {
