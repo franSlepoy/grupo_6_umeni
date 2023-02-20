@@ -57,22 +57,22 @@
         </div>
     </div>
     <p class="descripcionobra">
-        Título: "Naturaleza al borde del abismo"<br>
+        Título: <%=selectedProduct.titulo_obra%><br>
         <br>
-        Artista: Max Gomez Canle<br>
+        Artista: <%=selectedProduct.nombre_artista%> <%=selectedProduct.nombre_artista%><br>
         <br>
-        Precio: 2020<br>
-        <br>
+        <!-- Precio: <%=selectedProduct.precio%><br> -->
+        <!-- <br>
         Técnica: Oleo sobre lienzo <br>
         <br>
         Edición variada (cada obra intervenida por el artista de manera distinta)<br>
         Obra numerada y firmada<br>
         Con tintas de máxima resistencia a rayos UV,<br> garantizando la estabilidad de los colores por más de 100 años<br>
         Con Certificado de Autenticidad<br>
-        Con cuño de editor    
+        Con cuño de editor     -->
     </p>
     <div class="tamaño">
-        <p class="titulosdp">Tamaño de la foto</h2>
+        <p class="titulosdp">Tamaño de la obra</h2>
     </div>
     <div class="contsml">
         <div class="childsml">
@@ -87,7 +87,7 @@
     </div>
     <div class="agregarcarrito">
         <div class="precio">
-            AR$9790
+            Precio $ <%=selectedProduct.precio%>
         </div>
         <div class="cart">
             <button type="button" class="addtocart">

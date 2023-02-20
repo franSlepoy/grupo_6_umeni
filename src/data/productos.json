@@ -18,15 +18,6 @@
     "precio": 21786503
   },
   {
-    "id": 3,
-    "nombre_artista": "Chrisse",
-    "apellido_artista": "Bernette",
-    "titulo_obra": "Common Wealth (Comunidad, La)",
-    "categoria": "Comedy|Thriller",
-    "imagen": "../images/obra3.jpeg",
-    "precio": 95182684
-  },
-  {
     "id": 4,
     "nombre_artista": "Honey",
     "apellido_artista": "Norvel",
