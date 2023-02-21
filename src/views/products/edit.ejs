@@ -14,18 +14,23 @@
     <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<form> 
-  <h1>Editá tu producto</h1>
+  <% if(typeof product != "undefined") {%>
+<form action="/products/edit/<%= product.id%>" method="post"> 
+  <h1>Editándo la obra: <%= product.titulo_obra%>  </h1>
   <h4 class=subtitulo>Modificá la información suministrada</h4>
   <br>
   <label for="name">Título de la obra:</label>
-  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="prodname" required>
+  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="prodname" required value="<%= product.titulo_obra%>">
   <br>
-  <label for="description">Descripción:</label>
-  <input type="name" placeholder="Ingresá la descripción del mismo" id="description" name="description" required>
+  <label for="description">Nombre del Artista:</label>
+  <input type="name" placeholder="Ingresá nombre" id="nombre" name="nombre" required value="<%= product.nombre_artista%>">
+  <br>
+  <br>
+  <label for="description">Apellido del rtista:</label>
+  <input type="name" placeholder="Apellido del Artista" id="apellido" name="apellido" required value="<%= product.apellido_artista%>">
   <br>
   <label for="prod_img">Imagen de la obra:</label>
-  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="prod_img" accept=".jpg" multiple required>
+  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="prod_img" accept=".jpg" multiple required value="<%= product.imagen%>" 
   <br>
   <legend>Categoría</legend>
   <div class="contcheckbox">
@@ -41,14 +46,7 @@
   </div>
   <div class="contcheckbox">
     <br>
-    <legend>Colores</legend>
-    <label>
-        <input id="colors" type="checkbox" name="colors" value="frios" checked>Fríos
-    </label>
-    <label>
-        <input id="colors" type="checkbox" name="colors" value="calidos">Cálidos
-    </label>
-</div>
+    
 <br>
 <br>
 <label for="price">Precio:</label>
@@ -58,8 +56,10 @@
     <button class="login" type="submit">Enviar</button>
   <br>
 </form>
+<% } %>
+
+</body>
 <footer>
   <%- include('../partials/footer.ejs') %>
 </footer>
-</body>
 </html>
