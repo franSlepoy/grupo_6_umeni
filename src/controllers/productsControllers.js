@@ -25,15 +25,13 @@ const productsControllers = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		let ultimaObra = products.pop();
-		products.push(ultimaObra)
 		let nuevaObra = {
-			id: ultimaObra.id + 1 ,
+			id: products.length == 0? 1: products[products.length - 1].id + 1,
     nombre_artista: req.body.nombre_artista ,
     apellido_artista: req.body.apellido_artista ,
     titulo_obra: req.body.titulo_obra,
     categoria: req.body.categoria ,
-    imagen: req.body.filname ,
+    imagen: req.file.filename,
     precio: req.body.precio,
 	}
 	products.push(nuevaObra);

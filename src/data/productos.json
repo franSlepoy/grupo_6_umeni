@@ -1,114 +1,14 @@
 [
   {
     "id": 1,
-    "nombre_artista": "Gwenette",
-    "apellido_artista": "Tubbs",
-    "titulo_obra": "Ca$h",
-    "categoria": "Crime|Thriller",
-    "imagen": "../images/obra1.jpeg",
-    "precio": 49374783
-  },
-  {
-    "id": 2,
-    "nombre_artista": "Cammi",
-    "apellido_artista": "Hawgood",
-    "titulo_obra": "Recipe for Love",
-    "categoria": "Romance",
-    "imagen": "../images/obra2.jpeg",
-    "precio": 21786503
-  },
-  {
-    "id": 4,
-    "nombre_artista": "Honey",
-    "apellido_artista": "Norvel",
-    "titulo_obra": "Pledge This!",
-    "categoria": "Comedy",
-    "imagen": "../images/obra4.jpeg",
-    "precio": 49272798
-  },
-  {
-    "id": 5,
-    "nombre_artista": "Agatha",
-    "apellido_artista": "Yanshin",
-    "titulo_obra": "Beijing Taxi",
-    "categoria": "Documentary",
-    "imagen": "../images/obra5.jpeg",
-    "precio": 11928233
-  },
-  {
-    "id": 7,
-    "nombre_artista": "Agatha",
-    "apellido_artista": "Yanshin",
-    "titulo_obra": "Beijing Taxi",
-    "categoria": "Documentary",
-    "imagen": "../images/obra7.jpeg",
-    "precio": 11928233
-  },
-  {
-    "id": 8,
-    "nombre_artista": "Agatha",
-    "apellido_artista": "Yanshin",
-    "titulo_obra": "Beijing Taxi",
-    "categoria": "Documentary",
-    "imagen": "../images/obra8.jpeg",
-    "precio": 11928233
-  },
-  {
-    "id": 9,
-    "precio": "4555"
-  },
-  {
-    "id": 10,
-    "nombre_artista": "Un Artista",
-    "apellido_artista": "Con apellidp",
-    "titulo_obra": "Otra obra Nueva",
-    "categoria": "pintura",
-    "precio": "3333333"
-  },
-  {
-    "id": 11,
-    "nombre_artista": "IGLukrgw,kv",
-    "apellido_artista": "WUGILWR.w",
-    "titulo_obra": "Obra Digital",
+    "nombre_artista": "Artista 1",
+    "apellido_artista": "Apellido 1",
+    "titulo_obra": "Obra 1",
     "categoria": [
       "pintura",
       "fotografia"
     ],
-    "precio": "672647493"
-  },
-  {
-    "id": 12,
-    "nombre_artista": "IGLukrgw,kv",
-    "apellido_artista": "WUGILWR.w",
-    "titulo_obra": "Otra obra Nueva",
-    "categoria": "pintura",
-    "precio": "88888"
-  },
-  {
-    "id": 13
-  },
-  {
-    "id": 14,
-    "nombre_artista": "CDACa",
-    "apellido_artista": "a aA",
-    "titulo_obra": "dcdcAC",
-    "categoria": "pintura",
-    "precio": "4444"
-  },
-  {
-    "id": 15,
-    "nombre_artista": "Oink Oink producciones",
-    "apellido_artista": "Pepito Chanchon",
-    "titulo_obra": "Chanchito feliz",
-    "categoria": "fotografia",
-    "precio": "33"
-  },
-  {
-    "id": 16,
-    "nombre_artista": "aaaa",
-    "apellido_artista": "wwww",
-    "titulo_obra": "oooooo",
-    "categoria": "pintura",
-    "precio": "3212"
+    "imagen": "obra1677109745181.jpeg",
+    "precio": "333111"
   }
 ]
