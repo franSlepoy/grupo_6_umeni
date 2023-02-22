@@ -5,17 +5,28 @@ const productsControllers = require("../controllers/productsControllers");
 const multer = require("multer");
 
 const storage = multer.diskStorage({
-    destination: (req,file, cb) => {
-                const ruta = path.join(__dirname, "../../public/images");
-               cb(null, ruta)
+    destination: function (req, file, cb) {
+      cb(null, path.resolve(__dirname, "../../public/images"));
     },
-    filename: (req, file, cb) =>{
-      const newFilname = "img" + Date.now() + path.extname(file.originalname);
-      cb(null, newFilname)
+    filename: function (req, file, cb) {
+      cb(null, "obra" + Date.now()+path.extname(file.originalname))
     }
   })
   
-  const upload = multer({storage})
+  const upload = multer({ storage: storage })
+
+//const storage = multer.diskStorage({
+//    destination: (req,file, cb) => {
+//                const ruta = path.join(__dirname, "../../public/images");
+//               cb(null, ruta)
+//    },
+//    filename: (req, file, cb) =>{
+//      const newFilname = "img" + Date.now() + path.extname(file.originalname);
+//      cb(null, newFilname)
+//    }
+//  })
+  
+//  const upload = multer({storage})
 
 
 

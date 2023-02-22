@@ -102,5 +102,13 @@
     "titulo_obra": "Chanchito feliz",
     "categoria": "fotografia",
     "precio": "33"
+  },
+  {
+    "id": 16,
+    "nombre_artista": "aaaa",
+    "apellido_artista": "wwww",
+    "titulo_obra": "oooooo",
+    "categoria": "pintura",
+    "precio": "3212"
   }
 ]
