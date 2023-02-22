@@ -1,23 +1,21 @@
 const express = require("express");
 const router = express.Router();
+const path = require("path");
 const productsControllers = require("../controllers/productsControllers");
 const multer = require("multer");
 
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.resolve(__dirname, "../../public/images")) 
+    destination: (req,file, cb) => {
+                const ruta = path.join(__dirname, "../../public/images");
+                cb(null, ruta)
     },
-    filename: (req, file, cb) => {
-        //let fileName=`${Date.now()}_img${path.extname(file.originalname)}`
-        //cb(null, filename)
-        let extArray = file.mimetype.split("/");
-        let extension = extArray[extArray.length - 1];
-        cb(null, file.fieldname + '-' + Date.now()+ '.' +extension)
-        //cb(null, "obra" + Date.now()+path.extname(file.originalname) )
-        }
-})
-
-const uploadFile = multer({ storage });
+    filename: (req, file, cb) =>{
+      const newFilname = "img" + Date.now() + path.extname(file.originalname);
+      cb(null, newFilname)
+    }
+  })
+  
+  const upload = multer({storage})
 
 
 
@@ -28,7 +26,7 @@ router.get("/", productsControllers.products);
 // formulario crear un producto
 router.get("/create", productsControllers.create);
 //a donde se envia el producto creado
-router.post("/create", productsControllers.store);
+router.post("/create", upload.single("imagen"),  productsControllers.store);
 //Detalle de producto
 router.get("/productdetails/:id", productsControllers.productDetails);
 //editar un producto

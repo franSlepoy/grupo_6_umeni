@@ -83,5 +83,24 @@
     "titulo_obra": "Otra obra Nueva",
     "categoria": "pintura",
     "precio": "88888"
+  },
+  {
+    "id": 13
+  },
+  {
+    "id": 14,
+    "nombre_artista": "CDACa",
+    "apellido_artista": "a aA",
+    "titulo_obra": "dcdcAC",
+    "categoria": "pintura",
+    "precio": "4444"
+  },
+  {
+    "id": 15,
+    "nombre_artista": "Oink Oink producciones",
+    "apellido_artista": "Pepito Chanchon",
+    "titulo_obra": "Chanchito feliz",
+    "categoria": "fotografia",
+    "precio": "33"
   }
 ]
