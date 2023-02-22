@@ -75,5 +75,13 @@
       "fotografia"
     ],
     "precio": "672647493"
+  },
+  {
+    "id": 12,
+    "nombre_artista": "IGLukrgw,kv",
+    "apellido_artista": "WUGILWR.w",
+    "titulo_obra": "Otra obra Nueva",
+    "categoria": "pintura",
+    "precio": "88888"
   }
 ]
