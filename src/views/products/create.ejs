@@ -18,28 +18,36 @@
   <h1>Creá un producto</h1>
   <h4 class=subtitulo>Llená la información requerida</h4>
   <br>
+ 
+  
   <label for="name">Título de la obra:</label>
   <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="titulo_obra" required>
   <br>
-  <label for="description">Descripción:</label>
-  <input type="name" placeholder="Ingresá la descripción del mismo" id="description" name="descripcion" required>
+  <label for="description">Nombre del Artista:</label>
+  <input type="name" placeholder="Ingresá nombre" id="nombre" name="nombre_artista" required>
+  <br>
+  <br>
+  <label for="description">Apellido del rtista:</label>
+  <input type="name" placeholder="Apellido del Artista" id="apellido" name="apellido_artista" required >
   <br>
   <label for="prod_img">Imagen de la obra:</label>
-  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="imagen" accept=".jpg" multiple required>
+  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="prod_img" accept=".jpg" multiple required> 
   <br>
   <legend>Categoría</legend>
   <div class="contcheckbox">
       <label>
-          <input id="catint" type="checkbox" name="catint" value="pintura" checked>Pintura
+          <input id="catint" type="checkbox" name="categoria" value="pintura" checked>Pintura
       </label>
       <label>
-          <input id="catint" type="checkbox" name="catint" value="escultura">Escultura
+          <input id="catint" type="checkbox" name="categoria" value="escultura">Escultura
       </label>
       <label>
-          <input id="catint" type="checkbox" name="catint" value="fotografia">Fotografía
+          <input id="catint" type="checkbox" name="categoria" value="fotografia">Fotografía
       </label>
   </div>
-  
+  <div class="contcheckbox">
+    <br>
+    
 <br>
 <br>
 <label for="price">Precio:</label>

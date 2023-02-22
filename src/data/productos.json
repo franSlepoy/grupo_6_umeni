@@ -52,5 +52,28 @@
     "categoria": "Documentary",
     "imagen": "../images/obra8.jpeg",
     "precio": 11928233
+  },
+  {
+    "id": 9,
+    "precio": "4555"
+  },
+  {
+    "id": 10,
+    "nombre_artista": "Un Artista",
+    "apellido_artista": "Con apellidp",
+    "titulo_obra": "Otra obra Nueva",
+    "categoria": "pintura",
+    "precio": "3333333"
+  },
+  {
+    "id": 11,
+    "nombre_artista": "IGLukrgw,kv",
+    "apellido_artista": "WUGILWR.w",
+    "titulo_obra": "Obra Digital",
+    "categoria": [
+      "pintura",
+      "fotografia"
+    ],
+    "precio": "672647493"
   }
 ]

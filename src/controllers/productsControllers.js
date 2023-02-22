@@ -25,15 +25,24 @@ const productsControllers = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		let obra = {
-			titulo: req.body.titulo_obra ,
-			nombreArtista: req.body.nombre_artista,
-			imagen: req.body.imagen
-        }
-		console.log(obra)
-		//res.send(obra)
-		res.redirect("/products")
-	},
+		let ultimaObra = products.pop();
+		products.push(ultimaObra)
+		let nuevaObra = {
+			id: ultimaObra.id + 1 ,
+    nombre_artista: req.body.nombre_artista ,
+    apellido_artista: req.body.apellido_artista ,
+    titulo_obra: req.body.titulo_obra,
+    categoria: req.body.categoria ,
+    imagen: req.body.filname ,
+    precio: req.body.precio,
+	}
+	products.push(nuevaObra);
+	let nuevaObraGuardar = JSON.stringify(products,null,2);
+	fs.writeFileSync(path.resolve(__dirname, "../data/productos.json"), nuevaObraGuardar);
+	
+	res.redirect("/products");
+},
+	
 
 	// Update - Form to edit
 	edit: (req, res) => {
