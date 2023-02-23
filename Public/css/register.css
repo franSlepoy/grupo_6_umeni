@@ -98,3 +98,5 @@ a {
   justify-content: center;
   display: flex;
 }
+
+.text-danger { color: red}

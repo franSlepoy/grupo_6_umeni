@@ -19,7 +19,9 @@ const usersControllers = {
           if (resultValidation.errors.length > 0){
           return res.render(path.resolve(__dirname, "../views/users/register"), {
               errors: resultValidation.mapped(),
+              oldData: req.body
           })
      }
+     return res.send("Las validaciones se pasaron correctamente")
 }}
 module.exports = usersControllers;

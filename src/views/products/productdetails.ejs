@@ -40,9 +40,11 @@
 
 <div class="contimg">
     <% if(selectedProduct){%>
-        <% const myJsonId = JSON.stringify(selectedProduct.id)%>
-        <% console.log(myJsonId) %>
+        <% const myJsonId = JSON.stringify(selectedProduct.imagen)%>
+        <!-- <% console.log(myJsonId) %>
         <% routeImg = "/images/obra" + myJsonId + ".jpeg"%>
+        <img class="img1" src=<%=routeImg%> alt=String(selectedProduct.titulo_obra)> -->
+        <% routeImg = "/images/"+ myJsonId %>
         <img class="img1" src=<%=routeImg%> alt=String(selectedProduct.titulo_obra)>
     <%}else{%>
         <h1> Producto no encontrado </h1>
