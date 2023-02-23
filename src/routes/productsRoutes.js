@@ -12,26 +12,8 @@ const storage = multer.diskStorage({
       cb(null, "obra" + Date.now()+path.extname(file.originalname))
     }
   })
-  
+
   const upload = multer({ storage: storage })
-
-//const storage = multer.diskStorage({
-//    destination: (req,file, cb) => {
-//                const ruta = path.join(__dirname, "../../public/images");
-//               cb(null, ruta)
-//    },
-//    filename: (req, file, cb) =>{
-//      const newFilname = "img" + Date.now() + path.extname(file.originalname);
-//      cb(null, newFilname)
-//    }
-//  })
-  
-//  const upload = multer({storage})
-
-
-
-
-
 //mostrar productos
 router.get("/", productsControllers.products);
 // formulario crear un producto
