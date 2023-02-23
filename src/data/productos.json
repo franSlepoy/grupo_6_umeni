@@ -10,5 +10,23 @@
     ],
     "imagen": "obra1677109745181.jpeg",
     "precio": "333111"
+  },
+  {
+    "id": 2,
+    "nombre_artista": "Carmen",
+    "apellido_artista": "Villa",
+    "titulo_obra": "Monocopia",
+    "categoria": "pintura",
+    "imagen": "obra1677111315663.jpg",
+    "precio": "6654"
+  },
+  {
+    "id": 3,
+    "nombre_artista": "carmen",
+    "apellido_artista": "Marina",
+    "titulo_obra": "Monocopia 2",
+    "categoria": "pintura",
+    "imagen": "obra1677111362169.jpg",
+    "precio": "9877665"
   }
 ]
