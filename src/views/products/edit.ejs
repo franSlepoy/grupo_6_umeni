@@ -14,23 +14,23 @@
     <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <% if(typeof product != "undefined") {%>
-<form action="/products/edit/<%= product.id%>" method="post"> 
-  <h1>Editándo la obra: <%= product.titulo_obra%>  </h1>
+  
+<form action="/products/edit/<%= productEditar,id%>?_method=PUT" method="POST" enctype="mutipart/form-data"> 
+  <h1>Editándo la obra: <%= productEditar.titulo_obra%>  </h1>
   <h4 class=subtitulo>Modificá la información suministrada</h4>
   <br>
   <label for="name">Título de la obra:</label>
-  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="prodname" required value="<%= product.titulo_obra%>">
+  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="prodname" required value="<%= productEdita.titulo_obra%>">
   <br>
   <label for="description">Nombre del Artista:</label>
-  <input type="name" placeholder="Ingresá nombre" id="nombre" name="nombre" required value="<%= product.nombre_artista%>">
+  <input type="name" placeholder="Ingresá nombre" id="nombre" name="nombre" required value="<%= productEditar.nombre_artista%>">
   <br>
   <br>
   <label for="description">Apellido del rtista:</label>
-  <input type="name" placeholder="Apellido del Artista" id="apellido" name="apellido" required value="<%= product.apellido_artista%>">
+  <input type="name" placeholder="Apellido del Artista" id="apellido" name="apellido" required value="<%= productEditar.apellido_artista%>">
   <br>
   <label for="prod_img">Imagen de la obra:</label>
-  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="prod_img" accept=".jpg" multiple required value="<%= product.imagen%>" 
+  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="prod_img" accept=".jpg" multiple required value="<%= productEditar.imagen%>" 
   <br>
   <legend>Categoría</legend>
   <div class="contcheckbox">
@@ -50,13 +50,13 @@
 <br>
 <br>
 <label for="price">Precio:</label>
-<input type="number" placeholder="Ingresá el precio de la obra" id="price" name="price" required>
+<input type="number" placeholder="Ingresá el precio de la obra" id="price" name="price" required value="<%= productEditar.precio%>">
 <br>
   <br>
     <button class="login" type="submit">Enviar</button>
   <br>
 </form>
-<% } %>
+
 
 </body>
 <footer>

@@ -45,8 +45,8 @@ const productsControllers = {
 	// Update - Form to edit
 	edit: (req, res) => {
 		const id = req.params.id;
-		const product = products.find(product => product.id == id);
-		return res.render("edit", { product });
+		const productEditar = products.find(product => product.id == id);
+		res.render(path.resolve(__dirname, "../views/products/edit"), { productEditar });
 	},
 	// Update - Method to update
 	update: (req, res) => {
