@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/umeni.jpeg">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
+</head>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+<body>
+    <div class="container" style="margin-top: 40px;">
+        <div class="row">
+            <div class="col-md-3">
+                <h2> Hola <%= usuario.nombre_completo %> </h2>
+                <img src="/Public/images/avatars/<%= usuario.avatar %> ">
+                <br>
+                <br>
+                <div class="alert alert-success"> <%= usuario.email %> </div>
+            </div>
+        </div>
+    </div>
+
+	<%- include('../partials/footer.ejs') %>
+</body>
+</html>

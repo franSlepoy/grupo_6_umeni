@@ -1,10 +1,17 @@
 const express = require('express');
+const session = require('express-session');
 const app = express();
 const mainRoutes = require("./routes/mainRoutes");
 const productsRoutes = require("./routes/productsRoutes");
 const usersRoutes = require("./routes/usersRoutes")
 const methodOverride =  require('method-override');
 const PORT = 3031;
+
+app.use(session({
+    secret: "Super secreto",
+    resave: false,
+    saveUninitialized: false,
+}));
 
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}))
