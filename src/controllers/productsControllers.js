@@ -45,8 +45,8 @@ const productsControllers = {
 	// Update - Form to edit
 	edit: (req, res) => {
 		const id = req.params.id;
-		const productEditar = products.find(product => product.id == id);
-		res.render("edit", { productEditar });
+		const product = products.find(product => product.id == id);
+		res.render("edit", { product });
 	},
 	// Update - Method to update
 	update: (req, res) => {
@@ -55,7 +55,7 @@ const productsControllers = {
 		const product = {
 			id,
 			...req.body,
-			image: req.file?.filename ? req.file.filename : "imagen.png"
+			image: req.file?.filename ? req.file.filename : "logo_umeni.jpeg"
 		}
 		guardarProducto(product)
 		return res.redirect("/products");
