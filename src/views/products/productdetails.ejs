@@ -26,14 +26,9 @@
 <div class="contimg">
     <% if(selectedProduct){%>
         <article>
-            <% const myJsonId = JSON.stringify(selectedProduct.imagen)%>
-        <!-- <% console.log(myJsonId) %>
-        <% routeImg = "/images/obra" + myJsonId + ".jpeg"%>
-        <img class="img1" src=<%=routeImg%> alt=String(selectedProduct.titulo_obra)> -->
-        <% routeImg = "/images/"+ myJsonId %>
-        <img class="img1" src=<%=routeImg%> alt=String(selectedProduct.titulo_obra)>
+          
             
-        
+        <img src="/images/<%= selectedProduct.imagen %>" alt="">
             <div class="detalle-obra">
                 <h1 class="titulo-obra"> Artista: <%= selectedProduct.apellido_artista %></h1>
             <div class="precio-boton">
