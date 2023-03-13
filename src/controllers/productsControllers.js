@@ -72,6 +72,17 @@ const productsControllers = {
 function getProductList(path) {
 	return JSON.parse(fs.readFileSync(path, 'utf-8'));
 }
+function guardarProducto(productToStore){
+	const products = getProductList(productsFilePath);
+
+	const productList = products.map(prod => {
+		if(prod.id == productToStore.id){
+			return productToStore
+		}
+		return prod;
+	})
+	fs.writeFileSync(productsFilePath, JSON.stringify(productList,null,2))
+}
 
 function eliminarProducto(id) {
 	let products = getProductList(productsFilePath);
