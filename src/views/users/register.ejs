@@ -30,17 +30,17 @@
   <h1>Crea tu cuenta</h1>
   <h4 class=subtitulo>Llena la información requerida</h4>
   <br>
-  <label for="name">Nombre Completo:</label>
+  <label for="fullName">Nombre Completo:</label>
   <input 
-  type="name" 
+  type="fullName" 
   placeholder="Ingresa tu nombre completo" 
-  id="name" 
-  name="name"
-  value="<%=locals.oldData ? oldData.name : null %>"
+  id="fullName" 
+  name="fullName"
+  value="<%=locals.oldData ? oldData.fullName : null %>"
   <br>
-  <% if (locals.errors && errors.name) { %>
+  <% if (locals.errors && errors.fullName) { %>
     <div class="text-danger">
-      <%= errors.name.msg %>
+      <%= errors.fullName.msg %>
     </div>
   <% } %>
   <br>

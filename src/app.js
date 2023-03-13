@@ -21,6 +21,6 @@ app.use(methodOverride('_method'));
 
 app.use("/", mainRoutes);
 app.use("/products", productsRoutes);
-app.use("/users", usersRoutes)
+app.use("/user", usersRoutes)
 
 app.listen(PORT, ()=>console.log('Servidor corriendo en el puerto 3031'));

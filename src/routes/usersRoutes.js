@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const path = require("path")
+const path = require("path");
 
-const multer = require("multer")
+const multer = require("multer");
 
-const { body } = require("express-validator") 
+const { body } = require("express-validator");
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -27,25 +27,27 @@ const validations = [
 
 const uploadFile = multer({ storage })
 
-const usersControllers = require("../controllers/usersControllers");
+const userController = require("../controllers/userController");
 
 //middlewares
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
+//const uploadFile = require('.../middlewares/multerMiddleware');
+//const validations = require('.../middlewares/validateRegisterMiddleware');
 
 //formulario login
-router.get("/login", guestMiddleware, usersControllers.login);
+router.get("/login", guestMiddleware, userController.login);
 
-//procesar login
-
+//Procesar el login
+router.post('/login', userController, loginProcess);
 
 //formulario register
-router.get("/register", guestMiddleware, usersControllers.register);
+router.get("/register", guestMiddleware, userController.register);
 
 //precesar registro
-router.post("/register", uploadFile.single("avatar"), validations, usersControllers.processRegister);
+router.post("/register", uploadFile.single("avatar"), validations, userController.processRegister);
 
 //profile
-router.get("/profile", authMiddleware, usersControllers.profile);
+router.get("/profile", authMiddleware, userController.profile);
 
 module.exports = router;
