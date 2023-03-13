@@ -39,7 +39,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 router.get("/login", guestMiddleware, userController.login);
 
 //Procesar el login
-router.post('/login', userController, loginProcess);
+router.post('/login', userController.loginProcess);
 
 //formulario register
 router.get("/register", guestMiddleware, userController.register);
@@ -48,6 +48,6 @@ router.get("/register", guestMiddleware, userController.register);
 router.post("/register", uploadFile.single("avatar"), validations, userController.processRegister);
 
 //profile
-router.get("/profile", authMiddleware, userController.profile);
+// router.get("/profile", authMiddleware, userController.profile);
 
 module.exports = router;

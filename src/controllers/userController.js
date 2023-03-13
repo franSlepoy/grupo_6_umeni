@@ -10,37 +10,39 @@ const controller = {
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
-            return res.render ('register', {
+            return res.render ("register", {
                 errors:resultValidation.mapped(),
                 oldData: req.body
             });
         }
         
-        return res.send ('Ok, las validaciones se pasaron y no tienes errores');
-    },
+    //     return res.send ("Ok, las validaciones se pasaron y no tienes errores");
+    // },
     
-    let userInDB = User.findByField('email', req.body.email);
+    let userInDB = User.findByField("email", req.body.email);
+
     if(userInDB) {
-        return res.render('userRegisterForm', {
+        return res.render("register", {
           errors: {
                email:{
-                 msg: 'Este email ya está registrado.'
+                 msg: "Este email ya está registrado."
              }
          },
          oldData: req.body
         });
-    },
+    }
 
     
     let userToCreate = {
     ...req.body,
     password: bcryptjs.hashSync(req,body,password,10),
     avatar: req.file.filename
-    },
+    }
 
     let userCreated = User.create(userToCreate);
 
     return res.redirect('/user/login');
+    },
 
     login:(req,res) => {
     return res.render('userLoginForm');
@@ -52,7 +54,7 @@ const controller = {
      if(userToLogin) {
         let isPasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
         if (isPasswordOk) {
-            return.res.redirect('/user/profile');
+            res.redirect('/user/profile');
         }
     return res.render('login', {
         errors: {
