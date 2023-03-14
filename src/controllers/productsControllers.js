@@ -46,12 +46,13 @@ const productsControllers = {
 	edit: (req, res) => {
 		const id = req.params.id;
 		const product = products.find(product => product.id == id);
-		res.render("edit", { product });
+		res.render("products/edit", {product} );
 	},
 	// Update - Method to update
 	update: (req, res) => {
 		const id = req.params.id;
-		
+		console.log("esta funcionando");
+		console.log(req.body)
 		const product = {
 			id,
 			...req.body,
@@ -77,7 +78,7 @@ function guardarProducto(productToStore){
 
 	const productList = products.map(prod => {
 		if(prod.id == productToStore.id){
-			return productToStore
+			products.push(productToStore) 
 		}
 		return prod;
 	})
