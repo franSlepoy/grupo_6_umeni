@@ -1,10 +1,11 @@
+const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
 
 const User = require ('../models/User');
 
 const controller = {
     register: (req, res) => {
-        return res.render('register');
+        return res.render("register");
     },
     processRegister: (req, res) => {
         const resultValidation = validationResult(req);
@@ -45,7 +46,7 @@ const controller = {
     },
 
     login:(req,res) => {
-    return res.render('userLoginForm');
+    return res.render('login');
     },
 
     loginProcess: (req,res) => {
