@@ -53,6 +53,6 @@ const User = {
     
     
 }
-console.log(User.create({ name: "javi", email: "gsf@gajsk.com"}));
+//console.log(User.create({ name: "javi", email: "gsf@gajsk.com"}));
 
 module.exports = User
