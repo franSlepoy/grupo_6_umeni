@@ -10,7 +10,7 @@ const fileName = path.join(__dirname, "../data/users.json");
 
 const User = {
     getData: () => {
-        return fs.readFileSync(fileName, 'utf-8');
+        return JSON.parse(fs.readFileSync(fileName, 'utf-8'));
     },
 
     findAll: function(){
