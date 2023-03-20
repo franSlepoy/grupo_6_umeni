@@ -37,13 +37,13 @@ const controller = {
     
     let userToCreate = {
     ...req.body,
-    password: bcryptjs.hashSync(req,body,password,10),
+    password: bcryptjs.hashSync(req.body.password,10),
     avatar: req.file.filename
     }
 
     let userCreated = User.create(userToCreate);
 
-    return res.redirect('/user/login');
+    return res.redirect('/login');
     },
 
     login:(req,res) => {

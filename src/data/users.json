@@ -96,6 +96,11 @@
   "email": "lisapark@example.com",
   "password": "password456",
   "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "fullName": "Cristian",
+  "email": "cristian@hola.com",
+  "password": "$2a$10$o4CIRHa8tsrL3WZY7DHXE.OCzsRE9DXIgRnFyifGWR.QNJc/Pmt0u",
+  "avatar": "1679356632150_img.jpg"
  }
- 
 ]
