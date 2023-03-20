@@ -12,6 +12,15 @@ const User = {
     getData: () => {
         return JSON.parse(fs.readFileSync(fileName, 'utf-8'));
     },
+    generateId: ()=> {
+        let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
+        let lastUser = allUsers.pop();
+        return lastUser.id + 1;
+        if(lastUser){
+            return lastUser.id +1;
+        }
+        return 1
+    },
 
     findAll: () => {
         return JSON.parse(fs.readFileSync(fileName, "utf-8"));
@@ -34,10 +43,11 @@ const User = {
         fs.writeFileSync(fileName, JSON.stringify(allUsers,null, " "));
         return true;
 
-    }
+    },
+
     
     
 }
-console.log(User.create({ fullName: "carmen", email: "alicelee@example.com" }))
+console.log(User.generateId())
 
 module.exports = User
