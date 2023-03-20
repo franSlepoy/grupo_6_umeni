@@ -13,6 +13,10 @@ const User = {
         return fs.readFileSync(fileName, 'utf-8');
     },
 
+    findAll: function(){
+        return this.getData();
+    },
+    
     generateId: function () {
         let allUsers = this.findAll();
         let lastUser = allUsers.pop();
@@ -20,11 +24,6 @@ const User = {
         return lastUser.id = id + 1
         }
         return 1;
-    },
-
-
-    findAll: function(){
-        return this.getData();
     },
 
     findByPk: function (id) {
@@ -46,7 +45,7 @@ const User = {
             id: this.generateId(),
             ...userData
         }
-        allUsers.push(userData);
+        allUsers.push(newData);
         fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
         return newUser;
     },
