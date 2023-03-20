@@ -5,12 +5,12 @@
 //5. Eliminar a un usuario de la DB
 
 const fs = require('fs');
+const path = require("path");
+const fileName = path.join(__dirname, "../data/users.json");
 
 const User = {
-    fileName: './data/users.json',
-
-    getData: function () {
-        return JSON.parse (fs.readFileSync(this.fileName, 'utf-8'));
+    getData: () => {
+        return fs.readFileSync(fileName, 'utf-8');
     },
 
     generateId: function () {
@@ -58,5 +58,6 @@ const User = {
         return true;
     }
 }
+console.log(User.getData())
 
 module.exports = User
