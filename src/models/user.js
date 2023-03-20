@@ -29,23 +29,15 @@ const User = {
     },
 
     create: function (userData) {
-        let allUsers = this.findAll();
-        let newUser = {
-            id: this.generateId(),
-            ...userData
-        }
-        allUsers.push(newData);
-        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
-        return newUser;
-    },
-
-    delete: function(id) {
-        let allUsers = this.findAll();
-        let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
-        fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null, ' '));
+        let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
+        allUsers.push(userData);
+        fs.writeFileSync(fileName, JSON.stringify(allUsers,null, " "));
         return true;
+
     }
+    
+    
 }
-console.log(User.findByField("email", "alicelee@example.com" ))
+console.log(User.create({ fullName: "carmen", email: "alicelee@example.com" }))
 
 module.exports = User

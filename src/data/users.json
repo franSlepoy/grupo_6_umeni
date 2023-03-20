@@ -1,102 +1,101 @@
 [
-      {
-        "id": 1,
-        "fullName": "John Doe",
-        "email": "johndoe@example.com",
-        "password": "password123",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 2,
-        "fullName": "Jane Smith",
-        "email": "janesmith@example.com",
-        "password": "password456",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 3,
-        "fullName": "Bob Johnson",
-        "email": "bobjohnson@example.com",
-        "password": "password789",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 4,
-        "fullName": "Alice Lee",
-        "email": "alicelee@example.com",
-        "password": "password123",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 5,
-        "fullName": "Tom Davis",
-        "email": "tomdavis@example.com",
-        "password": "password456",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 6,
-        "fullName": "Emily Wang",
-        "email": "emilywang@example.com",
-        "password": "password789",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 7,
-        "fullName": "Jack Brown",
-        "email": "jackbrown@example.com",
-        "password": "password123",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 8,
-        "fullName": "Sarah Kim",
-        "email": "sarahkim@example.com",
-        "password": "password456",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 9,
-        "fullName": "Mike Chang",
-        "email": "mikechang@example.com",
-        "password": "password789",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 10,
-        "fullName": "Linda Chen",
-        "email": "lindachen@example.com",
-        "password": "password123",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 11,
-        "fullName": "David Kim",
-        "email": "davidkim@example.com",
-        "password": "password456",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 12,
-        "fullName": "Sophie Wu",
-        "email": "sophiewu@example.com",
-        "password": "password789",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 13,
-        "fullName": "Chris Lee",
-        "email": "chrislee@example.com",
-        "password": "password123",
-        "avatar": "https://example.com/avatar.jpg"
-      },
-      {
-        "id": 14,
-        "fullName": "Lisa Park",
-        "email": "lisapark@example.com",
-        "password": "password456",
-        "avatar": "https://example.com/avatar.jpg"
-      }
+ {
+  "id": 1,
+  "fullName": "John Doe",
+  "email": "johndoe@example.com",
+  "password": "password123",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 2,
+  "fullName": "Jane Smith",
+  "email": "janesmith@example.com",
+  "password": "password456",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 3,
+  "fullName": "Bob Johnson",
+  "email": "bobjohnson@example.com",
+  "password": "password789",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 4,
+  "fullName": "Alice Lee",
+  "email": "alicelee@example.com",
+  "password": "password123",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 5,
+  "fullName": "Tom Davis",
+  "email": "tomdavis@example.com",
+  "password": "password456",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 6,
+  "fullName": "Emily Wang",
+  "email": "emilywang@example.com",
+  "password": "password789",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 7,
+  "fullName": "Jack Brown",
+  "email": "jackbrown@example.com",
+  "password": "password123",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 8,
+  "fullName": "Sarah Kim",
+  "email": "sarahkim@example.com",
+  "password": "password456",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 9,
+  "fullName": "Mike Chang",
+  "email": "mikechang@example.com",
+  "password": "password789",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 10,
+  "fullName": "Linda Chen",
+  "email": "lindachen@example.com",
+  "password": "password123",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 11,
+  "fullName": "David Kim",
+  "email": "davidkim@example.com",
+  "password": "password456",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 12,
+  "fullName": "Sophie Wu",
+  "email": "sophiewu@example.com",
+  "password": "password789",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 13,
+  "fullName": "Chris Lee",
+  "email": "chrislee@example.com",
+  "password": "password123",
+  "avatar": "https://example.com/avatar.jpg"
+ },
+ {
+  "id": 14,
+  "fullName": "Lisa Park",
+  "email": "lisapark@example.com",
+  "password": "password456",
+  "avatar": "https://example.com/avatar.jpg"
+ }
+ 
 ]
-
-  
