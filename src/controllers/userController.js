@@ -12,14 +12,14 @@ const controller = {
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
-            return res.render (path.join(__dirname, "../views/users/register"), {
-                errors:resultValidation.mapped(),
+            return res.render (path.join(__dirname, "../views/users/register"), 
+            { errors:resultValidation.mapped(),
                 oldData: req.body
             });
         }
         
-    //     return res.send ("Ok, las validaciones se pasaron y no tienes errores");
-    // },
+     //return res.send ("Ok, las validaciones se pasaron y no tienes errores");
+     
     
     let userInDB = User.findByField("email", req.body.email);
 
