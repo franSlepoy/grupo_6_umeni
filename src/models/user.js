@@ -39,15 +39,20 @@ const User = {
 
     create: function (userData) {
         let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
-        allUsers.push(userData);
+        allUsers.push(newUser);
         fs.writeFileSync(fileName, JSON.stringify(allUsers,null, " "));
         return true;
-
     },
+    delete: () =>{
+        let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
+        let finalUsers = allUsers.filter(oneUser.id !== id);
+        fs.writeFileSync(fileName, JSON.stringify(finalUsers,null, " "));
+        return true;
+    }
 
     
     
 }
-console.log(User.generateId())
+console.log(User.create({ name: "javi", email: "gsf@gajsk.com"}));
 
 module.exports = User
