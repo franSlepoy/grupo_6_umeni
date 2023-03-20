@@ -1,17 +1,18 @@
 const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
+const path = require("path");
 
 const User = require ('../models/User');
 
 const controller = {
     register: (req, res) => {
-        return res.render("register");
+        return res.render(path.join(__dirname, "../views/users/register"))
     },
     processRegister: (req, res) => {
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
-            return res.render ("register", {
+            return res.render (path.join(__dirname, "../views/users/register"), {
                 errors:resultValidation.mapped(),
                 oldData: req.body
             });

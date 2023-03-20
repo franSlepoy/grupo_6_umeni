@@ -53,6 +53,6 @@ const User = {
     
     
 }
-//console.log(User.create({ name: "javi", email: "gsf@gajsk.com"}));
+//console.log(User.findByPk(5));
 
 module.exports = User
