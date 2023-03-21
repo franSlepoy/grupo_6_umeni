@@ -24,7 +24,7 @@ const controller = {
     let userInDB = User.findByField("email", req.body.email);
 
     if(userInDB) {
-        return res.render("register", {
+        return res.render(path.join(__dirname, "../views/users/register"), {
           errors: {
                email:{
                  msg: "Este email ya está registrado."
