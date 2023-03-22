@@ -43,7 +43,7 @@ const controller = {
 
     let userCreated = User.create(userToCreate);
 
-    return res.redirect('/login');
+    return res.redirect('/user/login');
     },
 
     login:(req,res) => {
