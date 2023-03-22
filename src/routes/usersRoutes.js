@@ -12,7 +12,7 @@ const validations = require("../middlewares/validateRegisterMiddleware");
 const uploadFile = require('../middlewares/multerMiddleware');
 
 //formulario login
-router.get("/login", guestMiddleware, userController.login);
+router.get("/login", userController.login);
 
 //Procesar el login
 router.post('/login', userController.loginProcess);

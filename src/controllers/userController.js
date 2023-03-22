@@ -43,30 +43,42 @@ const controller = {
 
     let userCreated = User.create(userToCreate);
 
-    return res.redirect('/login');
+    return res.redirect("/login");
     },
 
     login:(req,res) => {
-    return res.render('login');
+    return res.render("/login");
     },
 
     loginProcess: (req,res) => {
-     let userToLogin = User.findByField('email', req.body.email);
+     let userToLogin = User.findByField("email", req.body.email);
 
      if(userToLogin) {
         let isPasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
         if (isPasswordOk) {
-            res.redirect('/user/profile');
+            req.session.userLogged = userToLogin;
+            res.redirect("/user/profile");
         }
-    return res.render('login', {
+    return res.render("/login", {
         errors: {
             email: {
-                msg: 'Las credenciales son inválidas'
+                msg: "Las credenciales son inválidas"
             }
         }
     });
     }
-    }
+    return res.render(path.join(__dirname, "../views/users/login"), {
+        errors: {
+            email: {
+                msg: "No se encuentra este email en nuestra base de datos"
+            }
+        }
+    });
+    },
+
+    profile: (req,res) => {
+        return res.render ("/profile");
+    },
 }
 
 module.exports = controller;

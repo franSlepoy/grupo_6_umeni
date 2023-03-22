@@ -98,3 +98,4 @@ body {
     display: flex;
   }
   
+  .text-danger { color: red}

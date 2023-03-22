@@ -23,5 +23,14 @@
     "categoria": "pintura",
     "imagen": "obra1677111362169.jpg",
     "precio": "9877665"
+  },
+  {
+    "id": 4,
+    "nombre_artista": "Pedro",
+    "apellido_artista": "algo",
+    "titulo_obra": "asd",
+    "categoria": "pintura",
+    "imagen": "obra1679357767805.jpg",
+    "precio": "123"
   }
 ]
