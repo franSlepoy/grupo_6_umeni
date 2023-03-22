@@ -22,11 +22,11 @@
     <div class="container" style="margin-top: 40px;">
         <div class="row">
             <div class="col-md-3">
-                <h2> Hola USUARIO </h2>
-                <img src="/images/avatars/avatar-1677067580789.jpeg" height="200px" width="200px">
+                <h2> Hola <%= user.fullName %> </h2>
+                <img src="/images/avatars/<%= user.avatar %>" height="200px" width="200px">
                 <br>
                 <br>
-                <div class="alert alert-success"> Falso.Email@mail.com.ar </div>
+                <div class="alert alert-success"> <%= user.email %></div>
             </div>
         </div>
     </div>

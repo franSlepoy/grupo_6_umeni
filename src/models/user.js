@@ -14,7 +14,7 @@ const User = {
     },
 
     generateId: function () {
-		let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
+		let allUsers = this.findAll();
 		let lastUser = allUsers.pop();
 		if (lastUser) {
 			return lastUser.id + 1;
@@ -40,12 +40,12 @@ const User = {
     create: function (userData) {
         let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
         let newUser = {
-			id: this.generateId(),
-			...userData
-		}
+            id: this.generateId(),
+            ...userData
+        }
         allUsers.push(newUser);
         fs.writeFileSync(fileName, JSON.stringify(allUsers,null, " "));
-        return true;
+        return newUser;
     },
     delete: () =>{
         let allUsers = JSON.parse(fs.readFileSync(fileName, "utf-8"));
@@ -53,9 +53,6 @@ const User = {
         fs.writeFileSync(fileName, JSON.stringify(finalUsers,null, " "));
         return true;
     }
-
-    
-    
 }
 //console.log(User.create({ fullName : "Ceci", email : "ceci@gns.com"}));
 

@@ -9,7 +9,7 @@ const methodOverride =  require('method-override');
 const PORT = 3031;
 
 app.use(session({
-    secret: "Super secreto",
+    secret: "Secreto",
     resave: false,
     saveUninitialized: false,
 }));

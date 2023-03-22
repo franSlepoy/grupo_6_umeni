@@ -43,23 +43,24 @@ const controller = {
 
     let userCreated = User.create(userToCreate);
 
-    return res.redirect("/login");
+    return res.redirect("/user/login");
     },
 
     login:(req,res) => {
-    return res.render("/login");
+        return res.render(path.join(__dirname, "../views/users/login"));
     },
-
+    
     loginProcess: (req,res) => {
      let userToLogin = User.findByField("email", req.body.email);
-
+     
      if(userToLogin) {
-        let isPasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
-        if (isPasswordOk) {
-            req.session.userLogged = userToLogin;
-            res.redirect("/user/profile");
-        }
-    return res.render("/login", {
+         let isPasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
+         if (isPasswordOk) {
+             // return res.send("ok puedes ingresar")
+             req.session.userLogged = userToLogin;
+             res.redirect("/user/profile");
+            }
+    return res.render(path.join(__dirname, "../views/users/login"), {
         errors: {
             email: {
                 msg: "Las credenciales son inválidas"
@@ -76,9 +77,11 @@ const controller = {
     });
     },
 
-    profile: (req,res) => {
-        return res.render ("/profile");
-    },
+    profile: (req, res) => {
+		return res.render(path.join(__dirname, "../views/users/profile"), {
+			user: req.session.userLogged
+		});
+	},
 }
 
 module.exports = controller;
