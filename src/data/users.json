@@ -103,5 +103,19 @@
   "email": "cristiano@gmail.com",
   "password": "$2a$10$ghsYSI0ZZvGs4Ppx3.Ym8.2vx5q0O5HVysoRa4Of.yA26fjNc0kN.",
   "avatar": "1679491058051_img.jpg"
+ },
+ {
+  "id": 16,
+  "fullName": "Anger Di Maria",
+  "email": "angelitoDM@campeon.com",
+  "password": "$2a$10$8o94NdYsdVEq8ifI5qY0ouhoMT04ibPPrc0Q3s18SvOAOUpMJxJa.",
+  "avatar": "1679491740288_img.jpg"
+ },
+ {
+  "id": 17,
+  "fullName": "Javier Mascherano",
+  "email": "masche@subcampeon.com",
+  "password": "$2a$10$OhYf8/aY3kLTDfZABSnebe0spZt5d/PalN32j8HS/Ovd1NyQWOHNW",
+  "avatar": "1679491880042_img.jpg"
  }
 ]
