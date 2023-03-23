@@ -7,6 +7,9 @@ const productsRoutes = require("./routes/productsRoutes");
 const usersRoutes = require("./routes/usersRoutes")
 const methodOverride =  require('method-override');
 const PORT = 3031;
+const cookies = require('cookie-parser');
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 app.use(session({
     secret: "Secreto",
@@ -14,6 +17,8 @@ app.use(session({
     saveUninitialized: false,
 }));
 
+app.use(cookies());
+app.use(userLoggedMiddleware);
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())

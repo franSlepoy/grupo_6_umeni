@@ -56,9 +56,14 @@ const controller = {
      if(userToLogin) {
          let isPasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
          if (isPasswordOk) {
-             // return res.send("ok puedes ingresar")
+            delete userToLogin.password;
              req.session.userLogged = userToLogin;
-             res.redirect("/user/profile");
+
+             if(req.body.remember_user){
+                res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2})
+             }
+
+             return res.redirect("/user/profile");
             }
     return res.render(path.join(__dirname, "../views/users/login"), {
         errors: {
@@ -82,6 +87,12 @@ const controller = {
 			user: req.session.userLogged
 		});
 	},
+
+    logout: (req, res) => {
+        res.clearCookie("userEmail");
+        req.session.destroy();
+        return res.redirect("/");
+    }
 }
 
 module.exports = controller;

@@ -54,6 +54,5 @@ const User = {
         return true;
     }
 }
-//console.log(User.create({ fullName : "Ceci", email : "ceci@gns.com"}));
 
 module.exports = User

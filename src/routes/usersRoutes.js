@@ -12,7 +12,7 @@ const validations = require("../middlewares/validateRegisterMiddleware");
 const uploadFile = require('../middlewares/multerMiddleware');
 
 //formulario login
-router.get("/login", userController.login);
+router.get("/login", guestMiddleware, userController.login);
 
 //Procesar el login
 router.post("/login", userController.loginProcess);
@@ -25,5 +25,8 @@ router.post("/register", uploadFile.single("avatar"), validations, userControlle
 
 //perfil usuario
 router.get("/profile", authMiddleware, userController.profile);
+
+//logout
+router.get("/logout", userController.logout);
 
 module.exports = router;

@@ -28,7 +28,7 @@ nav {
     }
    
     nav {
-        display: inline-block;
+        display: flex;
         position: absolute;
         top: 6%;
         left: 45%;
@@ -51,8 +51,8 @@ nav {
     .carrito-de-compras {
        display: inline-block;
         position: absolute;
-        top: 53%;
-        left: 115%;
+        top: 50%;
+        left: 122%;
         transform: translate(-50%, -50%);
         color: #060606;
     }
@@ -64,11 +64,20 @@ nav {
         text-shadow: 10px 10px 50px #F4B266;
         font-size: 20px;
     }
-    .fa-user {
+    .fa-user{
         display: inline-block;
         position: absolute;
         top: 50%;
         left: 105%;
+        transform: translate(-50%, -50%);
+        color: #060606;
+    }
+
+    .fa-sign-out-alt{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 114%;
         transform: translate(-50%, -50%);
         color: #060606;
     }
