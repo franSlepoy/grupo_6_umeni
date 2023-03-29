@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Umeni - Detalle de Producto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/umeni.jpeg">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
+</head>
+<header>
+    <%- include('../partials/header.ejs') %>
+</header>
+
+
+
+
+<div class="contimg">
+    <% if(selectedProduct){%>
+        <article>
+          
+            
+        <img src="/images/<%= selectedProduct.imagen %>" alt="">
+            <div class="detalle-obra">
+                <h1 class="titulo-obra"> Artista: <%= selectedProduct.apellido_artista %></h1>
+            <div class="precio-boton">
+               <h1 class="precio-obra"> Precio: <%= selectedProduct.precio %></h1> <br>
+               <h1 class="titulo-obra"> Titulo de la obra: <%= selectedProduct.titulo_obra %></h1> 
+            </div>
+            </div>
+        </article>
+            
+            
+      
+        <div class="contsml">
+            <div class="childsml">
+       
+        <div class="agregarcarrito">
+            <div class="precio">
+                Precio $ <%=selectedProduct.precio%>
+            </div>
+            <div class="cart">
+                <button type="button" class="addtocart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p class="addtocarttxt">Agregar al carrito</p>
+            </div>
+            <div>
+                <form method="POST" action="/products/delete/<%= selectedProduct.id %>?_method=DELETE" style="display: inline-flex">
+                    <button type="submit" class="action-button-delete">ELIMINAR</button>
+                </form>
+            </div>
+            <div>
+              <button>
+                <a href="/products/edit/<%= selectedProduct.id %>">EDITAR</a>
+            </button>
+            </div>
+        </div>
+        
+        
+    <%} else { %>
+        <h1> Producto no encontrado </h1>
+    <% } %>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+</div>
+</body>
+    
+
+</html>

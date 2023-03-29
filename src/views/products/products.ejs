@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenidxs a UMENI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="css/products.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+    </head>
+    <body>
+        
+     
+        <header>
+            <%- include('../partials/header.ejs') %>
+        </header>
+        <main>
+            <section class="shop-all">
+                <h3>Todas las obras</h3>
+                
+                <div class="products">
+                <% if (locals.products){ %>   
+                    <% for (let i = 0; i < products.length; i++){ %> 
+                
+                    
+                    <article class="product-item">
+                        
+                        <div class="main-article">
+                        <h1 class="titulo"> Titulo de la obra:<%= products[i].titulo_obra %></h1>
+                        <h2 class="nombre-artista"> Nomre del Atrista: <%= products[i].nombre_artista %></h2>
+                        <h2 class="categoria"> Categoria: <%= products[i].categoria %></h2>
+                        <p class="precio">Precio: <%= products[i].precio %></p>
+                        <a href="/products/productdetails/<%=products[i].id %>">
+                            <img src= "/images/<%= products[i].imagen %>"  alt="" height="242" width="242">
+                        </a>
+                         
+                          
+                             </div>
+                             
+                        </article>
+                        <% } %>
+                        <% } %>
+                    </div>
+                    </section>
+                    
+                    
+        
+    </body>
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+</html>

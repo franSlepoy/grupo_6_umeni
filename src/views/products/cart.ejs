@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/css/carrito.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d928569876.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/images/umeni.jpeg">
+    <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
+
+    <title>Umeni Carrito de Compras</title>
+    
+</head>
+
+
+<body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header> 
+    <div class="contenedor">
+       
+    <header>
+        <div class="top-header">
+            <div class="volver" href="#"><i class="fas fa-arrow-left"></i></div>
+            <div class="logo">
+                <img src="/images/logo_umeni.jpeg" alt="logo-umeni" class="umeni">
+            </div>
+            <h2>Mi Carrito</h2>
+            <div class="compras" href="/carrito"><i class="fas fa-shopping-cart"></i></div>
+        </div>
+    </header>
+    <main>
+        <section class="compra">
+            <article>
+                <div><img src="/images/max_gomez_canle_paisaje1.jpeg" alt="paisaje1" class="imagen"></div>
+                <div class="info">
+                    <h3 class="autor">Max Gomez Canle - Paisaje 1</h3>
+                    <p class="tamaño">Tamaño L</h4>
+                    <p class="precio">ARS $15.000</p>
+                    <div class="eliminar"><i class="fas fa-trash"></i></div>
+                    <div class="cantidad">
+                        <i class="far fa-minus-square"></i>
+                        <input class="cuantia" type="number" id="cuantia" name="cuantia" min="1" max="10">
+                        <i class="far fa-plus-square"></i>
+                    </div>
+                </div>
+            </article>
+            <br>
+            <article>
+                <div><img src="/images/max_gomez_canle_paisaje2.jpeg" alt="paisaje1" class="imagen"></div>
+                <div class="info">
+                    <h3 class="autor">Max Gomez Canle - Paisaje 2</h3>
+                    <p class="tamaño">Tamaño XL</h4>
+                    <p class="precio">ARS $29.000</p>
+                    <div class="eliminar"><i class="fas fa-trash"></i></div>
+                    <div class="cantidad">
+                        <i class="far fa-minus-square"></i>
+                        <input class="cuantia" type="number" id="cuantia" name="cuantia" min="1" max="10">
+                        <i class="far fa-plus-square"></i>
+                    </div>
+                </div>
+            </article>
+            <br>
+            <div>
+                <input type="text" class="descuento" rows="1" cols="30" maxlength="9" placeholder="Agregar cupón de descuento">
+            </div>
+        </section>
+        <br>
+        <section class="detalles">
+            <div class="subtotal">
+                <h3>Subtotal</h3>
+                <h5>ARS $44.000</h5>
+            </div>
+            <div class="iva">
+                <h3>IVA (%)</h3>
+                <h5>ARS $0,00</h5>
+            </div>
+            <div class="envio">
+                <h3>Envio</h3>
+                <h5>ARS $150</h5>
+            </div>
+            <div class="total">
+                <h3>Total</h3>
+                <h5>ARS $44.150</h5>
+            </div>  
+        </section>
+        <br>
+        <section class="realizar">
+        <form action="/" method="POST">
+            <input type="submit" value="Comprar"><i class="fas fa-long-arrow-right"></i>
+        </form>
+        </section>
+    </main>
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+    
+  
+</div>  
+</body>
+</html>

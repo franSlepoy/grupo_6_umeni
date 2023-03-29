@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+.products {
+    display: flex;
+    border: 5px solid;
+}
