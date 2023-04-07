@@ -1,22 +1,21 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Cepa"
+    let alias = "Pedido"
     let cols = {
-        idCepa:{
+        idPedido:{
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        nombreCepa:{
-            type: dataTypes.STRING
-        },
-        
+        usuarios_idUsuarios:{
+            type: dataTypes.INTEGER
+        }
     }
     let config = {
-        tableName : "usuarios",
+        tableName : "pedidos",
         timestamps : false
     }
     
-    const Usuario = sequelize.define(alias, cols, config);
+    const Pedido = sequelize.define(alias, cols, config);
 
-    return Usuario
+    return Pedido
 }
