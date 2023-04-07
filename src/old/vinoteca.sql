@@ -95,13 +95,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`vinos` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_vinos_nombreBodega_idx` ON `mydb`.`vinos` (`nombreBodega_idBodega` ASC);
+CREATE INDEX `fk_vinos_nombreBodega_idx` ON `mydb`.`vinos` (`nombreBodega_idBodega` ASC) VISIBLE;
 
-CREATE INDEX `fk_vinos_lineas1_idx` ON `mydb`.`vinos` (`lineas_idLineas` ASC);
+CREATE INDEX `fk_vinos_lineas1_idx` ON `mydb`.`vinos` (`lineas_idLineas` ASC) VISIBLE;
 
-CREATE INDEX `fk_vinos_cepas1_idx` ON `mydb`.`vinos` (`cepas_idCepa` ASC);
+CREATE INDEX `fk_vinos_cepas1_idx` ON `mydb`.`vinos` (`cepas_idCepa` ASC) VISIBLE;
 
-CREATE INDEX `fk_vinos_maridaje1_idx` ON `mydb`.`vinos` (`maridaje_idmaridaje` ASC);
+CREATE INDEX `fk_vinos_maridaje1_idx` ON `mydb`.`vinos` (`maridaje_idmaridaje` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
@@ -132,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`pedidos` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_pedidos_usuarios1_idx` ON `mydb`.`pedidos` (`usuarios_idUsuarios` ASC);
+CREATE INDEX `fk_pedidos_usuarios1_idx` ON `mydb`.`pedidos` (`usuarios_idUsuarios` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
@@ -155,9 +155,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`IntPedidosVinos` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_IntPedidosVinos_pedidos1_idx` ON `mydb`.`IntPedidosVinos` (`pedidos_idPedidos` ASC);
+CREATE INDEX `fk_IntPedidosVinos_pedidos1_idx` ON `mydb`.`IntPedidosVinos` (`pedidos_idPedidos` ASC) VISIBLE;
 
-CREATE INDEX `fk_IntPedidosVinos_vinos1_idx` ON `mydb`.`IntPedidosVinos` (`vinos_idVino` ASC);
+CREATE INDEX `fk_IntPedidosVinos_vinos1_idx` ON `mydb`.`IntPedidosVinos` (`vinos_idVino` ASC) VISIBLE;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
