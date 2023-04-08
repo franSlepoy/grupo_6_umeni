@@ -3,6 +3,6 @@ var router = express.Router();
 var vinosController = require("../controllers/vinosController");
 
 
-router.get("/vinos", vinosController.list);
+router.get("/", vinosController.list);
 
 module.exports = router; 
