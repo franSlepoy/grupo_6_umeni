@@ -9,10 +9,11 @@
 <body>
     <h1>Listado de Vinos</h1>
     <ul>
-        <%  for (let i = 0; i < cepas.length; i++){ %>
+        <%  for (let i = 0; i < vinos.length; i++){ %>
             <li>
-                <a href=""><%= cepas[i].idCepa %></a>
-                <a href=""> <%= cepas[i].nombreCepa %></a>
+                
+                <a href="/vinos/<%= vinos[i].idVino %>"> <%= vinos[i].descripcion %></a>
+
                
             </li>
         <% } %>    

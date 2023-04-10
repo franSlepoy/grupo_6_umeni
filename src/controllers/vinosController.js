@@ -3,9 +3,9 @@ const path = require("path");
 
 let vinosController = {
     list: function(req,res){
-       db.Cepa.findAll()
-       .then(function(cepas){
-        res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {cepas:cepas})
+       db.Vino.findAll()
+       .then(function(vinos){
+        res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
        })
     },
     add: function(req,res){
@@ -16,6 +16,12 @@ let vinosController = {
     },
     delete: function(req,res){
         
+    },
+    detail: function(req,res){
+        db.Vino.findByPk(req.params.id)
+        .then(function(vinos){
+            res.render(path.resolve(__dirname, "../views/detalleVino"), {vinos:vinos})
+        })
     }
 };
 module.exports = vinosController
