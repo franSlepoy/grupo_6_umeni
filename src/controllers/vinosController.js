@@ -3,9 +3,9 @@ const path = require("path");
 
 let vinosController = {
     list: function(req,res){
-       db.Vino.findAll()
-       .then(function(vinos){
-        res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
+       db.Cepa.findAll()
+       .then(function(cepas){
+        res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {cepas:cepas})
        })
     },
     add: function(req,res){
