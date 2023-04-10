@@ -7,18 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Listado de Vinos</h1>
+    <H1>Cepas</H1>
+    
     <ul>
-        <% if(locals.vinos){ %>
-        <%  for (let i = 0; i < vinos.length; i++){ %>
+       
+        <% for (let i = 0; i < cepas.length; i++){ %>
             <li>
-                
-         <a href="/vinos/<%= vinos[i].idVino %>"><%= vinos.nombre %></a>
-
-               
+                <p> <%= cepas.nombreCepa %></p>
             </li>
         <% } %> 
-        <% } %>   
+       
     </ul>
 </body>
 </html>
