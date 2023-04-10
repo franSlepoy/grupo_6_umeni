@@ -37,6 +37,12 @@ let vinosController = {
             res.render(path.resolve(__dirname, "../views/detalleVino"), {vinos:vinos})
         })
     },
+    edit: (req,res) => {
+       db.Vino.findByPk(req.params.id)
+       .then(function(vino){
+        res.render("editarVinoForm", {vino:vino})
+       })
+    },
     cepasList: (req,res) =>{
         db.Cepa.findAll()
         .then(function(cepas){

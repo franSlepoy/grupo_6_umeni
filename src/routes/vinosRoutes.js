@@ -9,6 +9,7 @@ router.get("/vinos/:id", vinosController.detail);
 router.get("/add", vinosController.add);
 router.post("/add", vinosController.create);
 
+router.get("/edit/:id", vinosController.edit);
 
 router.get("/cepas", vinosController.cepasList);
 
