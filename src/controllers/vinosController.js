@@ -5,8 +5,8 @@ let vinosController = {
     list: function(req,res){
        db.Vino.findAll()
        .then(function(vinos){
-      res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
-       //return  res.json({vinos:vinos});
+       res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
+       //return  res.json(vinos);
        })
     },
     add: function(req,res){

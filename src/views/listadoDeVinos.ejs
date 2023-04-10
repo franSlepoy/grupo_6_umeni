@@ -10,10 +10,11 @@
     <h1>Listado de Vinos</h1>
     <ul>
         <% if(locals.vinos){ %>
-        <%  for (let i = 0; i < vinos.length; i++){ %>
+        <%  for (let i = 0; i < vinos.length; i++){ 
+            console.log(vinos) %>
             <li>
                 
-         <a href="/vinos/<%= vinos[i].idVino %>"><%= vinos.nombre %></a>
+         <a href="/vinos/<%= vinos[i].idVino %>"><%= vinos[i].nombre %></a>
 
                
             </li>
