@@ -1,14 +1,14 @@
 header {
-    margin-bottom: 150px;
-    background-color: #808F87;
+    margin-bottom: 100px;
+    background-color: #F5F5F5;
 }
 
 .hamburger-buttom {
     z-index: 2;
     font-size: 50px;
-    color: #808F87;
+    color: #F4B266;
     position: absolute;
-    left: 78%;
+    left: 10%;
     top: 5%;
 }
 
@@ -36,41 +36,40 @@ nav {
     }
     ul {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         list-style: none;
     }
     a.nav {
-        color: #5C5C5C;
+        color: #808F87;
         text-decoration: none;
         font-size: 30px;
         padding: 5px;
         margin: 10px;
     }
 
-    .carrito-de-compras {
+    .cart {
        display: inline-block;
         position: absolute;
         top: 50%;
         left: 122%;
         transform: translate(-50%, -50%);
-        color: #060606;
+        color: #5C5C5C;
     }
     i {
         transition: all 3s;
     }
     i:hover {
-        color: #9B7E46;
+        color: #F4B266;
         text-shadow: 10px 10px 50px #F4B266;
         font-size: 20px;
     }
-    .fa-user{
+    .img-user{
         display: inline-block;
         position: absolute;
         top: 50%;
         left: 105%;
         transform: translate(-50%, -50%);
-        color: #060606;
     }
 
     .fa-sign-out-alt{
@@ -79,14 +78,14 @@ nav {
         top: 50%;
         left: 114%;
         transform: translate(-50%, -50%);
-        color: #060606;
+        color: #5C5C5C;
     }
    
 a.nav {
     transition: all 3s;
 }
 a:hover {
-    color: #9B7E46;
+    color: #F4B266;
     text-shadow: 10px 10px 50px #F4B266
 }
 

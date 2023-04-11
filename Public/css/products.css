@@ -6,8 +6,36 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #ebebeb;
+    background-color: #F5F5F5;
 }
+
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.portada {
+    width: 95%;
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.form{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EDEDED;
+    outline: none;
+    color: #65655D;
+    border-radius: 5px;
+    height: 2em;
+    margin: 0px 30px;
+}
+
 .products {
     display: flex;
     border: 5px solid;

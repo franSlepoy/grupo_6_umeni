@@ -1,38 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    
+<html>
+    <head>
         <meta charset="UTF-8">
+        <title>Bienvenidxs a UMENI</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/css/styles.css">
-        <link rel="stylesheet" href="/css/footer.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="/css/home.css">
         <link rel="stylesheet" href="/css/header.css">
-        <link rel="icon" href="/images/umeni.jpeg">
+        <link rel="stylesheet" href="/css/footer.css">
+    </head>
+    <body>
         
-    
-        <title>Umeni</title>
-        
-</head>
-<body class="home">
-<main>
-    <header>
-        <%- include('./partials/header.ejs') %>
-    </header>
+        <header>
+            <%- include('./partials/header.ejs') %>
+        </header>
 
-    <div class="logo">
-        <img class="logo" src="/images/umeni.jpeg" alt="logo-de-umeni">
-    </div>
-        
-       
-    <button class="redes">Redes</button>
-    <button class="contacto">Contacto</button>
-        
-    <footer class="container">
+        <main>
+            <section class="banner">
+                <img class="portada" src="/images/vino-banner.jpg" alt="Banner-vino">
+            </section>
+
+            <div class="form" action="#" method="GET">
+                <div class="input">Buscar</div>
+                <div class="submit"><i class="fas fa-search"></i></div>
+            </div>
+            <br>
+            <section class="recomendados">
+                <h2>Recomendados</h2>
+                    <div class="recomend">
+                    <article>
+                        <div><img class= "imagen" src="/images/salentein.jpeg"></div>
+                        <div class="info">
+                            <p class="descripcion">Vino</p>
+                            <p class="bodega">Bodega</p>
+                            <p class="year">Año</p>
+                            <p class="precio">Precio</p>
+                        </div>       
+                    </article>
+                    <article>
+                        <div><img class= "imagen" src="/images/rutini.jpg"></div>
+                        <div class="info">
+                            <p class="descripcion">Vino</p>
+                            <p class="bodega">Bodega</p>
+                            <p class="year">Año</p>
+                            <p class="precio">Precio</p>
+                        </div>       
+                    </article>
+                    <article>
+                        <div><img class= "imagen" src="/images/catena-zapata.jpg"></div>
+                        <div class="info">
+                            <p class="descripcion">Vino</p>
+                            <p class="bodega">Bodega</p>
+                            <p class="year">Año</p>
+                            <p class="precio">Precio</p>
+                        </div>       
+                    </article>
+                    <article>
+                        <div><img class= "imagen" src="/images/dom-perignon.jpg"></div>
+                        <div class="info">
+                            <p class="descripcion">Vino</p>
+                            <p class="bodega">Bodega</p>
+                            <p class="year">Año</p>
+                            <p class="precio">Precio</p>
+                        </div>       
+                    </article>
+                    </div>
+                    <div class="view-more">
+                        <h3>Ver más</h3>
+                    </div>
+            </section>
+            <br>
+            <sectionc class="wine-type">
+                <h2>¿Qué estas buscando?</h2>
+                <div class="types">
+                    <article>
+                        <div><img class= "imagen-tipo" src="/images/copa-tinto.jpg"></div>
+                        <div class="info-type">
+                        <p class="variedad">TINTO</p>
+                        <p class="estacion">Verano 2022</p>
+                        <a class="see-more" href="#">VER MÁS</a>
+                        </div>
+                    </article>
+                    <article>
+                        <div><img class= "imagen-tipo" src="/images/copa-blanco.jpg"></div>
+                        <div class="info-type">
+                        <p class="variedad">BLANCO</p>
+                        <p class="estacion">Verano 2022</p>
+                        <a class="see-more" href="#">VER MÁS</a>
+                        </div>
+                    </article>
+                    <article>
+                        <div><img class= "imagen-tipo" src="/images/copa-espumante.jpg"></div>
+                        <div class="info-type">
+                        <p class="variedad">ESPUMANTES</p>
+                        <p class="estacion">Verano 2022</p>
+                        <a class="see-more" href="#">VER MÁS</a>
+                        </div>
+                    </article>
+                    <article>
+                        <div><img class= "imagen-tipo" src="/images/copa-especiales.jpg"></div>
+                        <div class="info-type">
+                        <p class="variedad">ESPECIALES</p>
+                        <p class="estacion">Verano 2022</p>
+                        <a class="see-more" href="#">VER MÁS</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+    </body>
+
+    <footer>
         <%- include('./partials/footer.ejs') %>
     </footer>
-</main>
-</body>
 
 </html>

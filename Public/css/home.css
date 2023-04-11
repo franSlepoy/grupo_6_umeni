@@ -1,0 +1,170 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+}
+
+main{
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.portada {
+    width: 95%;
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.form{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EDEDED;
+    outline: none;
+    color: #65655D;
+    border-radius: 5px;
+    height: 2em;
+    margin: 0px 30px;
+}
+
+article{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.info{
+    width: 100%;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagen{
+    width: 100%;
+    height: 12em;
+}
+.year, .bodega, .descripcion{
+    font-size: 12px;
+    width: 30%;
+    color: #505D68;
+}
+.precio{
+    font-size: 14px;
+    width: 30%;
+    color: #505D68;
+}
+
+.info-type{
+    width: 100%;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: absolute;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagen-tipo{
+    width: 100%;
+    height: 10em;
+    filter: blur(1.5px);
+}
+
+.variedad{
+    position: relative;
+    top: 30px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+}
+.estacion{
+    position: relative;
+    top: 50px;
+    color: #A1AEB7;
+    font-size: 14px;
+    font-weight: 500;
+}
+.see-more{
+    position: relative;
+    top: 70px;
+    color: #FFFFFF;
+    background-color: #A1AEB7;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+@media screen and (max-width: 361px) {
+    .descripcion{
+        display:none;
+    }
+    
+    article:hover .descripcion{
+        display: block;
+    }
+}
+
+@media (min-width: 361px){
+    main section article .descripcion{
+        display: none;
+    }
+    
+    main section article{
+        width: 45%;
+    }
+   
+    .recomend, .types{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    
+    .precio,
+    .year,
+    .bodega{
+        width: 50%;
+    }
+
+    article:hover .descripcion{
+        display: block;
+    }
+
+}
+@media (min-width: 769px){
+    main section article{
+        width: 20%;
+    }
+    
+    article:hover .descripcion{
+        display: block;
+    }
+}

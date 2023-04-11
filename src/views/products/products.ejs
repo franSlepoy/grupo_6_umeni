@@ -12,11 +12,16 @@
     </head>
     <body>
         
-     
         <header>
             <%- include('../partials/header.ejs') %>
         </header>
+
         <main>
+            <div class="form" action="#" method="GET">
+                <div class="input">Buscar</div>
+                <div class="submit"><i class="fas fa-search"></i></div>
+            </div>
+            <br>
             <section class="shop-all">
                 <h3>Todas las obras</h3>
                 
@@ -24,9 +29,7 @@
                 <% if (locals.products){ %>   
                     <% for (let i = 0; i < products.length; i++){ %> 
                 
-                    
-                    <article class="product-item">
-                        
+                    <article class="product-item">   
                         <div class="main-article">
                         <h1 class="titulo"> Titulo de la obra:<%= products[i].titulo_obra %></h1>
                         <h2 class="nombre-artista"> Nomre del Atrista: <%= products[i].nombre_artista %></h2>
@@ -34,21 +37,17 @@
                         <p class="precio">Precio: <%= products[i].precio %></p>
                         <a href="/products/productdetails/<%=products[i].id %>">
                             <img src= "/images/<%= products[i].imagen %>"  alt="" height="242" width="242">
-                        </a>
-                         
-                          
-                             </div>
-                             
-                        </article>
+                        </a>    
+                        </div>        
+                    </article>
                         <% } %>
                         <% } %>
-                    </div>
-                    </section>
-                    
-                    
-        
+                </div>
+
+            </section>
     </body>
     <footer>
         <%- include('../partials/footer.ejs') %>
     </footer>
+
 </html>

@@ -6,11 +6,10 @@ let vinosController = {
        db.Vino.findAll()
        .then(function(vinos){
        res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
-       //return  res.json(vinos);
        })
     },
     add: function(req,res){
-        res.render("crearVinoForm")
+        res.render(path.resolve(__dirname, "../views/crearVinoForm"));
     },
     create: function(req,res){
         db.Vino.create({
@@ -26,7 +25,7 @@ let vinosController = {
             precio: req.body.precio,
             volumen: req.body.volumen
         });
-         res.redirect(path.resolve(__dirname, "../views/vinos"));
+         res.redirect(path.resolve(__dirname, "../views/listadoDeVinos"));
     },
     delete: function(req,res){
         
@@ -40,7 +39,7 @@ let vinosController = {
     edit: (req,res) => {
        db.Vino.findByPk(req.params.id)
        .then(function(vino){
-        res.render("editarVinoForm", {vino:vino})
+        res.render(path.resolve(__dirname, "../views/crearVinoForm"), {vino:vino})
        })
     },
     cepasList: (req,res) =>{
