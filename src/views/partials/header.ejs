@@ -1,23 +1,22 @@
-<header> 
-    <a href="#" class="hamburger-buttom">
-        <i class="fa-solid fa-bars"></i>
-    </a>
-      
-          
+<header>
+    <div>
+        <a href="#" class="hamburger-buttom">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </div>
     <nav>
         <ul>
             <li><a class="nav" href="/">Home</a></li>
-            <li><a class="nav" href="../products">Products</a></li>
         </ul>
 
         <% if (locals.isLogged) { %> 
             <a href="../user/profile">
-                <i class="fa-solid fa-user"></i>
+                <img class="img-user" src="/images/avatars/<%= locals.userLogged.avatar %>" width="30px" height="30px" style="border-radius: 100%;">
             </a>
             <a href="../user/logout">
                 <i class="fas fa-sign-out-alt"></i>
             </a>
-            <a href="../cart" class="carrito-de-compras">
+            <a href="../cart" class="cart">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
         <% } else { %>
@@ -28,5 +27,4 @@
         <% } %>
 
     </nav>
-    
 </header>
