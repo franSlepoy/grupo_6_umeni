@@ -7,52 +7,52 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Crear Vino</h1>
+    <h1>Editar Vino</h1>
     <br>
     <br>
-    <form method="POST" action="/vinos/edit" enctype="multipart/form-data">
+    <form method="POST" action="/vinos/edit/<%=vino.id  %>?_method=PUT" enctype="multipart/form-data">
 <label for="name">Nombre:</label>
-  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="nombre" required>
+  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="nombre" value="<%=vino.nombre %>">
   <br>
   <br>
   <label for="description">Descripción</label>
-  <input type="name" placeholder="Descripción" id="apellido" name="apellido_artista" required >
+  <input type="name" placeholder="Descripción" id="apellido" name="descripcion" <%=vino.descripcion %>   >
   <br>
   <br>
   <label for="prod_img">Imagen:</label>
-  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="imagen"  multiple required> 
+  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="imagen" value="<%=vino.imagen %>"> 
   <br>
   <br>
   <label for="price">Precio:</label>
-  <input type="number" placeholder="Ingresá el precio" id="price" name="precio" required>
+  <input type="number" placeholder="Ingresá el precio" id="price" name="precio" value="<%=vino.precio %>">
   <br>
   <br>
   <label for="price">Año:</label>
-  <input type="number" placeholder="Ingresá el año" id="price" name="anio" required>
+  <input type="number" placeholder="Ingresá el año" id="price" name="anio" value="<%=vino.anio %>">
   <br>
   <br>
   <label>nombreBodega_idBodega:</label>
-  <input type="number" placeholder="Ingresá el id de bodega"  name="nombreBodega_idBodega" required>
+  <input type="number" placeholder="Ingresá el id de bodega"  name="nombreBodega_idBodega" value="<%=vino.nombreBodega_idBodega %>">
   <br>
   <br>
   <label>lineas_idLineas:</label>
-  <input type="number" placeholder="Ingresá el id de linea"  name="lineas_idLineas" required>
+  <input type="number" placeholder="Ingresá el id de linea"  name="lineas_idLineas" value="<%=vino.lineas_idLineas %>">
   <br>
   <br>
   <label>cepas_idCepas:</label>
-  <input type="number" placeholder="Ingresá el id de cepa"  name="cepas_idcepa" required>
+  <input type="number" placeholder="Ingresá el id de cepa"  name="cepas_idcepa" value="<%=vino.cepas_idcepa %>">
   <br>
   <br>
   <label>maridaje_idMaridaje:</label>
-  <input type="number" placeholder="Ingresá el id de maridaje"  name="maridaje_idMaridaje" required>
+  <input type="number" placeholder="Ingresá el id de maridaje"  name="maridaje_idMaridaje" value="<%=vino.maridaje_idMaridaje%>">
   <br>
   <br>
   <label>Potencial de guardado:</label>
-  <input type="number" placeholder="Ingresá el potencial de guardado"  name="potencialGuardado" required>
+  <input type="number" placeholder="Ingresá el potencial de guardado"  name="potencialGuardado" value="<%=vino.potencialGuardado%>">
   <br>
   <br>
   <label>Volumen:</label>
-  <input type="number" placeholder="Ingresá el volumen"  name="volumen" required>
+  <input type="number" placeholder="Ingresá el volumen"  name="volumen" value="<%=vino.volumen%>">
   <br>
   <br>
     <button class="login" type="submit">Enviar</button>
