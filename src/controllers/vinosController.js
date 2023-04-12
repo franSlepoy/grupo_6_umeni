@@ -4,10 +4,10 @@ const Cepa = require("../database/models/Cepa");
 
 let vinosController = {
     list: function(req,res){
-     db.Vino.findAll()
-       // {
-       //include : [{associaton: "cepas"}]
-       //})
+     db.Vino.findAll(
+        {
+       include : [ "cepas"]
+       })
        .then(function(vinos){
        res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
        })
