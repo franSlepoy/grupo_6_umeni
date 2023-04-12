@@ -3,25 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/images/umeni.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="container">
-  <header class="container">
-    <%- include('../partials/header.ejs') %>
-  </header>
-
-  <br>
-  
+<header>
+  <%- include('../partials/header.ejs') %>
+</header> 
+<body>    
   <form method="POST" action="/user/login">
   <h1>Iniciar Sesion</h1>
   <br>
@@ -49,8 +43,7 @@
   <br><br>
        <a href="./register">Registrarme</a>
 </form>
-<footer class="container">
-  <%- include('../partials/footer.ejs') %>
-</footer>
+<br>
+<br>
 </body>
 </html>

@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #9b7e46;
+    background-color: #F5F5F5;
     font-family: 'Inter', sans-serif;
     color: #5C5C5C;
     flex-direction:column;
@@ -19,7 +19,6 @@ body {
     justify-content: left;
     align-items: left;
     background-color:white;
-    margin-top: 408px;
     max-width: 568px;
   }
   

@@ -4,33 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/images/umeni.jpeg">
-    <link rel="stylesheet" href="/css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/profile.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
 </head>
+<body>
     <header>
         <%- include('../partials/header.ejs') %>
     </header>
-<body>
-    <div class="container" style="margin-top: 40px;">
-        <div class="row">
-            <div class="col-md-3">
+<main>
+            <div class="data">
                 <h2> Hola <%= user.fullName %> </h2>
                 <img src="/images/avatars/<%= user.avatar %>" height="200px" width="200px">
                 <br>
                 <br>
-                <div class="alert alert-success"> <%= user.email %></div>
+                <div> <%= user.email %></div>
             </div>
-        </div>
-    </div>
-
-	<%- include('../partials/footer.ejs') %>
+</main>
+<br>
 </body>
 </html>
