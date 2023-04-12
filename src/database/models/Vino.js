@@ -48,5 +48,18 @@ module.exports = (sequelize, dataTypes) => {
   }
    
   const Vino = sequelize.define(alias, cols, config);
+   Vino.associate = function(models) {
+     Vino.belongsTo(models.Cepa, {
+        as: "cepas",
+        foreignKey: "cepas_idCepa"
+     }); 
+   
+     Vino.associate = function(models) {
+        Vino.belongsTo(models.Bodega, {
+           as: "bodegas",
+           foreignKey: "nombreBodega_idBodega"
+        });
+   }
+   }
    return Vino
 }

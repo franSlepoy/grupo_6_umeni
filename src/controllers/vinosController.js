@@ -1,9 +1,13 @@
 let db = require("../database/models")
 const path = require("path");
+const Cepa = require("../database/models/Cepa");
 
 let vinosController = {
     list: function(req,res){
-       db.Vino.findAll()
+     db.Vino.findAll()
+       // {
+       //include : [{associaton: "bodegas"}]
+       //})
        .then(function(vinos){
        res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
        })
