@@ -22,6 +22,32 @@ body{
     border-radius: 20px;
 }
 
+h2{
+    text-align: left;
+    color:#505D68;
+    font-weight: bolder;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+.boton-variedad{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 30px;
+}
+.botoncito{
+    background-color: #EDEDED;
+    padding: 10px;
+    color: #C37029;
+    text-decoration: none;
+    border-radius: 5px;
+    display: grid;
+    margin: 2px 50px;
+    justify-content: space-around;
+}
+
 .form{
     width: 95%;
     display: flex;
@@ -38,5 +64,57 @@ body{
 
 .products {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0px 30px;
+    width: 95%;
     border: 5px solid;
+}
+
+.imagen{
+    width: 100%;
+    height: 12em;
+}
+
+.precio{
+    font-size: 15px;
+    color: #C37029;
+    font-weight: bold;
+}
+.vino{
+    font-size: 20px;
+    color: #505D68;
+    font-weight: bold;
+}
+
+.botoncito:hover {
+    background-color: #F99F3F;
+    color:#EDEDED
+  }
+.botoncito{
+    transition: all 1s;
+}
+
+@media (min-width: 361px){
+    main section article{
+        width: 45%;
+    }
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    .precio,
+    .bodega{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section article{
+        width: 20%;
+    }
 }

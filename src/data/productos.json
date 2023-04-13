@@ -1,36 +1,38 @@
 [
   {
     "id": 1,
-    "nombre_artista": "Artista 1",
-    "apellido_artista": "Apellido 1",
-    "titulo_obra": "Obra 1",
-    "categoria": [
-      "pintura",
-      "fotografia"
-    ],
-    "imagen": "obra1677109745181.jpeg",
-    "precio": "333111"
+    "vino": "Salentein Reserve",
+    "bodega": "Salentein",
+    "year": "2019",
+    "cepa": "Malbec",
+    "imagen": "salentein.jpeg",
+    "precio": "2.300"
   },
   {
-    "id": "2",
-    "image": "logo_umeni.jpeg"
+    "id": 2,
+    "vino": "DV Catena",
+    "bodega": "Catena Zapata",
+    "year": "2019",
+    "cepa": ["Malbec", "Cabernet"],
+    "imagen": "catena-zapata.jpg",
+    "precio": "3.200"
   },
   {
     "id": 3,
-    "nombre_artista": "carmen",
-    "apellido_artista": "Marina",
-    "titulo_obra": "Monocopia 2",
-    "categoria": "pintura",
-    "imagen": "obra1677111362169.jpg",
-    "precio": "9877665"
+    "vino": "Rutini",
+    "bodega": "Rutini",
+    "year": "2018",
+    "cepa": ["Malbec", "Cabernet"],
+    "imagen": "rutini.jpg",
+    "precio": "3.300"
   },
   {
     "id": 4,
-    "nombre_artista": "Pedro",
-    "apellido_artista": "algo",
-    "titulo_obra": "asd",
-    "categoria": "pintura",
-    "imagen": "obra1679357767805.jpg",
-    "precio": "123"
-  }
+    "vino": "Vintage Dom Perignon",
+    "bodega": "Dom Perignon",
+    "year": "2012",
+    "cepa": "Brut Cuvee",
+    "imagen": "dom-perignon.jpg",
+    "precio": "139.000"
+  }  
 ]

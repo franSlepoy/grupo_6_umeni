@@ -38,7 +38,7 @@ body {
   
   .login{
     width: 100%;
-    background-color: #AFD0BF;
+    background-color: #F4B266;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -49,7 +49,7 @@ body {
   }
   
   .login:hover {
-    background-color: #86a093;
+    background-color: #F99F3F;
   }
 
   .facebook{

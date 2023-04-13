@@ -68,3 +68,10 @@ nav{
         display: none;
     }   
 }
+
+.navigation:hover {
+    color: #F99F3F;
+  }
+.navigation{
+    transition: all 1s;
+}

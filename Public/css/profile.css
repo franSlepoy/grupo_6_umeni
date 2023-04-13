@@ -8,4 +8,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin:50px 30px;
+}
+
+h2{
+    color: #65655D;
+    margin: 50px 0px;
+    font-size: 50px;
+}
+
+.img-avatar{
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+}
+
+.user-mail{
+    color: #F99F3F;
+    font-size: 25px;
 }

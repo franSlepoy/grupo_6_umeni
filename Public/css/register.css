@@ -26,9 +26,9 @@ label {
   font-weight: bold;
 }
 
+input[type="fullName"],
 input[type="email"],
-input[type="password"],
-input[type="name"] {
+input[type="password"]{
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -39,7 +39,7 @@ input[type="name"] {
 
 .login{
   width: 100%;
-  background-color: #AFD0BF;
+  background-color: #F4B266;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -50,7 +50,7 @@ input[type="name"] {
 }
 
 .login:hover {
-  background-color: #86a093;
+  background-color: #F99F3F;
 }
 
 .facebook{
