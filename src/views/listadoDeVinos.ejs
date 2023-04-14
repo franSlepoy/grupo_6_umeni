@@ -1,25 +1,61 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Listado de Vinos</h1>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenidxs a UMENI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+    </head>
+    <body>
+        <header>
+            <%- include('./partials/header.ejs') %>
+        </header>
+        <main>
+            <section class="banner">
+                <img class="portada" src="/images/vino-banner.jpg" alt="Banner-vino">
+            </section>
+
+            <div class="form" action="#" method="GET">
+                <div class="input">Buscar mas productos</div>
+                <div class="submit"><i class="fas fa-search"></i></div>
+            </div>
+            <br>
+            <section class="recomendados">
+                <h2>Nuestros recomendados</h2>
+                <div class="recomend">
+    <Article>
     <ul>
         <% if(locals.vinos){ %>
-            <%  for (let i = 0; i < vinos.length; i++){ 
-                console.log(vinos) %>
+            <%  for (let i = 0; i < vinos.length; i++){ %>
                 <li>
                     
-             <a href="/vinos/detalleVino/<%= vinos[i].idVino %>"> Vino: <%= vinos[i].nombre %> - Cepa: <%= vinos[i].cepas.nombreCepa %> </a>
-             
-                   
+             <a href="/vinos/detalleVino/<%= vinos[i].idVino %>"> <p class="vino"><%= vinos[i].imagen %> </p> </a>
+             <div class="info">
+            <p class="vino"> Vino:<%= vinos[i].nombre %> </p>
+            <p class="bodega"> Bodega: <%= vinos[i].cepas.nombreCepa %></p>
+            <p class="year"> Año: <%= vinos[i].anio %></p>
+            <p class="precio"> Precio: <%= vinos[i].precio %></p>
+             </div>  
                 </li>
             <% } %> 
             <% } %>      
     </ul>
+    </Article>
+</div>
+</section>
+<br>
+</main>
 </body>
+<footer>
+<%- include('./partials/footer.ejs') %>
+</footer>
+</html>
+           
+
 </html>
