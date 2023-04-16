@@ -7,8 +7,17 @@ const path = require("path");
 const User = require ('../models/User');
 
 const controller = {
+    lista: function(req,res){
+        db.Usuario.findAll()
+          .then(function(usuarios){
+          res.render(path.resolve(__dirname, "../views/users/lista"), {usuarios:usuarios})
+          })
+       },
     register: (req, res) => {
-        return res.render(path.join(__dirname, "../views/users/register"))
+        db.Usuario.findAll()
+            .then(function(usuarios){
+                return res.render(path.join(__dirname, "../views/users/register"),{usuarios:usuarios})
+            })
     },
     processRegister: (req, res) => {
         const resultValidation = validationResult(req);
@@ -19,6 +28,26 @@ const controller = {
                 oldData: req.body
             });
         }
+        else (db.Usuario.create({
+            nombre: req.body.fullName,
+            email: req.body.email,
+            contrasenia: req.body.password,
+            avatar: req.body.avatar
+        }))
+
+        // register: (req, res) => {
+        //     return res.render(path.join(__dirname, "../views/users/register"))
+        // },
+        // processRegister: (req, res) => {
+        //     const resultValidation = validationResult(req);
+    
+        //     if (resultValidation.errors.length > 0) {
+        //         return res.render (path.join(__dirname, "../views/users/register"), 
+        //         { errors:resultValidation.mapped(),
+        //             oldData: req.body
+        //         });
+        //     }
+        
         
      //return res.send ("Ok, las validaciones se pasaron y no tienes errores");
      

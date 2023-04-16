@@ -9,17 +9,17 @@ module.exports = (sequelize, dataTypes) => {
         nombre:{
             type: dataTypes.STRING
         },
-        apellido:{
-            type: dataTypes.INTEGER
-        },
+        // apellido:{
+        //     type: dataTypes.INTEGER
+        // },
         email:{
-            type: dataTypes.INTEGER
+            type: dataTypes.STRING
         },
         contrasenia:{
-            type: dataTypes.INTEGER
+            type: dataTypes.STRING
         },
         avatar:{
-            type: dataTypes.INTEGER
+            type: dataTypes.STRING
         }
     }
     let config = {

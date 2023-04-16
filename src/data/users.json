@@ -5,5 +5,12 @@
   "email": "algo@algo.com",
   "password": "$2a$10$D.Agr1MvxpKr1d283WO7JuBjw6HVeLcs84ue/3Yy9QiKT7Pu.WxFW",
   "avatar": "1679521771370_img.jpg"
+ },
+ {
+  "id": 2,
+  "fullName": "Jorge Gutierrez",
+  "email": "jorge@gmail.com",
+  "password": "$2a$10$hidiwOOQm2hmb1IxStnqQee5DXGZVplnmXNJZLcQ4i03F7z5pkBLS",
+  "avatar": "1681666940681_img.jpg"
  }
 ]

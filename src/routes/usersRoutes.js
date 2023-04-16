@@ -11,6 +11,9 @@ const authMiddleware = require("../middlewares/authMiddleware");
 const validations = require("../middlewares/validateRegisterMiddleware");
 const uploadFile = require('../middlewares/multerMiddleware');
 
+//listado usuarios
+router.get("/", userController.lista);
+
 //formulario login
 router.get("/login", guestMiddleware, userController.login);
 
