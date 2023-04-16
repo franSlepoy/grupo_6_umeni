@@ -6,38 +6,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/products.css">
         <link rel="stylesheet" href="/css/header.css">
         <link rel="stylesheet" href="/css/footer.css">
     </head>
     <body>
         
-        <header>
-            <%- include('../partials/header.ejs') %>
-        </header>
-
         <main>
-            <div class="form" action="#" method="GET">
-                <div class="input">Buscar</div>
-                <div class="submit"><i class="fas fa-search"></i></div>
-            </div>
+            <header>
+                <%- include('../partials/header.ejs') %>
+            </header>
+
             <br>
             <section class="shop-all">
-                <h3>Todas las obras</h3>
+                <h2>Tienda</h2>
                 
+                <div class="form" action="#" method="GET">
+                    <div class="input">Buscar mas productos</div>
+                    <div class="submit"><i class="fas fa-search"></i></div>
+                </div>
+                <section class="boton-variedad">
+                    <div>
+                        <a class="botoncito" href="#">Tinto</a>
+                    </div>
+                    <div>
+                        <a  class="botoncito" href="#">Blanco</a>
+                    </div>
+                    <div>
+                        <a class="botoncito" href="#">Espumante</a>
+                    </div>
+                    <div>
+                        <a class="botoncito" href="#">Especial</a>
+                    </div>
+                </section>
+
                 <div class="products">
                 <% if (locals.products){ %>   
                     <% for (let i = 0; i < products.length; i++){ %> 
                 
                     <article class="product-item">   
                         <div class="main-article">
-                        <h1 class="titulo"> Titulo de la obra:<%= products[i].titulo_obra %></h1>
-                        <h2 class="nombre-artista"> Nomre del Atrista: <%= products[i].nombre_artista %></h2>
-                        <h2 class="categoria"> Categoria: <%= products[i].categoria %></h2>
+                            <a href="/products/productdetails/<%=products[i].id %>">
+                                <img class="imagen" src= "/images/<%= products[i].imagen %>"  alt="" height="242" width="242">
+                            </a>    
+                        <h1 class="vino"> <%= products[i].vino %></h1>
+                        <!-- <h2 class="bodega"> <%= products[i].bodega %></h2>
+                        <h2 class="year"> Año: <%= products[i].year %></h2> -->
                         <p class="precio">Precio: <%= products[i].precio %></p>
-                        <a href="/products/productdetails/<%=products[i].id %>">
-                            <img src= "/images/<%= products[i].imagen %>"  alt="" height="242" width="242">
-                        </a>    
                         </div>        
                     </article>
                         <% } %>

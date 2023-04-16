@@ -13,5 +13,10 @@
     <p>Año:  <%= vinos.anio %></p>
     <p> Bodega:  <%= vinos.nombreBodega_idBodega %></p>
     <p> Imagen:  <%= vinos.imagen %></p>
+    <br>
+    <br>
+    <form action="/vinos/delete/<%=vinos.id%>" method="POST">
+           <button>DELETE</button>   
+    </form>
 </body>
 </html>

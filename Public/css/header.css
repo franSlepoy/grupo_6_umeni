@@ -1,92 +1,77 @@
 header {
-    margin-bottom: 100px;
-    background-color: #F5F5F5;
+    margin: 20px;
 }
 
-.hamburger-buttom {
-    z-index: 2;
+.fa-bars{
     font-size: 50px;
     color: #F4B266;
     position: absolute;
-    left: 10%;
-    top: 5%;
+    left: 5%;
 }
 
-.carrito-de-compras {
-    display: none
-}
-.user {
-    display: none;
-}
-nav {
-    display: none;
+nav{
+    display: flex;
 }
 
-@media (min-width: 768px){
-    .hamburger-buttom{
+.navigation{
+    color: #808F87;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.home{
+    position: absolute;
+    left:10%;
+}
+.tienda{
+    position: absolute;
+    left:25%;
+}
+.join{
+    position: absolute;
+    right:10%;
+}
+.enter{
+    position: absolute;
+    right:30%;
+}
+
+.img-user{
+    position:absolute;
+    right: 30%;
+    top: 2%;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.fa-sign-out-alt{
+    position: absolute;
+    right: 18%;
+    font-size: 30px;
+    color: #808F87;
+}
+.fa-cart-shopping{
+    position: absolute;
+    right: 5%;
+    font-size: 30px;
+    color: #808F87;
+}
+
+@media (min-width: 460px){
+    .fa-bars{
         display: none;
     }
-   
-    nav {
-        display: flex;
-        position: absolute;
-        top: 6%;
-        left: 45%;
-        transform: translate(-50%, -50%);
-    }
-    ul {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        list-style: none;
-    }
-    a.nav {
-        color: #808F87;
-        text-decoration: none;
-        font-size: 30px;
-        padding: 5px;
-        margin: 10px;
-    }
-
-    .cart {
-       display: inline-block;
-        position: absolute;
-        top: 50%;
-        left: 122%;
-        transform: translate(-50%, -50%);
-        color: #5C5C5C;
-    }
-    i {
-        transition: all 3s;
-    }
-    i:hover {
-        color: #F4B266;
-        text-shadow: 10px 10px 50px #F4B266;
-        font-size: 20px;
-    }
-    .img-user{
-        display: inline-block;
-        position: absolute;
-        top: 50%;
-        left: 105%;
-        transform: translate(-50%, -50%);
-    }
-
-    .fa-sign-out-alt{
-        display: inline-block;
-        position: absolute;
-        top: 50%;
-        left: 114%;
-        transform: translate(-50%, -50%);
-        color: #5C5C5C;
-    }
-   
-a.nav {
-    transition: all 3s;
-}
-a:hover {
-    color: #F4B266;
-    text-shadow: 10px 10px 50px #F4B266
 }
 
+@media (max-width: 460px){
+    .navigation{
+        display: none;
+    }   
+}
+
+.navigation:hover {
+    color: #F99F3F;
+  }
+.navigation{
+    transition: all 1s;
 }

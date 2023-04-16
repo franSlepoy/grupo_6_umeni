@@ -16,7 +16,13 @@ module.exports = (sequelize, dataTypes) => {
         timestamps : false
     }
     
-    const Usuario = sequelize.define(alias, cols, config);
+    const Cepa = sequelize.define(alias, cols, config);
+    Cepa.associate = function(models) {
+        Cepa.hasMany(models.Vino,{
+           as: "vinos",
+           foreignKey: "cepas_idCepa"
+        })
+    }
 
-    return Usuario
+    return Cepa
 }

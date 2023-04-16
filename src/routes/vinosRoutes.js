@@ -10,6 +10,9 @@ router.get("/add", vinosController.add);
 router.post("/add", vinosController.create);
 
 router.get("/edit/:id", vinosController.edit);
+router.post("/edit/:id",vinosController.update );
+
+router.post("/delete/:id", vinosController.delete)
 
 router.get("/cepas", vinosController.cepasList);
 
