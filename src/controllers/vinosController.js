@@ -6,7 +6,11 @@ let vinosController = {
     list: function(req,res){
      db.Vino.findAll(
         {
-       include : [ "cepas"]
+       include : [
+        {association: "cepas"}
+    ]
+       
+       
        })
        .then(function(vinos){
        res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
