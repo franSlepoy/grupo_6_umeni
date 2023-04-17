@@ -44,7 +44,13 @@ let vinosController = {
         res.redirect(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
     },
     detail: function(req,res){
-        db.Vino.findByPk(req.params.id)
+        db.Vino.findByPk(req.params.id , {
+            include : [
+             {association: "cepas"}
+         ]
+            
+            
+            } )
         .then(function(vinos){
             res.render(path.resolve(__dirname, "../views/detalleVino"), {vinos:vinos})
         })
