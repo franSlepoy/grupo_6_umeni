@@ -7,7 +7,8 @@ let vinosController = {
      db.Vino.findAll(
         {
        include : [
-        {association: "cepas"}
+        {association: "cepas"},
+        {association: "bodegas"}
     ]
        
        
@@ -46,7 +47,8 @@ let vinosController = {
     detail: function(req,res){
         db.Vino.findByPk(req.params.id , {
             include : [
-             {association: "cepas"}
+             {association: "cepas"},
+             {association: "bodegas"}
          ]
             
             

@@ -52,14 +52,14 @@ module.exports = (sequelize, dataTypes) => {
      Vino.belongsTo(models.Cepa, {
         as: "cepas",
         foreignKey: "cepas_idCepa"
+     })
+     Vino.belongsTo(models.Bodega, {
+        as: "bodegas",
+        foreignKey: "nombreBodega_idBodega"
      }); 
+
    
-     Vino.associate = function(models) {
-        Vino.belongsTo(models.Bodega, {
-           as: "bodegas",
-           foreignKey: "nombreBodega_idBodega"
-        });
-   }
+     
    }
    return Vino
 }
