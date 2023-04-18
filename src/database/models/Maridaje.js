@@ -16,6 +16,15 @@ module.exports = (sequelize, dataTypes) => {
     }
     
     const Maridaje = sequelize.define(alias, cols, config);
-
+    Maridaje.associate = function(models) {
+    Maridaje.hasMany(models.Vino, {
+           as: "vino",
+           foreignKey: "maridaje_idmaridaje"
+        })
+   
+   
+      
+        
+      }
     return Maridaje
 }

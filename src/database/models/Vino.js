@@ -56,7 +56,12 @@ module.exports = (sequelize, dataTypes) => {
      Vino.belongsTo(models.Bodega, {
         as: "bodegas",
         foreignKey: "nombreBodega_idBodega"
-     }); 
+     })
+     Vino.belongsTo(models.Maridaje, {
+        as: "maridaje",
+        foreignKey: "maridaje_idmaridaje"
+     })
+
 
    
      
