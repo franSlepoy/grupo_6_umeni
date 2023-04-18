@@ -1,6 +1,6 @@
 let db = require("../database/models")
 const path = require("path");
-const Cepa = require("../database/models/Cepa");
+
 
 let vinosController = {
     list: function(req,res){
@@ -18,7 +18,17 @@ let vinosController = {
        })
     },
     add: function(req,res){
-        res.render(path.resolve(__dirname, "../views/crearVinoForm"));
+        db.Vino.findAll({
+            include : [
+             {association: "cepas"},
+             {association: "bodegas"},
+             {association: "maridaje"}
+         ]
+        })
+           .then(function(vinos) {
+            return res.render(path.resolve(__dirname, "../views/crearVinoForm"), {vinos:vinos});
+           })
+        
     },
     create: function(req,res){
         db.Vino.create({
@@ -34,7 +44,7 @@ let vinosController = {
             precio: req.body.precio,
             volumen: req.body.volumen
         });
-         res.redirect(path.resolve(__dirname, "../views/listadoDeVinos"));
+         res.redirect(path.join(__dirname, "../views/listadoDeVinos"));
     },
     delete: function(req,res){
         db.Vino.destroy({
@@ -42,7 +52,7 @@ let vinosController = {
                 id: req.params.id 
             }
         })
-        res.redirect(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
+        res.redirect(path.resolve(__dirname, "../views/listadoDeVinos"))
     },
     detail: function(req,res){
         db.Vino.findByPk(req.params.id , {
