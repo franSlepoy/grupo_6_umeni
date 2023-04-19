@@ -35,12 +35,12 @@ let vinosController = {
         db.Vino.create({
             nombre: req.body.nombre, 
             anio: req.body.anio, 
-            cepas_idCepa: req.body.cepas_idCepa,
+            cepa: req.body.cepa,
             descripcion: req.body.descripcion,
             imagen: req.body.imagen,
-            lineas_idLineas: req.body.lineas_idLineas,
-            maridaje_idmaridaje: req.body.maridaje_idmaridaje,
-            nombreBodega_idBodega: req.body.nombreBodega_idBodega,
+            //lineas_idLineas: req.body.lineas_idLineas,
+            maridaje_idmaridaje: req.body.maridaje,
+            nombreBodega_idBodega: req.body.bodega,
             potencialGuardado: req.body.potencialGuardado,
             precio: req.body.precio,
             volumen: req.body.volumen
@@ -79,12 +79,12 @@ let vinosController = {
         db.Vino.update({
             nombre: req.body.nombre, 
             anio: req.body.anio, 
-            cepas_idCepa: req.body.cepas_idCepa,
+            cepa: req.body.cepa,
             descripcion: req.body.descripcion,
             imagen: req.body.imagen,
-            lineas_idLineas: req.body.lineas_idLineas,
-            maridaje_idmaridaje: req.body.maridaje_idmaridaje,
-            nombreBodega_idBodega: req.body.nombreBodega_idBodega,
+            //lineas_idLineas: req.body.lineas_idLineas,
+            maridaje_idmaridaje: req.body.maridaje,
+            nombreBodega_idBodega: req.body.bodega,
             potencialGuardado: req.body.potencialGuardado,
             precio: req.body.precio,
             volumen: req.body.volumen
