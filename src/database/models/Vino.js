@@ -61,6 +61,10 @@ module.exports = (sequelize, dataTypes) => {
         as: "maridaje",
         foreignKey: "maridaje_idmaridaje"
      })
+     Vino.belongsTo(models.Linea, {
+        as: "lineas",
+        foreignKey: "lineas_idLineas"
+     })
 
 
    

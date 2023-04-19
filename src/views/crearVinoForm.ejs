@@ -33,6 +33,7 @@
   <br>
   <label>Bodega:</label>
   <select name="bodega">
+    <option selected disabled>Seleccionar bodega...</option>
     <% for (let i = 0; i < vinos.length; i++) {%>
     <option value="<%= vinos[i].bodegas.idBodega %>">
       <%= vinos[i].bodegas.bodegaNombre %>
@@ -41,30 +42,41 @@
   </select>
   <br>
   <br>
-  <label>linea:</label>
-  <input type="number" placeholder="Ingresá el id de linea"  name="lineas_idLineas" required>
+   <label>linea:</label>
   <br>
   <br>
   <label>Cepa</label>
-  <input type="number" placeholder="Ingresá el id de cepa"  name="cepas_idcepa" required>
+  <select name="cepa">
+    <option selected disabled>Seleccionar cepa...</option>
+    <% for (let i = 0; i < vinos.length; i++) {%>
+    <option value="<%= vinos[i].cepas.idCepa %>">
+      <%= vinos[i].cepas.nombreCepa %>
+    </option>
+    <% } %>
+  </select>
   <br>
   <br>
   <label>Maridaje:</label>
-  <input type="number" placeholder="Ingresá el id de maridaje"  name="maridaje_idMaridaje" required>
+  <select name="maridaje">
+    <option selected disabled>Seleccionar maridaje...</option>
+    <% for (let i = 0; i < vinos.length; i++) {%>
+    <option value="<%= vinos[i].maridaje.idMaridaje %>">
+      <%= vinos[i].maridaje.maridaje %>
+    </option>
+    <% } %>
+  </select>
   <br>
   <br>
-  <label>Potencial de guardado:</label>
+  <label>Potencial de guardado (en años):</label>
   <input type="number" placeholder="Ingresá el potencial de guardado"  name="potencialGuardado" required>
   <br>
   <br>
-  <label>Volumen:</label>
+  <label>Volumen (en ml.):</label>
   <input type="number" placeholder="Ingresá el volumen"  name="volumen" required>
   <br>
   <br>
     <button class="login" type="submit">Enviar</button>
   <br>
 </form>
-  
-
 </body>
 </html>

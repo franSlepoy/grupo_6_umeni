@@ -22,7 +22,8 @@ let vinosController = {
             include : [
              {association: "cepas"},
              {association: "bodegas"},
-             {association: "maridaje"}
+             {association: "maridaje"},
+             //{association: "lineas"}
          ]
         })
            .then(function(vinos) {
