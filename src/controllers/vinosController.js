@@ -1,5 +1,6 @@
 let db = require("../database/models")
 const path = require("path");
+const { where } = require("sequelize");
 
 
 let vinosController = {
@@ -32,7 +33,7 @@ let vinosController = {
         
     },
     create: function(req,res){
-        return  res.json(req.body);
+        //return  res.json(req.body);
         db.Vino.create({
             nombre: req.body.nombre, 
             anio: req.body.anio, 
@@ -102,7 +103,19 @@ let vinosController = {
             res.render(path.resolve(__dirname, "../views/listadoPorCepas"), {cepas:cepas})
              
              })
-    }
+    },
+    tintosList: (req,res) =>{
+    res.render(path.resolve(__dirname, "../views/tintos"))
+    },
+    blancosList: (req,res) =>{
+        res.render(path.resolve(__dirname, "../views/blancos"))
+    },
+    espumantesList: (req,res) =>{
+        res.render(path.resolve(__dirname, "../views/espumantes"))
+    },
+    especialesList: (req,res) =>{
+        res.render(path.resolve(__dirname, "../views/especiales"))
+    }            
 
 };
 module.exports = vinosController

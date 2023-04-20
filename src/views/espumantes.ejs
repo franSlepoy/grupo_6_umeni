@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenidxs a UMENI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+    </head>
+    <body>
+        <header>
+            <%- include('./partials/header.ejs') %>
+        </header>
+        <main>
+            <section class="banner">
+                <img class="portada" src="/images/vino-banner.jpg" alt="Banner-vino">
+            </section>
+
+            <div class="form" action="#" method="GET">
+                <div class="input">Buscar mas productos</div>
+                <div class="submit"><i class="fas fa-search"></i></div>
+            </div>
+            <br>
+            <section class="recomendados">
+                <h2>Vinos Espumantes</h2>
+                <div class="recomend">
+    <Article>
+       Aca van los espumantes 
+        
+    </Article>
+</div>
+</section>
+<br>
+
+
+</main>
+</body>
+<footer>
+<%- include('./partials/footer.ejs') %>
+</footer>
+
+           
+
+</html>
