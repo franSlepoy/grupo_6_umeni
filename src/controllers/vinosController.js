@@ -23,7 +23,7 @@ let vinosController = {
              {association: "cepas"},
              {association: "bodegas"},
              {association: "maridaje"},
-             //{association: "lineas"}
+             {association: "lineas"}
          ]
         })
            .then(function(vinos) {
@@ -32,13 +32,14 @@ let vinosController = {
         
     },
     create: function(req,res){
+        return  res.json(req.body);
         db.Vino.create({
             nombre: req.body.nombre, 
             anio: req.body.anio, 
             cepa: req.body.cepa,
             descripcion: req.body.descripcion,
             imagen: req.body.imagen,
-            //lineas_idLineas: req.body.lineas_idLineas,
+            lineas_idLineas: req.body.lineas_idLineas,
             maridaje_idmaridaje: req.body.maridaje,
             nombreBodega_idBodega: req.body.bodega,
             potencialGuardado: req.body.potencialGuardado,
@@ -82,7 +83,7 @@ let vinosController = {
             cepa: req.body.cepa,
             descripcion: req.body.descripcion,
             imagen: req.body.imagen,
-            //lineas_idLineas: req.body.lineas_idLineas,
+            lineas_idLineas: req.body.lineas_idLineas,
             maridaje_idmaridaje: req.body.maridaje,
             nombreBodega_idBodega: req.body.bodega,
             potencialGuardado: req.body.potencialGuardado,
@@ -99,7 +100,7 @@ let vinosController = {
         db.Cepa.findAll()
         .then(function(cepas){
             res.render(path.resolve(__dirname, "../views/listadoPorCepas"), {cepas:cepas})
-             //return  res.json({vinos:vinos});
+             
              })
     }
 

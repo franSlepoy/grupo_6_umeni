@@ -10,7 +10,7 @@
     <h1>Crear Vino</h1>
     <br>
     <br>
-    <form method="POST" action="/vinos/add" enctype="multipart/form-data">
+    <form method="POST" action="/vinos/add"  >
   <label for="name">Nombre:</label>
   <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="nombre" required>
   <br>
@@ -43,6 +43,14 @@
   <br>
   <br>
    <label>linea:</label>
+   <select name="bodega">
+    <option selected disabled>Seleccionar linea...</option>
+    <% for (let i = 0; i < vinos.length; i++) {%>
+    <option value="<%= vinos[i].lineas.idLinea %>">
+      <%= vinos[i].lineas.lineascol %>
+    </option>
+    <% } %>
+  </select>
   <br>
   <br>
   <label>Cepa</label>
