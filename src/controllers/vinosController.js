@@ -47,7 +47,7 @@ let vinosController = {
             precio: req.body.precio,
             volumen: req.body.volumen
         });
-         res.redirect("listadoDeVinos");
+         res.redirect(path.join(__dirname, "../views/listadoDeVinos"));
     },
     delete: function(req,res){
         db.Vino.destroy({
