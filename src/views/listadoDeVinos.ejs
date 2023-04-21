@@ -30,10 +30,12 @@
                 <h2>Nuestros recomendados</h2>
                 <div class="recomend">
     
-        <Article>
-        <% if(locals.vinos){ %>
+      
+        
+            <% if(locals.vinos){ %>
             
             <%  for (let i = 0; i < vinos.length; i++){ %>
+                <Article>
             <a href="/vinos/detalleVino/<%= vinos[i].idVino %>">
             <div><img class= "imagen" src="<%= vinos[i].imagen %>"></div> </a>      
             <div class="info">
@@ -41,12 +43,11 @@
             <p class="bodega"> </p>Vino:<%= vinos[i].nombre %></p>
             <p class="year"> Año: <%= vinos[i].anio %></p>
             <p class="precio"> Precio: <%= vinos[i].precio %></p>
-            
             </div>  
-       
+             </Article>
             <% } %> 
             <% } %>      
-        </Article>
+        
     
 </div>
 </section>
