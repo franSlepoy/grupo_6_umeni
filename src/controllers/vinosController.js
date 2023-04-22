@@ -25,28 +25,28 @@ let vinosController = {
         const lineas = await db.Linea.findAll();
         const maridaje = await db.Maridaje.findAll();
           
-        //return res.json(bodegas)
+        //return res.json(maridaje)
          res.render(path.resolve(__dirname, "../views/crearVinoForm"), 
         {vinos:vinos, cepas:cepas,bodegas:bodegas, lineas:lineas, 
         maridaje:maridaje});
     },
 
     create: function(req,res){
-        return  res.json(req.body);
+        //return  res.json(req.body);
         db.Vino.create({
             nombre: req.body.nombre, 
             anio: req.body.anio, 
-            cepa: req.body.cepa,
+            cepas_idCepa: req.body.cepa,
             descripcion: req.body.descripcion,
             imagen: req.body.imagen,
-            lineas_idLineas: req.body.lineas_idLineas,
+            lineas_idLineas: req.body.linea,
             maridaje_idmaridaje: req.body.maridaje,
             nombreBodega_idBodega: req.body.bodega,
             potencialGuardado: req.body.potencialGuardado,
             precio: req.body.precio,
             volumen: req.body.volumen
         });
-         res.redirect(path.join(__dirname, "../views/listadoDeVinos"));
+         res.redirect(path.resolve(__dirname,"../views/listadoDeVinos"));
     },
     delete: function(req,res){
         db.Vino.destroy({
