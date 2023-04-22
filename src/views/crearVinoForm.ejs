@@ -34,44 +34,42 @@
   <label>Bodega:</label>
   <select name="bodega">
     <option selected disabled>Seleccionar bodega...</option>
-    <% for (let i = 0; i < vinos.length; i++) {%>
-    <option value="<%= vinos[i].bodegas.idBodega %>">
-      <%= vinos[i].bodegas.bodegaNombre %>
-    </option>
-    <% } %>
+    <% locals.bodegas.forEach(function(bodegas) { %>
+    <option value="<%= bodegas.idBodega %>"> <%= bodegas.bodegaNombre %> </option>
+    <% }) %>
   </select>
   <br>
   <br>
    <label>linea:</label>
    <select name="linea">
     <option selected disabled>Seleccionar linea...</option>
-    <% for (let i = 0; i < vinos.length; i++) {%>
-    <option value="<%= vinos[i].lineas.idLinea %>">
-      <%= vinos[i].lineas.lineascol %>
+    <% locals.lineas.forEach(function (lineas) {%>
+    <option value="<%= lineas.idLinea %>">
+      <%= lineas.lineascol %>
     </option>
-    <% } %>
+    <% }) %>
   </select>
   <br>
   <br>
   <label>Cepa</label>
   <select name="cepa">
     <option selected disabled>Seleccionar cepa...</option>
-    <% for (let i = 0; i < vinos.length; i++) {%>
-    <option value="<%= vinos[i].cepas.idCepa %>">
-      <%= vinos[i].cepas.nombreCepa %>
+    <% locals.cepas.forEach(function (cepas) {%>
+    <option value="<%= cepas.idCepa %>">
+      <%= cepas.nombreCepa %>
     </option>
-    <% } %>
+    <% }) %>
   </select>
   <br>
   <br>
   <label>Maridaje:</label>
   <select name="maridaje">
     <option selected disabled>Seleccionar maridaje...</option>
-    <% for (let i = 0; i < vinos.length; i++) {%>
-    <option value="<%= vinos[i].maridaje.idMaridaje %>">
-      <%= vinos[i].maridaje.maridaje %>
+    <% locals.maridaje.forEach(function (maridaje) {%>
+    <option value="<%= maridaje.idMaridaje %>">
+      <%= maridaje.maridaje %>
     </option>
-    <% } %>
+    <% }) %>
   </select>
   <br>
   <br>

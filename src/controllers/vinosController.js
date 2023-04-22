@@ -18,22 +18,21 @@ let vinosController = {
        res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
        })
     },
-    add: function(req,res){
-        db.Vino.findAll({
-            include : [
-             {association: "cepas"},
-             {association: "bodegas"},
-             {association: "maridaje"},
-             {association: "lineas"}
-         ]
-        })
-           .then(function(vinos) {
-            return res.render(path.resolve(__dirname, "../views/crearVinoForm"), {vinos:vinos});
-           })
-        
+    add: async function(req,res){
+        const vinos = await db.Vino.findAll();
+        const cepas = await db.Cepa.findAll();
+        const bodegas = await db.Bodega.findAll();
+        const lineas = await db.Linea.findAll();
+        const maridaje = await db.Maridaje.findAll();
+          
+        //return res.json(bodegas)
+         res.render(path.resolve(__dirname, "../views/crearVinoForm"), 
+        {vinos:vinos, cepas:cepas,bodegas:bodegas, lineas:lineas, 
+        maridaje:maridaje});
     },
+
     create: function(req,res){
-        //return  res.json(req.body);
+        return  res.json(req.body);
         db.Vino.create({
             nombre: req.body.nombre, 
             anio: req.body.anio, 
