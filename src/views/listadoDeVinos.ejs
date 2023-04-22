@@ -29,33 +29,74 @@
             <section class="recomendados">
                 <h2>Nuestros recomendados</h2>
                 <div class="recomend">
-    <Article>
-    <ul>
-        <% if(locals.vinos){ %>
+    
+      
+        
+            <% if(locals.vinos){ %>
+            
             <%  for (let i = 0; i < vinos.length; i++){ %>
-                <li>
-                    
-             <a href="/vinos/detalleVino/<%= vinos[i].idVino %>"> <p class="vino"><%= vinos[i].imagen %> </p> </a>
-             <div class="info">
-            <p class="vino"> Vino:<%= vinos[i].nombre %> </p>
-            <p class="bodega"> Bodega: <%= vinos[i].cepas.nombreCepa %></p>
+                <Article>
+            <a href="/vinos/detalleVino/<%= vinos[i].idVino %>">
+            <div><img class= "imagen" src="<%= vinos[i].imagen %>"></div> </a>      
+            <div class="info">
+            <p class="vino"> Bodega: <%= vinos[i].bodegas.bodegaNombre %> </p>
+            <p class="bodega"> </p>Vino:<%= vinos[i].nombre %></p>
             <p class="year"> Año: <%= vinos[i].anio %></p>
             <p class="precio"> Precio: <%= vinos[i].precio %></p>
-             </div>  
-                </li>
+            </div>  
+             </Article>
             <% } %> 
             <% } %>      
-    </ul>
-    </Article>
+        
+    
 </div>
 </section>
 <br>
+<sectionc class="wine-type">
+    <h2>¿Qué estas buscando?</h2>
+    <div class="types">
+        <article>
+            <div><img class= "imagen-tipo" src="/images/copa-tinto.jpg"></div>
+            <div class="info-type">
+            <p class="variedad">TINTO</p>
+            <p class="estacion">Verano 2022</p>
+            <a class="see-more" href="/vinos/tintos">VER MÁS</a>
+            </div>
+        </article>
+        <article>
+            <div><img class= "imagen-tipo" src="/images/copa-blanco.jpg"></div>
+            <div class="info-type">
+            <p class="variedad">BLANCO</p>
+            <p class="estacion">Verano 2022</p>
+            <a class="see-more" href="/vinos/blancos">VER MÁS</a>
+            </div>
+        </article>
+        <article>
+            <div><img class= "imagen-tipo" src="/images/copa-espumante.jpg"></div>
+            <div class="info-type">
+            <p class="variedad">ESPUMANTES</p>
+            <p class="estacion">Verano 2022</p>
+            <a class="see-more" href="/vinos/espumantes">VER MÁS</a>
+            </div>
+        </article>
+        <article>
+            <div><img class= "imagen-tipo" src="/images/copa-especiales.jpg"></div>
+            <div class="info-type">
+            <p class="variedad">ESPECIALES</p>
+            <p class="estacion">Verano 2022</p>
+            <a class="see-more" href="/vinos/especiales">VER MÁS</a>
+            </div>
+        </article>
+    </div>
+</section>
+<br>
+
 </main>
 </body>
 <footer>
 <%- include('./partials/footer.ejs') %>
 </footer>
-</html>
+
            
 
 </html>

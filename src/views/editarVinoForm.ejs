@@ -12,11 +12,11 @@
     <br>
     <form method="POST" action="/vinos/edit/<%=vino.id  %>?_method=PUT" enctype="multipart/form-data">
 <label for="name">Nombre:</label>
-  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="nombre" value="<%=vino.nombre %>">
+  <input type="name" placeholder="Ingresá el nombre del producto"  name="nombre" value="<%=vino.nombre %>">
   <br>
   <br>
   <label for="description">Descripción</label>
-  <input type="name" placeholder="Descripción" id="apellido" name="descripcion" <%=vino.descripcion %>   >
+  <input type="name" placeholder="Descripción"  name="descripcion" <%=vino.descripcion %>>
   <br>
   <br>
   <label for="prod_img">Imagen:</label>
@@ -31,27 +31,27 @@
   <input type="number" placeholder="Ingresá el año" id="price" name="anio" value="<%=vino.anio %>">
   <br>
   <br>
-  <label>nombreBodega_idBodega:</label>
+  <label>Bodega:</label>
   <input type="number" placeholder="Ingresá el id de bodega"  name="nombreBodega_idBodega" value="<%=vino.nombreBodega_idBodega %>">
   <br>
   <br>
-  <label>lineas_idLineas:</label>
+  <label>linea:</label>
   <input type="number" placeholder="Ingresá el id de linea"  name="lineas_idLineas" value="<%=vino.lineas_idLineas %>">
   <br>
   <br>
-  <label>cepas_idCepas:</label>
+  <label>Cepa:</label>
   <input type="number" placeholder="Ingresá el id de cepa"  name="cepas_idcepa" value="<%=vino.cepas_idcepa %>">
   <br>
   <br>
-  <label>maridaje_idMaridaje:</label>
+  <label>Maridaje:</label>
   <input type="number" placeholder="Ingresá el id de maridaje"  name="maridaje_idMaridaje" value="<%=vino.maridaje_idMaridaje%>">
   <br>
   <br>
-  <label>Potencial de guardado:</label>
+  <label>Potencial de guardado (en años):</label>
   <input type="number" placeholder="Ingresá el potencial de guardado"  name="potencialGuardado" value="<%=vino.potencialGuardado%>">
   <br>
   <br>
-  <label>Volumen:</label>
+  <label>Volumen (en ml.):</label>
   <input type="number" placeholder="Ingresá el volumen"  name="volumen" value="<%=vino.volumen%>">
   <br>
   <br>

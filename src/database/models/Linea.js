@@ -10,8 +10,14 @@ module.exports = (sequelize, dataTypes) => {
         };
     let config = {
         tableName : "lineas",
-        timestamp: false
+        timestamps: false
     }
     const Linea = sequelize.define(alias, cols, config);
+    Linea.associate = function(models) {
+      Linea.hasMany(models.Vino, {
+             as: "vino",
+             foreignKey: "lineas_idLineas"
+          })
+        }
     return Linea
 }

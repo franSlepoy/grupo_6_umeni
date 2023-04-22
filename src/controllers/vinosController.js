@@ -1,13 +1,15 @@
 let db = require("../database/models")
 const path = require("path");
-const Cepa = require("../database/models/Cepa");
+const { where } = require("sequelize");
+
 
 let vinosController = {
     list: function(req,res){
      db.Vino.findAll(
         {
        include : [
-        {association: "cepas"}
+        {association: "cepas"},
+        {association: "bodegas"}
     ]
        
        
@@ -16,24 +18,35 @@ let vinosController = {
        res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
        })
     },
-    add: function(req,res){
-        res.render(path.resolve(__dirname, "../views/crearVinoForm"));
+    add: async function(req,res){
+        const vinos = await db.Vino.findAll();
+        const cepas = await db.Cepa.findAll();
+        const bodegas = await db.Bodega.findAll();
+        const lineas = await db.Linea.findAll();
+        const maridaje = await db.Maridaje.findAll();
+          
+        //return res.json(maridaje)
+         res.render(path.resolve(__dirname, "../views/crearVinoForm"), 
+        {vinos:vinos, cepas:cepas,bodegas:bodegas, lineas:lineas, 
+        maridaje:maridaje});
     },
+
     create: function(req,res){
+        //return  res.json(req.body);
         db.Vino.create({
             nombre: req.body.nombre, 
             anio: req.body.anio, 
-            cepas_idCepa: req.body.cepas_idCepa,
+            cepas_idCepa: req.body.cepa,
             descripcion: req.body.descripcion,
             imagen: req.body.imagen,
-            lineas_idLineas: req.body.lineas_idLineas,
-            maridaje_idmaridaje: req.body.maridaje_idmaridaje,
-            nombreBodega_idBodega: req.body.nombreBodega_idBodega,
+            lineas_idLineas: req.body.linea,
+            maridaje_idmaridaje: req.body.maridaje,
+            nombreBodega_idBodega: req.body.bodega,
             potencialGuardado: req.body.potencialGuardado,
             precio: req.body.precio,
             volumen: req.body.volumen
         });
-         res.redirect(path.resolve(__dirname, "../views/listadoDeVinos"));
+         res.redirect(path.resolve(__dirname,"../views/listadoDeVinos"));
     },
     delete: function(req,res){
         db.Vino.destroy({
@@ -41,12 +54,14 @@ let vinosController = {
                 id: req.params.id 
             }
         })
-        res.redirect(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
+        res.redirect(path.resolve(__dirname, "../views/listadoDeVinos"))
     },
     detail: function(req,res){
         db.Vino.findByPk(req.params.id , {
             include : [
-             {association: "cepas"}
+             {association: "cepas"},
+             {association: "bodegas"},
+             {association: "maridaje"}
          ]
             
             
@@ -65,12 +80,12 @@ let vinosController = {
         db.Vino.update({
             nombre: req.body.nombre, 
             anio: req.body.anio, 
-            cepas_idCepa: req.body.cepas_idCepa,
+            cepa: req.body.cepa,
             descripcion: req.body.descripcion,
             imagen: req.body.imagen,
             lineas_idLineas: req.body.lineas_idLineas,
-            maridaje_idmaridaje: req.body.maridaje_idmaridaje,
-            nombreBodega_idBodega: req.body.nombreBodega_idBodega,
+            maridaje_idmaridaje: req.body.maridaje,
+            nombreBodega_idBodega: req.body.bodega,
             potencialGuardado: req.body.potencialGuardado,
             precio: req.body.precio,
             volumen: req.body.volumen
@@ -85,9 +100,21 @@ let vinosController = {
         db.Cepa.findAll()
         .then(function(cepas){
             res.render(path.resolve(__dirname, "../views/listadoPorCepas"), {cepas:cepas})
-             //return  res.json({vinos:vinos});
+             
              })
-    }
+    },
+    tintosList: (req,res) =>{
+    res.render(path.resolve(__dirname, "../views/tintos"))
+    },
+    blancosList: (req,res) =>{
+        res.render(path.resolve(__dirname, "../views/blancos"))
+    },
+    espumantesList: (req,res) =>{
+        res.render(path.resolve(__dirname, "../views/espumantes"))
+    },
+    especialesList: (req,res) =>{
+        res.render(path.resolve(__dirname, "../views/especiales"))
+    }            
 
 };
 module.exports = vinosController

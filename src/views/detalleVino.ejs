@@ -8,18 +8,24 @@
 </head>
 <body>
     <h1> <%= vinos.nombre %> </h1>
+    <div><img class= "imagen" src="<%= vinos.imagen %>"></div>
     <p>Descripción:  <%= vinos.descripcion %> </p>
     <p>Precio:  <%= vinos.precio %></p>
     <p>Año:  <%= vinos.anio %></p>
-    <p> Bodega:  <%= vinos.nombreBodega_idBodega %></p>
-    <p> Imagen:  <%= vinos.imagen %></p>
+    <p> Bodega:  <%= vinos.bodegas.bodegaNombre %></p>
     <p> Volumen:  <%= vinos.volumen %></p>
     <p> Cepa:  <%= vinos.cepas.nombreCepa %></p>
+    <p> Maridaje:  <%= vinos.maridaje.maridaje %></p>
     
     <br>
     <br>
-    <form action="/vinos/delete/<%=vinos.id%>" method="POST">
-           <button>DELETE</button>   
+    <form action="/delete/<% vinos.idVino %>?_method=DELETE" method="POST">
+           <button type="submit">DELETE</button>   
     </form>
+    <br>
+    <a href="/vinos/edit/<%=vinos.idVino %>">
+        <button>EDITAR</button>
+    </a>
+    
 </body>
 </html>
