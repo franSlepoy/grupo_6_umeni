@@ -19,5 +19,12 @@
   "email": "juan@gmail.com",
   "password": "$2a$10$5mSw.ozAzGpXhAU0VOZrlOvl4uSTD5RzIBRCAk6Ki5pSySb3i85PS",
   "avatar": "1682012994175_img.jpg"
+ },
+ {
+  "id": 4,
+  "fullName": "Martin Dominguez",
+  "email": "martin@gmail.com",
+  "password": "$2a$10$3AP6rUB/K6ZFLaLXYbaJ/e.AlxeJPAKUx59JNNRKT5yU7CQ.yzHOG",
+  "avatar": "1682271939016_img.jpg"
  }
 ]

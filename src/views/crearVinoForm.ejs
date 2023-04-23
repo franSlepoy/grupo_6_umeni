@@ -7,16 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+  <!-- Se añade js para validacion front -->
+  <script async src="/js/script.js"></script>
     <h1>Crear Vino</h1>
     <br>
     <br>
-    <form method="POST" action="/vinos/add" enctype="multipart/form-data" >
+    <div class="errores">
+      <ul></ul>
+    </div>
+    <form method="POST" action="/vinos/add" enctype="multipart/form-data" class = "addVino">
   <label for="name">Nombre:</label>
-  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="nombre" required>
+  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="nombre" required class="name">
   <br>
   <br>
   <label for="description">Descripción</label>
-  <input type="name" placeholder="Descripción" id="apellido" name="descripcion" required >
+  <input type="name" placeholder="Descripción" id="apellido" name="descripcion" required class="descripcion">
   <br>
   <br>
   <label for="prod_img">Imagen:</label>
