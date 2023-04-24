@@ -10,13 +10,13 @@
     <h1>Editar Vino</h1>
     <br>
     <br>
-    <form method="POST" action="/vinos/edit/<%=vino.id  %>?_method=PUT" enctype="multipart/form-data">
+    <form method="POST" action="/vinos/edit/<%=vino.idVino%>?_method=PUT" enctype="multipart/form-data">
 <label for="name">Nombre:</label>
   <input type="name" placeholder="Ingresá el nombre del producto"  name="nombre" value="<%=vino.nombre %>">
   <br>
   <br>
   <label for="description">Descripción</label>
-  <input type="name" placeholder="Descripción"  name="descripcion" <%=vino.descripcion %>>
+  <input type="name" placeholder="Descripción"  name="descripcion" value="<%=vino.descripcion %>">
   <br>
   <br>
   <label for="prod_img">Imagen:</label>
@@ -35,7 +35,7 @@
   <select name="bodega">
     <option selected disabled>Seleccionar bodega...</option>
     <% locals.bodegas.forEach(function(bodegas) { %>
-    <option value="<%= bodegas.idBodega %>" <%bodegas.idBodega == vino.nombreBodega_idBodega? "selected": null %>> <%= bodegas.bodegaNombre %> </option>
+    <option value="<%= bodegas.idBodega %>" <%= bodegas.idBodega == vino.nombreBodega_idBodega? "selected": null %>> <%= bodegas.bodegaNombre %> </option>
     <% }) %>
   </select>
   <br>
@@ -44,7 +44,7 @@
    <select name="linea">
     <option selected disabled>Seleccionar linea...</option>
     <% locals.lineas.forEach(function (lineas) {%>
-    <option value="<%= lineas.idLinea %>">
+    <option value="<%= lineas.idLinea %>" <%= lineas.idLinea == vino.lineas_idLineas? "selected": null %>>
       <%= lineas.lineascol %>
     </option>
     <% }) %>
@@ -55,7 +55,7 @@
   <select name="cepa">
     <option selected disabled>Seleccionar cepa...</option>
     <% locals.cepas.forEach(function (cepas) {%>
-    <option value="<%= cepas.idCepa %>">
+    <option value="<%= cepas.idCepa %>" <%= cepas.idCepa == vino.cepas_idCepa? "selected": null %>>
       <%= cepas.nombreCepa %>
     </option>
     <% }) %>
@@ -66,7 +66,7 @@
   <select name="maridaje">
     <option selected disabled>Seleccionar maridaje...</option>
     <% locals.maridaje.forEach(function (maridaje) {%>
-    <option value="<%= maridaje.idmaridaje %>">
+    <option value="<%= maridaje.idmaridaje %>" <%= maridaje.idmaridaje == vino.maridaje_idmaridaje? "selected": null %>>
       <%= maridaje.maridaje %>
     </option>
     <% }) %>

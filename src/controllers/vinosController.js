@@ -46,7 +46,7 @@ let vinosController = {
             precio: req.body.precio,
             volumen: req.body.volumen
         });
-          res.redirect(path.join("../views/listadoDeVinos"));
+          return res.redirect(path.join(__dirname,"../views/listadoDeVinos"));
     },
     delete: function(req,res){
         db.Vino.destroy({
@@ -54,7 +54,7 @@ let vinosController = {
                 id: req.params.id 
             }
         })
-        res.redirect(path.resolve(__dirname, "../views/listadoDeVinos"))
+        return res.redirect(path.join(__dirname, "../views/listadoDeVinos"));
     },
     detail: function(req,res){
         db.Vino.findByPk(req.params.id , {
@@ -72,32 +72,23 @@ let vinosController = {
        const id = req.params.id;
        const vino = await db.Vino.findByPk(id);
        const cepas = await db.Cepa.findAll();
-        const bodegas = await db.Bodega.findAll();
-        const lineas = await db.Linea.findAll();
-        const maridaje = await db.Maridaje.findAll();
-        return res.render(path.resolve(__dirname, "../views/editarVinoForm"), 
+       const bodegas = await db.Bodega.findAll();
+       const lineas = await db.Linea.findAll();
+       const maridaje = await db.Maridaje.findAll();
+       return res.render(path.resolve(__dirname, "../views/editarVinoForm"), 
         {vino:vino, cepas:cepas,bodegas:bodegas, lineas:lineas, 
         maridaje:maridaje});
     },
-    update: (req,res) =>{
-        db.Vino.update({
-            nombre: req.body.nombre, 
-            anio: req.body.anio, 
-            cepas_idCepa: req.body.cepa,
-            descripcion: req.body.descripcion,
-            imagen: req.file.filename,
-            lineas_idLineas: req.body.linea,
-            maridaje_idmaridaje: req.body.maridaje,
-            nombreBodega_idBodega: req.body.bodega,
-            potencialGuardado: req.body.potencialGuardado,
-            precio: req.body.precio,
-            volumen: req.body.volumen
+    update: async (req,res) =>{
+        const id = req.params.id;
+        await db.Vino.update({
+            ...req.body
         }, {
             where : {
-                id: req.params.id
+                id
             }
         })
-        res.redirect(path.resolve(__dirname, "../views/editarVinoForm") + req.params.id);
+        return res.redirect(path.resolve(__dirname, "../views/editarVinoForm"));
     },
     cepasList: (req,res) =>{
         db.Cepa.findAll()
