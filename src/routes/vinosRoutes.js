@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
       cb(null, path.join(__dirname, "../../Public/images"));
     },
     filename: function (req, file, cb) {
-      cb(null, "obra" + Date.now()+path.extname(file.originalname))
+      cb(null, "imagen" + Date.now()+path.extname(file.originalname))
     }
   })
 
