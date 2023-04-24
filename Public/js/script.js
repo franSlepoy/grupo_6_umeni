@@ -14,8 +14,8 @@ window.addEventListener("load", function(){
         }
         if (campoDescripcion.value == ""){
             errores.push("El campo descripción de vino es obligatorio")
-        } else if(campoNombre.value.length < 20){
-            errores.push("El campo descripción de vino debe tener al menos 20 caracteres")
+        } else if(campoNombre.value.length < 5){
+            errores.push("El campo descripción de vino debe tener al menos 5 caracteres")
         }
 
         if(errores.length > 0){

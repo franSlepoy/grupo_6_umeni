@@ -32,19 +32,45 @@
   <br>
   <br>
   <label>Bodega:</label>
-  <input type="number" placeholder="Ingresá el id de bodega"  name="nombreBodega_idBodega" value="<%=vino.nombreBodega_idBodega %>">
+  <select name="bodega">
+    <option selected disabled>Seleccionar bodega...</option>
+    <% locals.bodegas.forEach(function(bodegas) { %>
+    <option value="<%= bodegas.idBodega %>" <%bodegas.idBodega == vino.nombreBodega_idBodega? "selected": null %>> <%= bodegas.bodegaNombre %> </option>
+    <% }) %>
+  </select>
   <br>
   <br>
-  <label>linea:</label>
-  <input type="number" placeholder="Ingresá el id de linea"  name="lineas_idLineas" value="<%=vino.lineas_idLineas %>">
+   <label>linea:</label>
+   <select name="linea">
+    <option selected disabled>Seleccionar linea...</option>
+    <% locals.lineas.forEach(function (lineas) {%>
+    <option value="<%= lineas.idLinea %>">
+      <%= lineas.lineascol %>
+    </option>
+    <% }) %>
+  </select>
   <br>
   <br>
-  <label>Cepa:</label>
-  <input type="number" placeholder="Ingresá el id de cepa"  name="cepas_idcepa" value="<%=vino.cepas_idcepa %>">
+  <label>Cepa</label>
+  <select name="cepa">
+    <option selected disabled>Seleccionar cepa...</option>
+    <% locals.cepas.forEach(function (cepas) {%>
+    <option value="<%= cepas.idCepa %>">
+      <%= cepas.nombreCepa %>
+    </option>
+    <% }) %>
+  </select>
   <br>
   <br>
   <label>Maridaje:</label>
-  <input type="number" placeholder="Ingresá el id de maridaje"  name="maridaje_idMaridaje" value="<%=vino.maridaje_idMaridaje%>">
+  <select name="maridaje">
+    <option selected disabled>Seleccionar maridaje...</option>
+    <% locals.maridaje.forEach(function (maridaje) {%>
+    <option value="<%= maridaje.idmaridaje %>">
+      <%= maridaje.maridaje %>
+    </option>
+    <% }) %>
+  </select>
   <br>
   <br>
   <label>Potencial de guardado (en años):</label>
