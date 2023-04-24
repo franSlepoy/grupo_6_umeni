@@ -31,26 +31,9 @@ const controller = {
         else (db.Usuario.create({
             nombre: req.body.fullName,
             email: req.body.email,
-            contrasenia: req.body.password,
-            avatar: req.body.avatar
-        }))
-
-        // register: (req, res) => {
-        //     return res.render(path.join(__dirname, "../views/users/register"))
-        // },
-        // processRegister: (req, res) => {
-        //     const resultValidation = validationResult(req);
-    
-        //     if (resultValidation.errors.length > 0) {
-        //         return res.render (path.join(__dirname, "../views/users/register"), 
-        //         { errors:resultValidation.mapped(),
-        //             oldData: req.body
-        //         });
-        //     }
-        
-        
-     //return res.send ("Ok, las validaciones se pasaron y no tienes errores");
-     
+            contrasenia: bcryptjs.hashSync(req.body.password, 10),
+            avatar: req.file.filename
+        }))     
     
     let userInDB = User.findByField("email", req.body.email);
 
@@ -65,7 +48,6 @@ const controller = {
         });
     }
 
-    
     let userToCreate = {
     ...req.body,
     password: bcryptjs.hashSync(req.body.password,10),
@@ -81,37 +63,76 @@ const controller = {
         return res.render(path.join(__dirname, "../views/users/login"));
     },
     
-    loginProcess: (req,res) => {
-     let userToLogin = User.findByField("email", req.body.email);
-     
-     if(userToLogin) {
-         let isPasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
-         if (isPasswordOk) {
-            delete userToLogin.password;
-             req.session.userLogged = userToLogin;
-
-             if(req.body.remember_user){
-                res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2})
-             }
-
-             return res.redirect("/user/profile");
-            }
-    return res.render(path.join(__dirname, "../views/users/login"), {
-        errors: {
-            email: {
-                msg: "Las credenciales son inválidas"
-            }
-        }
-    });
-    }
-    return res.render(path.join(__dirname, "../views/users/login"), {
-        errors: {
-            email: {
-                msg: "No se encuentra este email en nuestra base de datos"
-            }
-        }
-    });
+    loginProcess: (req,res) =>{
+        db.Usuario.findOne({
+            where: { email: req.body.email },
+          })
+            .then(response => {
+              let userToLogin = response;
+              if (!userToLogin) {
+                return res.render(path.join(__dirname, "../views/users/login"), {
+                  errors: [
+                    {
+                      msg: "No se encuentra este email en nuestra base de datos.",
+                    },
+                  ],
+                  oldData: req.body,
+                });
+              }
+              let passwordOk = bcryptjs.compareSync(
+                req.body.password,
+                userToLogin.password,
+              );
+              if (!passwordOk) {
+                return res.render(path.join(__dirname, "../views/users/login"), {
+                  errors: [
+                    {
+                      msg: "La información ingresada no es correcta.",
+                    },
+                  ],
+                  oldData: req.body,
+                });
+              }
+              delete userToLogin.password;
+              req.session.userLogged = userToLogin;
+              
+              if (req.body.rememberUser) {
+                res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2});
+              } 
+              return res.redirect("/user/profile");
+            })
+            .catch(error => error);
     },
+    //  let userToLogin = User.findByField("email", req.body.email);
+     
+    //  if(userToLogin) {
+    //      let isPasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
+    //      if (isPasswordOk) {
+    //         delete userToLogin.password;
+    //          req.session.userLogged = userToLogin;
+
+    //          if(req.body.remember_user){
+    //             res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2})
+    //          }
+
+    //          return res.redirect("/user/profile");
+    //         }
+    // return res.render(path.join(__dirname, "../views/users/login"), {
+    //     errors: {
+    //         email: {
+    //             msg: "Las credenciales son inválidas"
+    //         }
+    //     }
+    // });
+    // }
+    // return res.render(path.join(__dirname, "../views/users/login"), {
+    //     errors: {
+    //         email: {
+    //             msg: "No se encuentra este email en nuestra base de datos"
+    //         }
+    //     }
+    // });
+    // },
 
     profile: (req, res) => {
 		return res.render(path.join(__dirname, "../views/users/profile"), {
