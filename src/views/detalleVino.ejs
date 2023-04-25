@@ -19,12 +19,13 @@
     
     <br>
     <br>
-    <form action="/delete/<% vinos.idVino %>?_method=DELETE" method="POST">
-           <button type="submit">DELETE</button>   
-    </form>
+    <a href="/vinos/delete/<%= vinos.idVino %>">
+       <button>Delete</button> 
+    </a>
+    <br>
     <br>
     <a href="/vinos/edit/<%=vinos.idVino %>">
-        <button>EDITAR</button>
+      <button>Editar</button>
     </a>
     
 </body>

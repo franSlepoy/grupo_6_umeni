@@ -24,7 +24,9 @@ router.post("/add", upload.single("imagen"), vinosController.create);
 router.get("/edit/:id", vinosController.edit);
 router.post("/edit/:id",upload.single("imagen"),vinosController.update );
 
-router.post("/delete/:id", vinosController.delete)
+router.get("/delete/:id", vinosController.delete);
+router.delete("/delete/:id", vinosController.destroy);
+
 
 router.get("/cepas", vinosController.cepasList);
 router.get("/tintos", vinosController.tintosList);

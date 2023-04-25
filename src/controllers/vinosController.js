@@ -46,15 +46,18 @@ let vinosController = {
             precio: req.body.precio,
             volumen: req.body.volumen
         });
-          return res.redirect(path.join(__dirname,"../views/listadoDeVinos"));
+          return res.redirect("/vinos");
     },
-    delete: function(req,res){
-        db.Vino.destroy({
-            where: {
-                id: req.params.id 
-            }
-        })
-        return res.redirect(path.join(__dirname, "../views/listadoDeVinos"));
+    delete: async function(req,res){
+        const id = req.params.id;
+        const vino = await db.Vino.findByPk(id);               
+        return res.render(path.resolve(__dirname,"../views/delete"), {vino}); 
+    },
+    destroy: async (req, res) =>{
+       const idVino = req.params.id;
+       await db.Vino.destroy({where: {idVino}});
+       return res.redirect("/vinos");
+
     },
     detail: function(req,res){
         db.Vino.findByPk(req.params.id , {
