@@ -17,11 +17,19 @@
     </header>
 <main>
             <div class="data">
-                <h2> Hola <%= user.fullName %> </h2>
-                <img class="img-avatar" src="/images/avatars/<%= user.avatar %>">
+                <h2> Hola <%= user.nombre %> </h2>
+                <img class="img-avatar" src="/images/avatar/<%= user.avatar %>">
                 <br>
                 <br>
                 <div class="user-mail"> <%= user.email %></div>
+            </div>
+            <div class="edit-profile">
+            <div class="edit-user">
+                    <a href="/user/edit/<%= user.email %>" title="Actualizar-perfil">Actualizar perfil</a>
+                </div>
+                <div class="delete-user">
+                    <form action="/user/<%= user.email %>?_method=DELETE" method="POST" > <button type="submit"  title="Eliminar" name="Eliminar">Eliminar cuenta  </button></form>
+                </div>
             </div>
 </main>
 <br>

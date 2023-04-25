@@ -92,18 +92,16 @@ const controller = {
                       msg: "La información ingresada no es correcta.",
                     },
                   ],
-                  oldData: req.body,
                 });
               }
               delete userToLogin.contrasenia;
               req.session.userLogged = userToLogin;
               
-              if (req.body.rememberUser) {
+              if (req.body.remember_user) {
                 res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2});
               }
               return res.redirect("/user/profile");
             })
-            .catch(error => error);
     },
     //  let userToLogin = User.findByField("email", req.body.email);
      
@@ -141,6 +139,18 @@ const controller = {
 			user: req.session.userLogged
 		});
 	},
+    //Editar perfil
+    edit: async (req, res) => {
+    let emailUser = req.params.email;
+    let findUser = await db.Usuario.findOne({
+      where: { email: emailUser },
+    });
+    res.render(path.join(__dirname, "../views/user/userEdit"), {
+      usario: findUser,
+    });
+  },
+
+  //Update perfil
 
     logout: (req, res) => {
         res.clearCookie("userEmail");

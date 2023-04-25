@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+    </head>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+    <body>
+        <main>
+            <div class="data">
+                <h2> Hola <%= user.nombre %> </h2>
+
+                <form action="/user/update/<%= user.email %>?_method=PUT" method="POST"  id="form" enctype="multipart/form-data" class="main-profile">
+
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
