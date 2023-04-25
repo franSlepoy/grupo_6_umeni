@@ -1,10 +1,12 @@
-let db = require("../database/models")
-
 const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
 const path = require("path");
 
 const User = require ('../models/User');
+const db = require("../database/models")
+const { response } = require('express');
+const { where } = require('sequelize');
+const sequelize = db.sequelize;
 
 const controller = {
     lista: function(req,res){
@@ -67,21 +69,21 @@ const controller = {
         db.Usuario.findOne({
             where: { email: req.body.email },
           })
-            .then(response => {
-              let userToLogin = response;
-              if (!userToLogin) {
-                return res.render(path.join(__dirname, "../views/users/login"), {
-                  errors: [
-                    {
-                      msg: "No se encuentra este email en nuestra base de datos.",
-                    },
-                  ],
-                  oldData: req.body,
-                });
-              }
-              let passwordOk = bcryptjs.compareSync(
-                req.body.password,
-                userToLogin.password,
+          .then(response => {
+            let userToLogin = response;
+            if (!userToLogin) {
+              return res.render(path.join(__dirname, "../views/users/login"), {
+                errors: [
+                  {
+                    msg: "No se encuentra este email en nuestra base de datos.",
+                  },
+                ],
+                oldData: req.body,
+              });
+            }
+            let passwordOk = bcryptjs.compareSync(
+              req.body.password,
+              userToLogin.contrasenia,
               );
               if (!passwordOk) {
                 return res.render(path.join(__dirname, "../views/users/login"), {
@@ -93,12 +95,12 @@ const controller = {
                   oldData: req.body,
                 });
               }
-              delete userToLogin.password;
+              delete userToLogin.contrasenia;
               req.session.userLogged = userToLogin;
               
               if (req.body.rememberUser) {
                 res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2});
-              } 
+              }
               return res.redirect("/user/profile");
             })
             .catch(error => error);
