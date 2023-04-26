@@ -26,5 +26,12 @@
   "email": "martin@gmail.com",
   "password": "$2a$10$3AP6rUB/K6ZFLaLXYbaJ/e.AlxeJPAKUx59JNNRKT5yU7CQ.yzHOG",
   "avatar": "1682271939016_img.jpg"
+ },
+ {
+  "id": 5,
+  "fullName": "Fernando Ramirez",
+  "email": "fer.ram@correo.com",
+  "password": "$2a$10$6v2eZL2Ba/kDAHc80T5zveRgaAqrB4UqpzBhpP.Z5SMNqneEibz7a",
+  "avatar": "1682542831125_img.jpg"
  }
 ]
