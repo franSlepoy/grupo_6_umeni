@@ -2,31 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Umeni - Detalle de Producto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/productDetails.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-    <h1> <%= vinos.nombre %> </h1>
-    <div><img class= "imagen" src="/images/productos/<%= vinos.imagen %>"></div>
-    <p>Descripción:  <%= vinos.descripcion %> </p>
-    <p>Precio:  <%= vinos.precio %></p>
-    <p>Año:  <%= vinos.anio %></p>
-    <p> Bodega:  <%= vinos.bodegas.bodegaNombre %></p>
-    <p> Volumen:  <%= vinos.volumen %></p>
-    <p> Cepa:  <%= vinos.cepas.nombreCepa %></p>
-    <p> Maridaje:  <%= vinos.maridaje.maridaje %></p>
-    
-    <br>
+
+<header>
+    <%- include('./partials/header.ejs') %>
+</header>
+<br>
+<br>
+  <body>
+    <div class = "card-wrapper">
+      <div class = "card">
+        <!-- card left -->
+        <div class = "product-imgs">
+          <div class = "img-display">
+            <div class = "img-showcase">
+              <img src="/images/productos/<%= vinos.imagen %>">
+            </div>
+          </div>
+          <div class = "img-select">
+            <div class = "img-item">
+              <a href = "#" data-id = "1">
+                <img src = "/images/Umeni 1.png" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "2">
+                <img src = "/images/Umeni 1.png" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "3">
+                <img src = "/images/Umeni 1.png" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "4">
+                <img src = "/images/Umeni 1.png" alt = "shoe image">
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- card right -->
+        <div class = "product-content">
+          <h2 class = "product-title"><%= vinos.nombre %> </h2>
+          <div class = "product-price">
+            <p class = "new-price">Precio: <span><%= vinos.precio %> (5%)</span></p>
+          </div>
+
+          <div class = "product-detail">
+            <h2>Descripción del vino: </h2>
+            <p><%= vinos.descripcion %></p>
+            
+            <ul>
+              <li>Meridaje: <span><%= vinos.maridaje.maridaje %></span></li>
+              <li>Bodega: <span><%= vinos.bodegas.bodegaNombre %></span></li>
+              <li>Cepa: <span><%= vinos.cepas.nombreCepa %></span></li>
+              <li>Tipo: <span><%= vinos.lineas.lineascol %> </span></li>
+              <li>Año: <span> <%= vinos.anio %></span></li>
+              <li>Potencial de guardado (años): <span> <%= vinos.potencialGuardado %></span></li>
+              <li>Volumen (ml.): <span><%=vinos.volumen %> </span></li>
+            </ul>
+          </div>
+
+          <div class = "purchase-info">
+            <input type = "number" min = "0" value = "1">
+            <button type = "button" class = "btn">
+              Add to Cart <i class = "fas fa-shopping-cart"></i>
+            </button>
+               
     <br>
     <a href="/vinos/delete/<%= vinos.idVino %>">
        <button>Delete</button> 
     </a>
     <br>
-    <br>
     <a href="/vinos/edit/<%=vinos.idVino %>">
       <button>Editar</button>
     </a>
-    
-</body>
-</html>
+    <br>
+    <a href="/vinos/add">
+      <button>Crear</button>
+    </a>
+          </div>
+        </div>
+     
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  <br>
+  <br>
+  <br>
+  <footer>
+    <%- include('./partials/footer.ejs') %>
+  </footer>
+  </html>
