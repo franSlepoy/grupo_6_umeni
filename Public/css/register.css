@@ -62,3 +62,9 @@ a {
 }
 
 .text-danger { color: red}
+
+.user-image{
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+}

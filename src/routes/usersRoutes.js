@@ -33,7 +33,7 @@ router.get("/profile", authMiddleware, userController.profile);
 router.get("/edit/:email", authMiddleware, userController.edit);
 
 //update usuario
-// router.put("/update/:email", authMiddleware, uploadFile.single('avatar'), userController.update);
+router.put("/update/:email", authMiddleware, uploadFile.single("avatar"), userController.update);
 
 //logout
 router.get("/logout", userController.logout);

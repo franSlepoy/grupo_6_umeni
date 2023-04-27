@@ -17,18 +17,18 @@
     </header>
         <main>
             <div class="data">
-                <h2> Hola <%= user.nombre %> </h2>
+                <h2> Hola <%= locals.userLogged.nombre %> </h2>
                 <img class="img-avatar" src="/images/avatars/<%= locals.userLogged.avatar %>">
                 <br>
                 <br>
-                <div class="user-mail"> <%= user.email %></div>
+                <div class="user-mail"> <%= locals.userLogged.email %></div>
             </div>
             <div class="edit-profile">
             <div class="edit-user">
                     <a href="/user/edit/<%= locals.userLogged.email %>" title="Actualizar-perfil">Actualizar perfil</a>
                 </div>
                 <div class="delete-user">
-                    <form action="/user/<%= user.email %>?_method=DELETE" method="POST" > <button type="submit"  title="Eliminar" name="Eliminar">Eliminar cuenta  </button></form>
+                    <form action="/user/<%= locals.userLogged.email %>?_method=DELETE" method="POST" > <button type="submit"  title="Eliminar" name="Eliminar">Eliminar cuenta  </button></form>
                 </div>
             </div>
         </main>

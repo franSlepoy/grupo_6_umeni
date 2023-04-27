@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
+    <link rel="stylesheet" href="/css/register.css">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +20,9 @@
                 <form action="/user/update/<%= user.email %>?_method=PUT" method="POST"  id="form" enctype="multipart/form-data" class="main-profile">
                     
                     <h1>Modifica tu cuenta</h1>
-                    <h4 class=subtitulo>Llena la información requerida</h4>
-
-                    <label for="fullName">Nombre Completo:</label>
-                    <input type="text" placeholder="Ingresa tu nombre completo" id="fullName" name="fullName" value="<%=locals.oldData ? oldData.fullName : null %>">
+                    
+                    <label for="fullName">Editar nombre:</label>
+                    <input type="text" placeholder="Ingresa tu nombre completo" id="fullName" name="fullName" value="<%= user.nombre %>">
                     <br>
                      <% if (locals.errors && errors.fullName) { %>
                     <div class="text-danger">
@@ -28,8 +30,8 @@
                     </div>
                     <% } %>
                     <br>
-                    <label for="email">Modifique su correo Electrónico:</label>
-                    <input type="email" placeholder="Ingresa tu correo electrónico" id="email" name="email" value="<%=locals.oldData ? oldData.email : null %>">
+                    <label for="email">Editar correo Electrónico:</label>
+                    <input type="email" placeholder="Ingresa tu correo electrónico" id="email" name="email" value="<%= user.email %>">
                     <br>
                     <% if (locals.errors && errors.email) { %>
                     <div class="text-danger">
@@ -40,11 +42,25 @@
                     <div>
                         <label><b>Cambia tu imagen de perfil: </b></label>
                         <br>
-                        <input type="file" name="avatar">
+                        <div>
+                            <img id="imgOld" src="/images/avatars/<%= locals.userLogged.avatar %>" class="user-image">
+                        </div>
+                        <input type="file" name="avatar" id="img-avatar" value="<%= locals.userLogged.avatar %>">
                     </div>
                     <br>
-                        <label for="password">Modifique su contraseña:</label>
-                        <input type="password" placeholder="Ingresa tu contraseña" id="password" name="password">
+                    <div>
+                        <label for="password">Contraseña actual:</label>
+                        <input type="password" placeholder="Ingresa su contraseña actual" id="passwordOld" name="passwordOld">
+                    </div>
+                    <div>
+                        <label for="password">Ingrese su nueva contraseña:</label>
+                        <input type="password" placeholder="Ingrese nueva contraseña" id="password" name="password">
+                    </div>
+                    <div>
+                        <label for="password">Repita su nueva contraseña:</label>
+                        <input type="password" placeholder="Repita nueva contraseña" id="password2" name="password2">
+                    </div>
+                    <p class="formulario-error">Ambas contraseñas deben ser iguales.</p>
                     <br>
                     <% if (locals.errors && errors.password) { %>
                     <div class="text-danger">
@@ -52,7 +68,7 @@
                     </div>
                     <% } %>
                     
-                    <button class="login" type="submit">Enviar</button>
+                    <button class="login" type="submit">Actualizar perfil</button>
 
                 </form>
             </div>
