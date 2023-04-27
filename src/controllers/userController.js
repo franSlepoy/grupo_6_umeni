@@ -103,36 +103,6 @@ const controller = {
               return res.redirect("/user/profile");
             })
     },
-    //  let userToLogin = User.findByField("email", req.body.email);
-     
-    //  if(userToLogin) {
-    //      let isPasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
-    //      if (isPasswordOk) {
-    //         delete userToLogin.password;
-    //          req.session.userLogged = userToLogin;
-
-    //          if(req.body.remember_user){
-    //             res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2})
-    //          }
-
-    //          return res.redirect("/user/profile");
-    //         }
-    // return res.render(path.join(__dirname, "../views/users/login"), {
-    //     errors: {
-    //         email: {
-    //             msg: "Las credenciales son inválidas"
-    //         }
-    //     }
-    // });
-    // }
-    // return res.render(path.join(__dirname, "../views/users/login"), {
-    //     errors: {
-    //         email: {
-    //             msg: "No se encuentra este email en nuestra base de datos"
-    //         }
-    //     }
-    // });
-    // },
 
     profile: (req, res) => {
 		return res.render(path.join(__dirname, "../views/users/profile"), {
@@ -141,17 +111,17 @@ const controller = {
 	},
     //Editar perfil
     edit: async (req, res) => {
-    let emailUser = req.params.email;
     let findUser = await db.Usuario.findOne({
-      where: { email: emailUser },
+      where: { email: req.params.email },
     });
-    res.render(path.join(__dirname, "../views/user/userEdit"), {
-      usario: findUser,
+    res.render(path.join(__dirname, "../views/users/userEdit"), {
+      user: findUser,
     });
   },
 
   //Update perfil
 
+  //logout del perfil
     logout: (req, res) => {
         res.clearCookie("userEmail");
         req.session.destroy();

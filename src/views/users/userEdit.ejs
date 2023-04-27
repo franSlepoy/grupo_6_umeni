@@ -15,6 +15,44 @@
                 <h2> Hola <%= user.nombre %> </h2>
 
                 <form action="/user/update/<%= user.email %>?_method=PUT" method="POST"  id="form" enctype="multipart/form-data" class="main-profile">
+                    
+                    <h1>Modifica tu cuenta</h1>
+                    <h4 class=subtitulo>Llena la información requerida</h4>
+
+                    <label for="fullName">Nombre Completo:</label>
+                    <input type="text" placeholder="Ingresa tu nombre completo" id="fullName" name="fullName" value="<%=locals.oldData ? oldData.fullName : null %>">
+                    <br>
+                     <% if (locals.errors && errors.fullName) { %>
+                    <div class="text-danger">
+                        <%= errors.fullName.msg %>
+                    </div>
+                    <% } %>
+                    <br>
+                    <label for="email">Modifique su correo Electrónico:</label>
+                    <input type="email" placeholder="Ingresa tu correo electrónico" id="email" name="email" value="<%=locals.oldData ? oldData.email : null %>">
+                    <br>
+                    <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                    <%= errors.email.msg %>
+                    </div>
+                    <% } %>
+                    <br>
+                    <div>
+                        <label><b>Cambia tu imagen de perfil: </b></label>
+                        <br>
+                        <input type="file" name="avatar">
+                    </div>
+                    <br>
+                        <label for="password">Modifique su contraseña:</label>
+                        <input type="password" placeholder="Ingresa tu contraseña" id="password" name="password">
+                    <br>
+                    <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                        <%= errors.password.msg %>
+                    </div>
+                    <% } %>
+                    
+                    <button class="login" type="submit">Enviar</button>
 
                 </form>
             </div>
