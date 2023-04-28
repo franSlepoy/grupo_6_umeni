@@ -24,11 +24,11 @@
                 <div class="user-mail"> <%= locals.userLogged.email %></div>
             </div>
             <div class="edit-profile">
-            <div class="edit-user">
-                    <a href="/user/edit/<%= locals.userLogged.email %>" title="Actualizar-perfil">Actualizar perfil</a>
+            <div>
+                    <a href="/user/edit/<%= locals.userLogged.email %>" title="Actualizar-perfil"><button class="profile-edit">Actualizar perfil</button></a>
                 </div>
-                <div class="delete-user">
-                    <form action="/user/<%= locals.userLogged.email %>?_method=DELETE" method="POST" > <button type="submit"  title="Eliminar" name="Eliminar">Eliminar cuenta  </button></form>
+                <div>
+                    <form action="/user/<%= locals.userLogged.email %>?_method=DELETE" method="POST" > <button type="submit"  title="Eliminar" name="Eliminar" class="user-delete">Eliminar cuenta  </button></form>
                 </div>
             </div>
         </main>

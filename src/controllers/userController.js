@@ -219,6 +219,18 @@ const controller = {
     });
   },
 
+  //Eliminar usuario
+  borrar: async (req, res) => {
+    let emailUser = req.params.email;
+    await db.Usuario.destroy({
+      where: {
+        email: emailUser,
+      },
+    });
+    req.session.destroy();
+    return res.redirect("/");
+  },
+
   //logout del perfil
     logout: (req, res) => {
         res.clearCookie("userEmail");

@@ -35,6 +35,9 @@ router.get("/edit/:email", authMiddleware, userController.edit);
 //update usuario
 router.put("/update/:email", authMiddleware, uploadFile.single("avatar"), userController.update);
 
+//elimimar usuario
+router.delete("/:email", userController.borrar);
+
 //logout
 router.get("/logout", userController.logout);
 
