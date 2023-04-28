@@ -2,24 +2,19 @@ var express = require("express");
 var router = express.Router();
 const path = require("path");
 var vinosController = require("../controllers/vinosController");
-const multer = require("multer");
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, path.join(__dirname, "../../Public/images/productos"));
-    },
-    filename: function (req, file, cb) {
-      cb(null, "imagen" + Date.now()+path.extname(file.originalname))
-    }
-  })
 
-  const upload = multer({ storage: storage })
+const { body } = require("express-validator");
+const { throws } = require("assert");
+
+const upload = require('../middlewares/multerVinos');
+const validations = require("../middlewares/validateCrearVino");
 
 router.get("/", vinosController.list);
 router.get("/detalleVino/:id", vinosController.detail);
 
 router.get("/add", vinosController.add);
-router.post("/add", upload.single("imagen"), vinosController.create);
+router.post("/add", upload.single("imagen"),validations, vinosController.create);
 
 router.get("/edit/:id", vinosController.edit);
 router.post("/edit/:id",upload.single("imagen"),vinosController.update );
