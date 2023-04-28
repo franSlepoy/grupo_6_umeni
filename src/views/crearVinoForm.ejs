@@ -22,46 +22,64 @@
    <div class="errores">
      <ul></ul>
     </div>
-    <form method="POST" action="/vinos/add" enctype="multipart/form-data" class = "addVino">
+  <form method="POST" action="/vinos/add" enctype="multipart/form-data" class = "addVino">
   <label for="name">Nombre:</label>
-  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="nombre"  class="name">
+  <input type="name" placeholder="Ingresá el nombre del producto" 
+   name="nombre"  class="name <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+   value="<%=locals.oldData ? oldData.nombre : null %>">
   <% if(locals.errors && errors.nombre) {%>
   <div class="text-danger"> <%= errors.nombre.msg %> </div>
   <% } %>
   <br>
+  
   <label for="description">Descripción</label>
-  <input type="name" placeholder="Descripción" id="apellido" name="descripcion"  class="descripcion">
+  <input type="name" placeholder="Descripción" id="apellido" name="descripcion"  class="descripcion"
+  value="<%=locals.oldData ? oldData.descripcion : null %>">
   <% if(locals.errors && errors.descripcion) {%>
     <div class="text-danger"> <%= errors.descripcion.msg %> </div>
     <% } %>
   <br>
+  
   <label for="prod_img">Imagen:</label>
   <input type="file" placeholder="Cargá una imagen" id="prod_img" name="imagen"  multiple  class="imgVino"> 
+  <% if(locals.errors && errors.imagen) {%>
+    <div class="text-danger"> <%= errors.imagen.msg %> </div>
+    <% } %>
   <br>
+  
   <label for="precio">Precio:</label>
-  <input type="number" placeholder="Ingresá el precio" id="price" name="precio" >
+  <input type="number" placeholder="Ingresá el precio" id="price" name="precio" 
+  value="<%=locals.oldData ? oldData.precio : null %>">
   <% if(locals.errors && errors.precio) {%>
     <div class="text-danger"> <%= errors.precio.msg %> </div>
     <% } %>
   <br>
+  
   <label for="anio">Año:</label>
-  <input type="number" placeholder="Ingresá el año" id="price" name="anio" >
+  <input type="number" placeholder="Ingresá el año" id="price" name="anio"
+  value="<%=locals.oldData ? oldData.anio : null %>" >
   <% if(locals.errors && errors.anio) {%>
     <div class="text-danger"> <%= errors.anio.msg %> </div>
     <% } %>
   <br>
+  
   <label>Bodega:</label>
   <select name="bodega">
     <option selected disabled>Seleccionar bodega...</option>
     <% locals.bodegas.forEach(function(bodegas) { %>
-    <option value="<%= bodegas.idBodega %>"> <%= bodegas.bodegaNombre %> </option>
+    <option value="<%= bodegas.idBodega %>"
+      <%= locals.oldData && (bodegas.bodegaNombre === oldData.bodega) ? "selected" : null %>
+      > 
+    <%= bodegas.bodegaNombre %>  
+    </option>
     <% }) %>
   </select>
   <% if(locals.errors && errors.bodega) {%>
     <div class="text-danger"> <%= errors.bodega.msg %> </div>
     <% } %>
   <br>
-   <label>linea:</label>
+   
+  <label>linea:</label>
    <select name="linea">
     <option selected disabled>Seleccionar linea...</option>
     <% locals.lineas.forEach(function (lineas) {%>
@@ -74,6 +92,7 @@
     <div class="text-danger"> <%= errors.linea.msg %> </div>
     <% } %>
   <br>
+  
   <label>Cepa</label>
   <select name="cepa">
     <option selected disabled>Seleccionar cepa...</option>
@@ -87,6 +106,7 @@
     <div class="text-danger"> <%= errors.cepa.msg %> </div>
     <% } %>
   <br>
+  
   <label>Maridaje:</label>
   <select name="maridaje">
     <option selected disabled>Seleccionar maridaje...</option>
@@ -100,14 +120,18 @@
     <div class="text-danger"> <%= errors.maridaje.msg %> </div>
     <% } %>
   <br>
+  
   <label>Potencial de guardado (en años):</label>
-  <input type="number" placeholder="Ingresá el potencial de guardado"  name="potencialGuardado">
+  <input type="number" placeholder="Ingresá el potencial de guardado"  name="potencialGuardado"
+  value="<%=locals.oldData ? oldData.potencialGuardado : null %>">
   <% if(locals.errors && errors.potencialGuardado) {%>
     <div class="text-danger"> <%= errors.potencialGuardado.msg %> </div>
     <% } %>
   <br>
+  
   <label>Volumen (en ml.):</label>
-  <input type="number" placeholder="Ingresá el volumen"  name="volumen">
+  <input type="number" placeholder="Ingresá el volumen"  name="volumen"
+  value="<%=locals.oldData ? oldData.volumen : null %>">
   <% if(locals.errors && errors.volumen) {%>
     <div class="text-danger"> <%= errors.volumen.msg %> </div>
     <% } %>

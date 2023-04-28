@@ -44,7 +44,7 @@ let vinosController = {
             {vinos:vinos, cepas:cepas,bodegas:bodegas, lineas:lineas, 
                 maridaje:maridaje,  
              errors:resultValidation.mapped(),
-                //oldData: req.body
+                oldData: req.body
             });
         }
             db.Vino.create({

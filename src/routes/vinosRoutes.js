@@ -5,6 +5,7 @@ var vinosController = require("../controllers/vinosController");
 const multer = require("multer");
 
 const { body } = require("express-validator");
+const { throws } = require("assert");
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -16,18 +17,7 @@ const storage = multer.diskStorage({
   })
 const upload = multer({ storage: storage })
 
-const validations = [
-  body("nombre").notEmpty().withMessage("Tenés que escribir un nombre de vino"),
-  body("descripcion").notEmpty().withMessage("Tenés que escribir una descripción"),
-  body("precio").notEmpty().withMessage("Tenés que escribir un precio"),
-  body("anio").notEmpty().withMessage("Tenés que escribir un año"),
-  body("bodega").notEmpty().withMessage("Tenés que seleccionar una bodega"),
-  body("linea").notEmpty().withMessage("Tenés que seleccionar una linea"),
-  body("cepa").notEmpty().withMessage("Tenés que seleccionar una cepa"),
-  body("maridaje").notEmpty().withMessage("Tenés que seleccionar un maridaje"),
-  body("potencialGuardado").notEmpty().withMessage("Tenés que escribir un potencial de guardado"),
-  body("volumen").notEmpty().withMessage("Tenés que escribir un volumen"),
-]
+const validations = require("../middlewares/validateCrearVino")
 
 router.get("/", vinosController.list);
 router.get("/detalleVino/:id", vinosController.detail);
