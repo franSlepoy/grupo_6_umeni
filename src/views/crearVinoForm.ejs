@@ -2,50 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Umeni-Crear</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
 </head>
+
+<header>
+  <%- include('./partials/header.ejs') %>
+</header> 
 <body>
   <!-- Se añade js para validacion front -->
-  <script async src="/js/script.js"></script>
+   <script async src="/js/script.js"></script>
     <h1>Crear Vino</h1>
-    <br>
-    <br>
-    <div class="errores">
-      <ul></ul>
+   <div class="errores">
+     <ul></ul>
     </div>
-    <form method="POST" action="/vinos/add" enctype="multipart/form-data" class = "addVino">
+  <form method="POST" action="/vinos/add" enctype="multipart/form-data" class = "addVino">
   <label for="name">Nombre:</label>
-  <input type="name" placeholder="Ingresá el nombre del producto" id="prodname" name="nombre" required class="name">
+  <input type="name" placeholder="Ingresá el nombre del producto" 
+   name="nombre"  class="name <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+   value="<%=locals.oldData ? oldData.nombre : null %>">
+  <% if(locals.errors && errors.nombre) {%>
+  <div class="text-danger"> <%= errors.nombre.msg %> </div>
+  <% } %>
   <br>
-  <br>
+  
   <label for="description">Descripción</label>
-  <input type="name" placeholder="Descripción" id="apellido" name="descripcion" required class="descripcion">
+  <input type="name" placeholder="Descripción" id="apellido" name="descripcion"  class="descripcion"
+  value="<%=locals.oldData ? oldData.descripcion : null %>">
+  <% if(locals.errors && errors.descripcion) {%>
+    <div class="text-danger"> <%= errors.descripcion.msg %> </div>
+    <% } %>
   <br>
-  <br>
+  
   <label for="prod_img">Imagen:</label>
-  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="imagen"  multiple required class="imgVino"> 
+  <input type="file" placeholder="Cargá una imagen" id="prod_img" name="imagen"  multiple  class="imgVino"> 
+  <% if(locals.errors && errors.imagen) {%>
+    <div class="text-danger"> <%= errors.imagen.msg %> </div>
+    <% } %>
   <br>
-  <br>
+  
   <label for="precio">Precio:</label>
-  <input type="number" placeholder="Ingresá el precio" id="price" name="precio" required>
+  <input type="number" placeholder="Ingresá el precio" id="price" name="precio" 
+  value="<%=locals.oldData ? oldData.precio : null %>">
+  <% if(locals.errors && errors.precio) {%>
+    <div class="text-danger"> <%= errors.precio.msg %> </div>
+    <% } %>
   <br>
-  <br>
+  
   <label for="anio">Año:</label>
-  <input type="number" placeholder="Ingresá el año" id="price" name="anio" required>
+  <input type="number" placeholder="Ingresá el año" id="price" name="anio"
+  value="<%=locals.oldData ? oldData.anio : null %>" >
+  <% if(locals.errors && errors.anio) {%>
+    <div class="text-danger"> <%= errors.anio.msg %> </div>
+    <% } %>
   <br>
-  <br>
+  
   <label>Bodega:</label>
   <select name="bodega">
     <option selected disabled>Seleccionar bodega...</option>
     <% locals.bodegas.forEach(function(bodegas) { %>
-    <option value="<%= bodegas.idBodega %>"> <%= bodegas.bodegaNombre %> </option>
+    <option value="<%= bodegas.idBodega %>"
+      <%= locals.oldData && (bodegas.bodegaNombre === oldData.bodega) ? "selected" : null %>
+      > 
+    <%= bodegas.bodegaNombre %>  
+    </option>
     <% }) %>
   </select>
+  <% if(locals.errors && errors.bodega) {%>
+    <div class="text-danger"> <%= errors.bodega.msg %> </div>
+    <% } %>
   <br>
-  <br>
-   <label>linea:</label>
+   
+  <label>linea:</label>
    <select name="linea">
     <option selected disabled>Seleccionar linea...</option>
     <% locals.lineas.forEach(function (lineas) {%>
@@ -54,8 +88,11 @@
     </option>
     <% }) %>
   </select>
+  <% if(locals.errors && errors.linea) {%>
+    <div class="text-danger"> <%= errors.linea.msg %> </div>
+    <% } %>
   <br>
-  <br>
+  
   <label>Cepa</label>
   <select name="cepa">
     <option selected disabled>Seleccionar cepa...</option>
@@ -65,8 +102,11 @@
     </option>
     <% }) %>
   </select>
+  <% if(locals.errors && errors.cepa) {%>
+    <div class="text-danger"> <%= errors.cepa.msg %> </div>
+    <% } %>
   <br>
-  <br>
+  
   <label>Maridaje:</label>
   <select name="maridaje">
     <option selected disabled>Seleccionar maridaje...</option>
@@ -76,15 +116,25 @@
     </option>
     <% }) %>
   </select>
+  <% if(locals.errors && errors.maridaje) {%>
+    <div class="text-danger"> <%= errors.maridaje.msg %> </div>
+    <% } %>
   <br>
-  <br>
+  
   <label>Potencial de guardado (en años):</label>
-  <input type="number" placeholder="Ingresá el potencial de guardado"  name="potencialGuardado" required>
+  <input type="number" placeholder="Ingresá el potencial de guardado"  name="potencialGuardado"
+  value="<%=locals.oldData ? oldData.potencialGuardado : null %>">
+  <% if(locals.errors && errors.potencialGuardado) {%>
+    <div class="text-danger"> <%= errors.potencialGuardado.msg %> </div>
+    <% } %>
   <br>
-  <br>
+  
   <label>Volumen (en ml.):</label>
-  <input type="number" placeholder="Ingresá el volumen"  name="volumen" required>
-  <br>
+  <input type="number" placeholder="Ingresá el volumen"  name="volumen"
+  value="<%=locals.oldData ? oldData.volumen : null %>">
+  <% if(locals.errors && errors.volumen) {%>
+    <div class="text-danger"> <%= errors.volumen.msg %> </div>
+    <% } %>
   <br>
     <button class="login" type="submit">Enviar</button>
   <br>

@@ -23,11 +23,20 @@ router.post("/login", userController.loginProcess);
 //formulario register
 router.get("/register", guestMiddleware, userController.register);
 
-//precesar registro
+//procesar registro
 router.post("/register", uploadFile.single("avatar"), validations, userController.processRegister);
 
 //perfil usuario
 router.get("/profile", authMiddleware, userController.profile);
+
+//editar usuario
+router.get("/edit/:email", authMiddleware, userController.edit);
+
+//update usuario
+router.put("/update/:email", authMiddleware, uploadFile.single("avatar"), userController.update);
+
+//elimimar usuario
+router.delete("/:email", userController.borrar);
 
 //logout
 router.get("/logout", userController.logout);

@@ -27,3 +27,20 @@ h2{
     color: #F99F3F;
     font-size: 25px;
 }
+
+.edit-profile{
+    margin: 0px 40px;
+}
+
+.user-delete,
+.profile-edit{
+    width: 100%;
+    background-color: #F4B266;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #888888;
+}

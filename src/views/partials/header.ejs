@@ -14,26 +14,26 @@
         </div>
         <% if (locals.isLogged) { %>
             <div class="profile">
-                <a href="../user/profile">
+                <a href="../../user/profile">
                     <img class="img-user" src="/images/avatars/<%= locals.userLogged.avatar %>">
                 </a>
             </div>
             <div class="logout">
-                <a href="../user/logout">
+                <a href="../../user/logout">
                     <i class="fas fa-sign-out-alt"></i>
                 </a>
             </div>
             <div class="cart">
-                <a href="../cart">
+                <a href="../../cart">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
             </div>
         <% } else { %>
         <div>
-            <li><a class="navigation enter" href="../user/login">Login</a></li>
+            <li><a class="navigation enter" href="../../user/login">Login</a></li>
         </div>
         <div>
-            <li><a class="navigation join" href="../user/register">Register</a></li>
+            <li><a class="navigation join" href="../../user/register">Register</a></li>
         </div>
         <% } %>
     </nav>

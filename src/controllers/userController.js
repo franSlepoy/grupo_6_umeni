@@ -92,56 +92,146 @@ const controller = {
                       msg: "La información ingresada no es correcta.",
                     },
                   ],
-                  oldData: req.body,
                 });
               }
               delete userToLogin.contrasenia;
               req.session.userLogged = userToLogin;
               
-              if (req.body.rememberUser) {
+              if (req.body.remember_user) {
                 res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2});
               }
               return res.redirect("/user/profile");
             })
-            .catch(error => error);
     },
-    //  let userToLogin = User.findByField("email", req.body.email);
-     
-    //  if(userToLogin) {
-    //      let isPasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
-    //      if (isPasswordOk) {
-    //         delete userToLogin.password;
-    //          req.session.userLogged = userToLogin;
-
-    //          if(req.body.remember_user){
-    //             res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2})
-    //          }
-
-    //          return res.redirect("/user/profile");
-    //         }
-    // return res.render(path.join(__dirname, "../views/users/login"), {
-    //     errors: {
-    //         email: {
-    //             msg: "Las credenciales son inválidas"
-    //         }
-    //     }
-    // });
-    // }
-    // return res.render(path.join(__dirname, "../views/users/login"), {
-    //     errors: {
-    //         email: {
-    //             msg: "No se encuentra este email en nuestra base de datos"
-    //         }
-    //     }
-    // });
-    // },
 
     profile: (req, res) => {
 		return res.render(path.join(__dirname, "../views/users/profile"), {
 			user: req.session.userLogged
 		});
 	},
+    //Editar perfil
+    edit: async (req, res) => {
+    let findUser = await db.Usuario.findOne({
+      where: { email: req.params.email },
+    });
+    res.render(path.join(__dirname, "../views/users/userEdit"), {
+      user: findUser,
+    });
+  },
 
+  //Update perfil
+  update: async (req, res) => {
+    let emailUser = req.params.email;
+    let userToEdit = await db.Usuario.findOne({
+      where: { email: emailUser},
+    });
+    let avatar;
+    if (req.file != undefined) {
+      avatar = req.file.filename;
+    } else {
+      avatar = userToEdit.avatar;
+    }
+
+    let passwordOk = bcryptjs.compareSync(
+      req.body.passwordOld,
+      userToEdit.contrasenia,
+    );
+
+    if (
+      req.body.check == undefined &&
+      req.body.fullName == userToEdit.fullName &&
+      req.body.email == userToEdit.email &&
+      req.file == undefined
+    ) {
+      return res.render(path.join(__dirname, "../views/users/profile"), {
+        mensajeExitoso: [
+          {
+            msg: "¡Su perfil no tuvo modificaciones!",
+          },
+        ],
+      });
+    }
+    if (req.body.check == "1") {
+      if (!passwordOk) {
+        return res.render(path.join(__dirname, "../views/users/userEdit"), {
+          mensajesDeError: [
+            {
+              msg: "Su contraseña actual no coincide",
+            },
+          ],
+          user: userToEdit,
+        });
+      } else if (req.body.password !== req.body.password2) {
+        return res.render(path.join(__dirname, "../views/users/userEdit"), {
+          mensajesDeError: [
+            {
+              msg: "Las contraseñas no coinciden",
+            },
+          ],
+          user: userToEdit,
+        });
+      } else {
+        delete req.body.passwordOld;
+        delete req.body.check;
+        delete req.body.password2;
+        await db.Usuario.update(
+          {
+            nombre: req.body.fullName,
+            email: req.body.email,
+            contrasenia: bcryptjs.hashSync(req.body.password, 10),
+            avatar: req.file.filename
+          },
+          {
+            where: { email: req.params.email },
+          },
+        );
+
+      }
+    } else {
+      delete req.body.passwordOld;
+      delete req.body.check;
+      delete req.body.password2;
+      await db.Usuario.update(
+        {
+          nombre: req.body.fullName,
+          email: req.body.email,
+          avatar: avatar,
+          contrasenia: bcryptjs.hashSync(req.body.password, 10),
+        },
+        {
+          where: { email: req.params.email },
+        },
+      );
+    }
+
+    let usuarioEditado = await db.Usuario.findOne({
+      where: { email: emailUser },
+    });     
+    return res.render(path.join(__dirname, "../views/users/profile"), {
+ 
+      mensajeExitoso: [
+        {
+          msg: "¡Perfil modificado con éxito!",
+        },
+      ],
+      
+      user: usuarioEditado,
+    });
+  },
+
+  //Eliminar usuario
+  borrar: async (req, res) => {
+    let emailUser = req.params.email;
+    await db.Usuario.destroy({
+      where: {
+        email: emailUser,
+      },
+    });
+    req.session.destroy();
+    return res.redirect("/");
+  },
+
+  //logout del perfil
     logout: (req, res) => {
         res.clearCookie("userEmail");
         req.session.destroy();

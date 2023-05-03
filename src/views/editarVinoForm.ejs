@@ -2,35 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Umeni-Crear</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/851c995492.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
 </head>
+
+<header>
+  <%- include('./partials/header.ejs') %>
+</header> 
 <body>
     <h1>Editar Vino</h1>
-    <br>
-    <br>
+   
     <form method="POST" action="/vinos/edit/<%=vino.idVino%>?_method=PUT" enctype="multipart/form-data">
 <label for="name">Nombre:</label>
   <input type="name" placeholder="Ingresá el nombre del producto"  name="nombre" value="<%=vino.nombre %>">
   <br>
-  <br>
+
   <label for="description">Descripción</label>
   <input type="name" placeholder="Descripción"  name="descripcion" value="<%=vino.descripcion %>">
   <br>
-  <br>
+
   <label for="prod_img">Imagen:</label>
   <input type="file" placeholder="Cargá una imagen" id="prod_img" name="imagen" value="<%=vino.imagen %>"> 
   <br>
-  <br>
+  
   <label for="price">Precio:</label>
   <input type="number" placeholder="Ingresá el precio" id="price" name="precio" value="<%=vino.precio %>">
   <br>
-  <br>
+
   <label for="price">Año:</label>
   <input type="number" placeholder="Ingresá el año" id="price" name="anio" value="<%=vino.anio %>">
   <br>
-  <br>
+ 
   <label>Bodega:</label>
   <select name="bodega">
     <option selected disabled>Seleccionar bodega...</option>
@@ -39,7 +47,7 @@
     <% }) %>
   </select>
   <br>
-  <br>
+
    <label>linea:</label>
    <select name="linea">
     <option selected disabled>Seleccionar linea...</option>
@@ -50,7 +58,7 @@
     <% }) %>
   </select>
   <br>
-  <br>
+
   <label>Cepa</label>
   <select name="cepa">
     <option selected disabled>Seleccionar cepa...</option>
@@ -61,7 +69,7 @@
     <% }) %>
   </select>
   <br>
-  <br>
+  
   <label>Maridaje:</label>
   <select name="maridaje">
     <option selected disabled>Seleccionar maridaje...</option>
@@ -72,17 +80,17 @@
     <% }) %>
   </select>
   <br>
-  <br>
+  
   <label>Potencial de guardado (en años):</label>
   <input type="number" placeholder="Ingresá el potencial de guardado"  name="potencialGuardado" value="<%=vino.potencialGuardado%>">
   <br>
-  <br>
+
   <label>Volumen (en ml.):</label>
   <input type="number" placeholder="Ingresá el volumen"  name="volumen" value="<%=vino.volumen%>">
   <br>
-  <br>
+ 
     <button class="login" type="submit">Enviar</button>
-  <br>
+
 </form>
   
 

@@ -1,6 +1,7 @@
 let db = require("../database/models")
 const path = require("path");
 const { where } = require("sequelize");
+const { validationResult } = require("express-validator")
 
 
 let vinosController = {
@@ -11,8 +12,6 @@ let vinosController = {
         {association: "cepas"},
         {association: "bodegas"}
     ]
-       
-       
        })
        .then(function(vinos){
        res.render(path.resolve(__dirname, "../views/listadoDeVinos"), {vinos:vinos})
@@ -31,9 +30,24 @@ let vinosController = {
         maridaje:maridaje});
     },
 
-    create: function(req,res){
-        //return  res.json(req.body);
-        db.Vino.create({
+    create:  async  function(req,res){
+        const vinos = await db.Vino.findAll();
+        const cepas = await db.Cepa.findAll();
+        const bodegas = await db.Bodega.findAll();
+        const lineas = await db.Linea.findAll();
+        const maridaje = await db.Maridaje.findAll();
+        
+        const resultValidation = validationResult(req); 
+        
+        if (resultValidation.errors.length > 0) {
+            return res.render (path.resolve(__dirname, "../views/crearVinoForm"), 
+            {vinos:vinos, cepas:cepas,bodegas:bodegas, lineas:lineas, 
+                maridaje:maridaje,  
+             errors:resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+            db.Vino.create({
             nombre: req.body.nombre, 
             anio: req.body.anio, 
             cepas_idCepa: req.body.cepa,
@@ -46,7 +60,7 @@ let vinosController = {
             precio: req.body.precio,
             volumen: req.body.volumen
         });
-          return res.redirect("/vinos");
+          return res.redirect("/vinos"); 
     },
     delete: async function(req,res){
         const id = req.params.id;
@@ -64,7 +78,9 @@ let vinosController = {
             include : [
              {association: "cepas"},
              {association: "bodegas"},
-             {association: "maridaje"}
+             {association: "maridaje"},
+             {association: "lineas"},
+
          ]
          } )
         .then(function(vinos){
