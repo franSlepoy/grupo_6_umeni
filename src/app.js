@@ -6,6 +6,7 @@ const mainRoutes = require("./routes/mainRoutes");
 const usersRoutes = require("./routes/usersRoutes")
 const vinosRoutes = require("./routes/vinosRoutes")
 const apiVinosRoutes = require("./routes/apiVinosRoutes");
+const apiUsersRoutes = require("./routes/apiUsersRoutes");
 const methodOverride =  require('method-override');
 const PORT = 3031;
 const cookies = require('cookie-parser');
@@ -32,5 +33,6 @@ app.use("/user", usersRoutes)
 app.use("/vinos", vinosRoutes);
 
 app.use("/apiVinos", apiVinosRoutes)
+app.use("/apiUsers", apiUsersRoutes)
 
 app.listen(PORT, ()=>console.log('Servidor corriendo en el puerto 3031'));
