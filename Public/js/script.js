@@ -1,5 +1,7 @@
 window.addEventListener("load", function(){
     let formularioVinos = document.querySelector("form.addVino")
+
+    // Validación formulario de vinos
     console.log(formularioVinos)
     formularioVinos.addEventListener("submit", function(e){
         let errores = []
@@ -36,5 +38,6 @@ window.addEventListener("load", function(){
 
 
         }
-    })
-})
+        })
+        })
+
