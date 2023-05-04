@@ -82,5 +82,12 @@
   "email": "aa@88543.com",
   "password": "$2a$10$2nUHK/isblXnXqceserWluHwnqjNygtirGoMfc53Rx4YnluSKTzUC",
   "avatar": "1683153299440_img.jpg"
+ },
+ {
+  "id": 13,
+  "fullName": "aa",
+  "email": "jorge@hotmail.com",
+  "password": "$2a$10$RY63MxM2YWOEr.aZvk3GGeGv7np.fmjFThUZ2QV583oFqQM/rQ.ue",
+  "avatar": "1683194015949_img.jpg"
  }
 ]
