@@ -4,13 +4,13 @@ const Op = db.Sequelize.Op;
 
 module.exports = {
     list: async (req,res) => {
-        const users = await db.Usuario.findAll();
+        const users = await db.Usuario.findAll({
+            attributes: {exclude: ['contrasenia']}
+        });
         res.json({
             total: users.length ,
             data: users ,
             status: 200
-
-
         })
      
     },
