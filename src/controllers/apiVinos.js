@@ -8,9 +8,7 @@ module.exports = {
         res.json({
             total: vinos.length ,
             data: vinos ,
-            status: 200
-
-
+            status: 200,
         })
      
     },
