@@ -89,5 +89,19 @@
   "email": "jorge@hotmail.com",
   "password": "$2a$10$RY63MxM2YWOEr.aZvk3GGeGv7np.fmjFThUZ2QV583oFqQM/rQ.ue",
   "avatar": "1683194015949_img.jpg"
+ },
+ {
+  "id": 14,
+  "fullName": "nombre falso",
+  "email": "falso@falso.com",
+  "password": "$2a$10$b/FN6A3IOnpnKComUmm16uf3jyXbcnhVs4hRo6keu3Av6ixhlAgjS",
+  "avatar": "1683349276124_img.png"
+ },
+ {
+  "id": 15,
+  "fullName": "Facundo Giuliani",
+  "email": "fg@gmail.com",
+  "password": "$2a$10$hFOWJG4xSWojJS9pJYzeq.pdY0d3BffJZS9PYjK5Z2Cc9dkgUH2y6",
+  "avatar": "1683350278805_img.jpg"
  }
 ]
