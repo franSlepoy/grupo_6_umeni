@@ -14,10 +14,11 @@ module.exports = {
         })     
     },
 
+    //Esto cuenta la cantidad de vinos que hay en cada cepa
     cepaList: async(req,res) =>{
         const vinos = await db.Vino.findAll({
             attributes: [
-              [db.Sequelize.fn('COUNT', db.Sequelize.col('idVino')), 'total_vinos'],
+              [db.Sequelize.fn('COUNT', db.Sequelize.col('idVino')), 'total_vinos_cepa'],
             ],
             where: {
                 cepas_idCepa: req.params.cepas_idCepa
