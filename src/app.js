@@ -10,6 +10,7 @@ const apiUsersRoutes = require("./routes/apiUsersRoutes");
 const methodOverride =  require('method-override');
 const PORT = 3031;
 const cookies = require('cookie-parser');
+const cors = require("cors");
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
@@ -19,6 +20,7 @@ app.use(session({
     saveUninitialized: false,
 }));
 
+app.use(cors());
 app.use(cookies());
 app.use(userLoggedMiddleware);
 app.use(express.static('public'));
