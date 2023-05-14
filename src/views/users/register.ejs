@@ -15,6 +15,8 @@
 <header>
   <%- include('../partials/header.ejs') %>
 </header>
+<br>
+<br>
 <body>
   <!-- Se añade js para validacion front -->
   <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
@@ -26,12 +28,7 @@
     <ul></ul>
   </div>
   <label for="fullName">Nombre Completo:</label>
-  <input 
-  type="text" 
-  placeholder="Ingresa tu nombre completo" 
-  id="fullName" 
-  name="fullName"
-  class="fullName"
+  <input type="text" placeholder="Ingresa tu nombre completo" id="fullName" name="fullName" class="fullName"
   value="<%=locals.oldData ? oldData.fullName : null %>"
   <br>
   <% if (locals.errors && errors.fullName) { %>

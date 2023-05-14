@@ -2,12 +2,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     background-color: #F5F5F5;
     font-family: 'Inter', sans-serif;
     color: #5C5C5C;
     flex-direction:column;
-    margin-top: 50px;
+    margin-top: auto;
   }
   
   form {
@@ -26,7 +26,7 @@ body {
   label {
     font-weight: bold;
   }
-  
+  input[type="text"],
   input[type="email"],
   input[type="password"] {
     padding: 12px 20px;

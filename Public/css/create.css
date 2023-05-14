@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     background-color: #9b7e46;
     font-family: 'Inter', sans-serif;
     color: #5C5C5C;
@@ -24,7 +24,7 @@ body {
   label {
     font-weight: bold;
   }
-  
+  input[type="text"],
   input[type="email"],
   input[type="password"],
   input[type="name"],
