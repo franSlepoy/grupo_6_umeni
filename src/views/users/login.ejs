@@ -12,13 +12,15 @@
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="icon" href="/images/productos/Malbec-Tintos.png">
 </head>
+
 <header>
-  <%- include ('../partials/header.ejs') %>
-  </header> 
+<%- include ('../partials/header.ejs') %>
+</header> 
+
 <br>
 <br>
+
 <body>    
- 
   <form method="POST" action="/user/login" class="logUser">
   <h1>Iniciar Sesion</h1>
   <br>
@@ -36,10 +38,6 @@
       <label class="form-check-label">
         <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
       </label>
-  <br><br>
-      <button class="login" type="submit">Login</button>
-       <a href="#">¿Olvidaste la contraseña?</a>
-  <br><br>
        <a href="./register">Registrarme</a>
 </form>
 <br>
