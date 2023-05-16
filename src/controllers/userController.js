@@ -30,14 +30,20 @@ const controller = {
                 oldData: req.body
             });
         }
-        else (db.Usuario.create({
+        else {
+            db.Usuario.create({
             nombre: req.body.fullName,
             email: req.body.email,
             contrasenia: bcryptjs.hashSync(req.body.password, 10),
             avatar: req.file.filename
-        }))     
+        })
+       .then((user)=>{
+          return res.json(user)
+          return res.redirect("/user/login");
+       }).catch(error => res.json(error))}
+        
     
-    let userInDB = User.findByField("email", req.body.email);
+    /* let userInDB = User.findByField("email", req.body.email);
 
     if(userInDB) {
         return res.render(path.join(__dirname, "../views/users/register"), {
@@ -57,8 +63,8 @@ const controller = {
     }
 
     let userCreated = User.create(userToCreate);
-
-    return res.redirect("/user/login");
+ */
+    
     },
 
     login:(req,res) => {
