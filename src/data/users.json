@@ -103,5 +103,12 @@
   "email": "fg@gmail.com",
   "password": "$2a$10$hFOWJG4xSWojJS9pJYzeq.pdY0d3BffJZS9PYjK5Z2Cc9dkgUH2y6",
   "avatar": "1683350278805_img.jpg"
+ },
+ {
+  "id": 16,
+  "fullName": "Usuario Prueba",
+  "email": "prueba@prueba.com",
+  "password": "$2a$10$zzmSSEU/3/kHAasNwQ7ydet/bcnUCoYE6mxq2F.kqy9favi/NxkRu",
+  "avatar": "1684194657383_img.jpg"
  }
 ]

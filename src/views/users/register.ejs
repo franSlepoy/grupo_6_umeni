@@ -27,13 +27,22 @@
   <div class="errores">
     <ul></ul>
   </div>
-  <label for="fullName">Nombre Completo:</label>
-  <input type="text" placeholder="Ingresa tu nombre completo" id="fullName" name="fullName" class="fullName"
+  <label for="fullName">Nombre:</label>
+  <input type="text" placeholder="Ingresa tu nombre" id="fullName" name="fullName" class="fullName"
   value="<%=locals.oldData ? oldData.fullName : null %>"
   <br>
   <% if (locals.errors && errors.fullName) { %>
     <div class="text-danger">
       <%= errors.fullName.msg %>
+    </div>
+  <% } %>
+  <label for="apellido">Apellido:</label>
+  <input type="text" placeholder="Ingresa tu apellido" id="apellido" name="apellido" class="fullName"
+  value="<%=locals.oldData ? oldData.fullName : null %>"
+  <br>
+  <% if (locals.errors && errors.apellido) { %>
+    <div class="text-danger">
+      <%= errors.apellido.msg %>
     </div>
   <% } %>
   <br>

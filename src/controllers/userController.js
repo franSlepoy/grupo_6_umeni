@@ -33,12 +33,13 @@ const controller = {
         else {
             db.Usuario.create({
             nombre: req.body.fullName,
+            apellido: req.body.apellido,
             email: req.body.email,
             contrasenia: bcryptjs.hashSync(req.body.password, 10),
             avatar: req.file.filename
         })
        .then((user)=>{
-          return res.json(user)
+          //return res.json(user)
           return res.redirect("/user/login");
        }).catch(error => res.json(error))}
         
