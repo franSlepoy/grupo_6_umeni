@@ -147,6 +147,7 @@ const controller = {
     if (
       req.body.check == undefined &&
       req.body.fullName == userToEdit.fullName &&
+      req.body.apellido == userToEdit.apellido &&
       req.body.email == userToEdit.email &&
       req.file == undefined
     ) {
@@ -167,6 +168,7 @@ const controller = {
             },
           ],
           user: userToEdit,
+          oldData: req.body,
         });
       } else if (req.body.password !== req.body.password2) {
         return res.render(path.join(__dirname, "../views/users/userEdit"), {
@@ -176,6 +178,7 @@ const controller = {
             },
           ],
           user: userToEdit,
+          oldData: req.body,
         });
       } else {
         delete req.body.passwordOld;
@@ -184,6 +187,7 @@ const controller = {
         await db.Usuario.update(
           {
             nombre: req.body.fullName,
+            apellido: req.body.apellido,
             email: req.body.email,
             contrasenia: bcryptjs.hashSync(req.body.password, 10),
             avatar: req.file.filename
@@ -201,6 +205,7 @@ const controller = {
       await db.Usuario.update(
         {
           nombre: req.body.fullName,
+          apellido: req.body.apellido,
           email: req.body.email,
           avatar: avatar,
           contrasenia: bcryptjs.hashSync(req.body.password, 10),

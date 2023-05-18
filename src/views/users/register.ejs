@@ -38,7 +38,7 @@
   <% } %>
   <label for="apellido">Apellido:</label>
   <input type="text" placeholder="Ingresa tu apellido" id="apellido" name="apellido" class="fullName"
-  value="<%=locals.oldData ? oldData.fullName : null %>"
+  value="<%=locals.oldData ? oldData.apellido : null %>"
   <br>
   <% if (locals.errors && errors.apellido) { %>
     <div class="text-danger">

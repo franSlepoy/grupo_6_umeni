@@ -29,6 +29,15 @@
                         <%= errors.fullName.msg %>
                     </div>
                     <% } %>
+                    <label for="apellido">Editar Apellido:</label>
+                    <input type="text" placeholder="Ingresa tu apellido" id="apellido" name="apellido" class="fullName"
+                    value="<%= user.apellido %>"
+                    <br>
+                    <% if (locals.errors && errors.apellido) { %>
+                      <div class="text-danger">
+                        <%= errors.apellido.msg %>
+                      </div>
+                    <% } %>
                     <br>
                     <label for="email">Editar correo Electrónico:</label>
                     <input type="email" placeholder="Ingresa tu correo electrónico" id="email" name="email" value="<%= user.email %>">
