@@ -4,6 +4,7 @@ const mainControllers = require("../controllers/maincontrollers");
 
 router.get("/", mainControllers.index);
 router.get("/menuMobile", mainControllers.menuMobile);
+router.get("/cart", mainControllers.cart);
 
 
 

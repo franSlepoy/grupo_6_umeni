@@ -116,18 +116,69 @@ let vinosController = {
              
              })
     },
-    tintosList: (req,res) =>{
-    res.render(path.resolve(__dirname, "../views/tintos"))
-    },
-    blancosList: (req,res) =>{
-        res.render(path.resolve(__dirname, "../views/blancos"))
-    },
-    espumantesList: (req,res) =>{
-        res.render(path.resolve(__dirname, "../views/espumantes"))
-    },
-    especialesList: (req,res) =>{
-        res.render(path.resolve(__dirname, "../views/especiales"))
-    }            
+    tintosList: function(req,res){
+        db.Vino.findAll(
+           {
+          include : [
+           {association: "cepas"},
+           {association: "bodegas"}
+       ],
+       where:{
+        lineas_idLineas: 1,
+       }
+          })
+          .then(function(vinos){
+          res.render(path.resolve(__dirname, "../views/tintos"), {vinos:vinos})
+          })
+       },
+
+    blancosList: function(req,res){
+        db.Vino.findAll(
+           {
+          include : [
+           {association: "cepas"},
+           {association: "bodegas"}
+       ],
+       where:{
+        lineas_idLineas: 2,
+       }
+          })
+          .then(function(vinos){
+          res.render(path.resolve(__dirname, "../views/blancos"), {vinos:vinos})
+          })
+       },
+    
+    espumantesList: function(req,res){
+        db.Vino.findAll(
+           {
+          include : [
+           {association: "cepas"},
+           {association: "bodegas"}
+       ],
+       where:{
+        lineas_idLineas: 4,
+       }
+          })
+          .then(function(vinos){
+          res.render(path.resolve(__dirname, "../views/espumantes"), {vinos:vinos})
+          })
+       },
+    
+    especialesList: function(req,res){
+        db.Vino.findAll(
+           {
+          include : [
+           {association: "cepas"},
+           {association: "bodegas"}
+       ],
+       where:{
+        lineas_idLineas: 3,
+       }
+          })
+          .then(function(vinos){
+          res.render(path.resolve(__dirname, "../views/especiales"), {vinos:vinos})
+          })
+       }            
 
 };
 module.exports = vinosController

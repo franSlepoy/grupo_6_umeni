@@ -30,21 +30,31 @@
             <section class="recomendados">
                 <h2>Vinos Blancos</h2>
                 <div class="recomend">
-    <Article>
-       Aca van los blancos 
-        
-    </Article>
-</div>
-</section>
+
+                    <% if (locals.vinos) { %>
+                        <% for (let i = 0; i < vinos.length; i++) { %>
+                            <Article>
+                              <a href="/vinos/detalleVino/<%= vinos[i].idVino %>">
+                                <div><img class="imagen" src="/images/productos/<%= vinos[i].imagen %>"></div>
+                              </a>
+                              <div class="info">
+                                <p class="vino">Bodega: <%= vinos[i].bodegas.bodegaNombre %></p>
+                                <p class="bodega">Vino: <%= vinos[i].nombre %></p>
+                                <p class="year">Año: <%= vinos[i].anio %></p>
+                                <p class="precio">Precio: <%= vinos[i].precio %></p>
+                              </div>
+                            </Article>
+                        <% } %>
+                      <% } %>
+                      
+                </div>
+            </section>
+        </main>
+    </body>
 <br>
 
-
-</main>
-</body>
 <footer>
 <%- include('./partials/footer.ejs') %>
 </footer>
-
-           
 
 </html>
