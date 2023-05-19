@@ -1,9 +1,9 @@
 window.addEventListener("load", function(){
     let formularioUsers = document.querySelector("form.addUser")
 
-    formularioUsers.addEventListener("submit", function(e){
-        e.preventDefault()
-    })
+    // formularioUsers.addEventListener("submit", function(e){
+    //     e.preventDefault()
+    // })
 
     // Validación formulario de registro de usuarios
     console.log(formularioUsers)

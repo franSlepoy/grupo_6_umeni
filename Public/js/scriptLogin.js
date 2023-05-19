@@ -1,9 +1,9 @@
 window.addEventListener("load", function(){
     let formularioLogin = document.querySelector("form.loginUser")
 
-    formularioLogin.addEventListener("submit", function(e){
-        e.preventDefault()
-    })
+    // formularioLogin.addEventListener("submit", function(e){
+    //     e.preventDefault()
+    // })
 
     // Validación formulario de registro de usuarios
     console.log(formularioLogin)
@@ -18,10 +18,10 @@ window.addEventListener("load", function(){
             errores.push("El campo email es obligatorio")
         } else if(campoEmail.value.length < 5){
             errores.push("El campo email debe tener al menos 5 caracteres")
-        }
-        // } else if(!validator.isEmail(campoEmail.value)){
-        //     errores.push("El campo email debe tener un formato válido")
         // }
+        } else if(!validator.isEmail(campoEmail.value)){
+            errores.push("El campo email debe tener un formato válido")
+        }
         if (campoContra.value == ""){
             errores.push("El campo contraseña es obligatorio")
         }
