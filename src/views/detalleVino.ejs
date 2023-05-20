@@ -64,6 +64,7 @@
           </a>
                
     <br>
+    <% if (locals.isLogged) { %>
     <a href="/vinos/delete/<%= vinos.idVino %>">
        <button>Delete</button> 
     </a>
@@ -75,6 +76,7 @@
     <a href="/vinos/add">
       <button>Crear</button>
     </a>
+    <% } %>
           </div>
         </div>
      
