@@ -159,7 +159,7 @@ const controller = {
         ],
       });
     }
-    if (req.body.check == "1") {
+
       if (!passwordOk) {
         return res.render(path.join(__dirname, "../views/users/userEdit"), {
           mensajesDeError: [
@@ -180,7 +180,8 @@ const controller = {
           user: userToEdit,
           oldData: req.body,
         });
-      } else {
+      } 
+
         delete req.body.passwordOld;
         delete req.body.check;
         delete req.body.password2;
@@ -190,16 +191,16 @@ const controller = {
             apellido: req.body.apellido,
             email: req.body.email,
             contrasenia: bcryptjs.hashSync(req.body.password, 10),
-            avatar: req.file.filename
+            avatar: avatar
           },
           {
             where: { email: req.params.email },
           },
         );
 
-      }
-    } else {
-      delete req.body.passwordOld;
+  
+
+/*       delete req.body.passwordOld;
       delete req.body.check;
       delete req.body.password2;
       await db.Usuario.update(
@@ -213,8 +214,8 @@ const controller = {
         {
           where: { email: req.params.email },
         },
-      );
-    }
+      ); */
+
 
     let usuarioEditado = await db.Usuario.findOne({
       where: { email: emailUser },

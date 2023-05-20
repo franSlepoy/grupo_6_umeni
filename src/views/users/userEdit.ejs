@@ -20,6 +20,7 @@
             <div class="data">
                 <h2> Hola <%= user.nombre %> </h2>
 
+
                 <form action="/user/update/<%= user.email %>?_method=PUT" method="POST"  id="form" enctype="multipart/form-data" class="editPerfil">
                     
                     <h1>Modifica tu cuenta</h1>
@@ -79,13 +80,20 @@
                         <label for="password2">Repita su nueva contraseña:</label>
                         <input type="password" placeholder="Repita nueva contraseña" id="password2" name="password2" class="nuevaContra2">
                     </div>
-                    <p class="formulario-error">Ambas contraseñas deben ser iguales.</p>
                     <br>
                     <% if (locals.errors && errors.password) { %>
                     <div class="text-danger">
                         <%= errors.password.msg %>
                     </div>
                     <% } %>
+
+                    <% if (locals && locals.mensajesDeError) { %>
+                        <div class="errores" id="error">
+                            <% mensajesDeError.forEach(error => { %>
+                                  <p><%= error.msg %> </p>
+                            <% }) %>
+                          </div>
+                      <% } %>
                     
                     <button class="login" type="submit">Actualizar perfil</button>
 
