@@ -2,21 +2,21 @@ window.addEventListener("load", function(){
     let formularioUsers = document.querySelector("form.addUser")
 
     // Validación formulario de vinos
-    console.log(formularioUsers)
+    //console.log(formularioUsers)
     formularioUsers.addEventListener("submit", function(e){
         let errores = []
         let campoNombre = document.querySelector(".fullName")
-        console.log(campoNombre.value)
+        //console.log(campoNombre.value)
         let campoEmail = document.querySelector(".emilio")
         let imagenUser = document.querySelector("input.imgUser")
-        console.log(imagenUser.value)
+        //console.log(imagenUser.value)
         let campoContra = document.querySelector(".contra")
 
         if (campoNombre.value == ""){
             errores.push("El campo nombre de vino es obligatorio")
         } else if(campoNombre.value.length < 5){
             errores.push("El campo nombre de vino debe tener al menos 5 caracteres")
-        // }
+        } //esta llave para que no tire error
         if (campoEmail.value == ""){
             errores.push("El campo email es obligatorio")
         } else if(!validator.isEmail(campoEmail)){
@@ -29,7 +29,7 @@ window.addEventListener("load", function(){
         if (campoContra.value == ""){
             errores.push("El campo contraseña es obligatorio")
             }
-    
+        } //esta llave para que no tire error
 
         if(errores.length > 0){
             e.preventDefault()

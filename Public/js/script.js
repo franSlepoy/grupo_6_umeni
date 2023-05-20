@@ -2,14 +2,14 @@ window.addEventListener("load", function(){
     let formularioVinos = document.querySelector("form.addVino")
 
     // Validación formulario de vinos
-    console.log(formularioVinos)
+    //console.log(formularioVinos)
     formularioVinos.addEventListener("submit", function(e){
         let errores = []
         let campoNombre = document.querySelector("input.name")
-        console.log(campoNombre.value)
+        //console.log(campoNombre.value)
         let campoDescripcion = document.querySelector("input.descripcion")
         let imagenVino = document.querySelector("input.imgVino")
-        console.log(imagenVino.value)
+        //console.log(imagenVino.value)
 
         if (campoNombre.value == ""){
             errores.push("El campo nombre de vino es obligatorio")

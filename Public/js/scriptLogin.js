@@ -6,13 +6,13 @@ window.addEventListener("load", function(){
     // })
 
     // Validación formulario de registro de usuarios
-    console.log(formularioLogin)
+    //console.log(formularioLogin)
     formularioLogin.addEventListener("submit", function(e){
         let errores = []
         let campoEmail = document.querySelector("input.emilio")
-        console.log(campoEmail.value)
+        //console.log(campoEmail.value)
         let campoContra = document.querySelector("input.contra")
-        console.log(campoContra.value)
+        //console.log(campoContra.value)
 
         if (campoEmail.value == ""){
             errores.push("El campo email es obligatorio")

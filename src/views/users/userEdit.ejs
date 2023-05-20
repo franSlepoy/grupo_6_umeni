@@ -13,16 +13,21 @@
         <%- include('../partials/header.ejs') %>
     </header>
     <body>
+            <!-- Se añade js para validacion front -->
+            <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+            <script async src="/js/scriptUserEdit.js"></script>
         <main>
             <div class="data">
                 <h2> Hola <%= user.nombre %> </h2>
 
-                <form action="/user/update/<%= user.email %>?_method=PUT" method="POST"  id="form" enctype="multipart/form-data" class="main-profile">
+                <form action="/user/update/<%= user.email %>?_method=PUT" method="POST"  id="form" enctype="multipart/form-data" class="editPerfil">
                     
                     <h1>Modifica tu cuenta</h1>
-                    
+                    <div class="errores">
+                        <ul></ul>
+                    </div>
                     <label for="fullName">Editar nombre:</label>
-                    <input type="text" placeholder="Ingresa tu nombre completo" id="fullName" name="fullName" value="<%= user.nombre %>">
+                    <input type="text" placeholder="Ingresa tu nombre completo" id="fullName" name="fullName" value="<%= user.nombre %>" class="fullName">
                     <br>
                      <% if (locals.errors && errors.fullName) { %>
                     <div class="text-danger">
@@ -30,7 +35,7 @@
                     </div>
                     <% } %>
                     <label for="apellido">Editar Apellido:</label>
-                    <input type="text" placeholder="Ingresa tu apellido" id="apellido" name="apellido" class="fullName"
+                    <input type="text" placeholder="Ingresa tu apellido" id="apellido" name="apellido" class="apellido"
                     value="<%= user.apellido %>"
                     <br>
                     <% if (locals.errors && errors.apellido) { %>
@@ -40,7 +45,7 @@
                     <% } %>
                     <br>
                     <label for="email">Editar correo Electrónico:</label>
-                    <input type="email" placeholder="Ingresa tu correo electrónico" id="email" name="email" value="<%= user.email %>">
+                    <input type="email" placeholder="Ingresa tu correo electrónico" id="email" name="email" value="<%= user.email %>" class="emilio">
                     <br>
                     <% if (locals.errors && errors.email) { %>
                     <div class="text-danger">
@@ -54,20 +59,25 @@
                         <div>
                             <img id="imgOld" src="/images/avatars/<%= locals.userLogged.avatar %>" class="user-image">
                         </div>
-                        <input type="file" name="avatar" id="img-avatar" value="<%= locals.userLogged.avatar %>">
+                        <input type="file" name="avatar" id="img-avatar" value="<%= locals.userLogged.avatar %>" class="imgUser">
                     </div>
                     <br>
                     <div>
-                        <label for="password">Contraseña actual:</label>
-                        <input type="password" placeholder="Ingresa su contraseña actual" id="passwordOld" name="passwordOld">
+                        <label for="passwordOld">Contraseña actual:</label>
+                        <input type="password" placeholder="Ingresa su contraseña actual" id="passwordOld" name="passwordOld" class="contra">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                              <%= errors.password.msg %>
+                            </div>
+                          <% } %>
                     </div>
                     <div>
                         <label for="password">Ingrese su nueva contraseña:</label>
-                        <input type="password" placeholder="Ingrese nueva contraseña" id="password" name="password">
+                        <input type="password" placeholder="Ingrese nueva contraseña" id="password" name="password" class="nuevaContra">
                     </div>
                     <div>
-                        <label for="password">Repita su nueva contraseña:</label>
-                        <input type="password" placeholder="Repita nueva contraseña" id="password2" name="password2">
+                        <label for="password2">Repita su nueva contraseña:</label>
+                        <input type="password" placeholder="Repita nueva contraseña" id="password2" name="password2" class="nuevaContra2">
                     </div>
                     <p class="formulario-error">Ambas contraseñas deben ser iguales.</p>
                     <br>
